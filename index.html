@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<section>
-    <img src="http://distilleryimage3.s3.amazonaws.com/22568bf8de6311e28c1322000a1fb036_7.jpg"/>
-    <h3>I'm making it. Please be patient.</h3>
-</section>
+{% for post in site.posts limit: 3 %}
+    {% assign content = post.content %}
+    {% assign page = post %}
+    {% include post/_post.html %}
+  {% endfor %}
+</ul>
 
