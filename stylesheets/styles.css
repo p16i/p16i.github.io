@@ -253,3 +253,8 @@ footer {
     color:#444;
   }
 }
+
+a#header {
+    color: black;
+    font-weight: bold;
+}
