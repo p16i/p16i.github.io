@@ -16,11 +16,11 @@ markdown_ext:  markdown,mkd,mkdn,md
 title:            Craft Code
 description:      Something about coding by crafting.
 logo: site-logo.png
-url: http://localhost:4000
+#url: http://goonnow.github.io
 
 # Owner/author information
 owner:
-  name:           Pattarawat Chortmai
+  name:           Pattarawat Chormai
   avatar:         me.png
   # Social networking links used in footer. Update and remove as you like.
   github: goonnow
