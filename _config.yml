@@ -16,7 +16,7 @@ markdown_ext:  markdown,mkd,mkdn,md
 title:            Craft Code
 description:      Something about coding by crafting.
 logo: site-logo.png
-url: http://localhost:4000/
+url: http://localhost:4000
 
 # Owner/author information
 owner:
@@ -31,4 +31,6 @@ google_analytics: UA-42287027-1
 links:
   - title: Articles
     url: /articles
+  - title: Tags
+    url: /tags.html
 
