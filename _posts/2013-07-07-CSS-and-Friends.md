@@ -1,8 +1,13 @@
 ---
-
 layout: post
 title: CSS and Friends
-
+description: "Showing example syntax between css and scss."
+category: articles
+tags: [ css, scss ]
+image:
+  credit: The Second Magpie
+  creditlink: http://thesecondmagpie.wordpress.com/
+  feature: colorful-mouth.jpg
 ---
 
 

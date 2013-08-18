@@ -1,15 +1,19 @@
 ---
-
 layout: post
 title: Chordtabs Extension v1.8.0
-
+category: articles
+tags: [ chordtabs-extension ]
+image:
+  credit: Jazz Lives
+  creditlink: http://jazzlives.wordpress.com
+  feature: music-session.jpg
 ---
 
 ในเวอร์ชั่นนี้ ผมได้เพิ่ม 2 feature หลักๆ คือ เพลงโปรด กับ opening as dialog ซึ่งน่าจะช่วยให้การใช้งานมีความสะดวกมากยิ่งขึ้น
 
 ### Feature เพลงโปรด
 
-![image](/img/2013-07/chordtabs-ex-favorite-song.png)
+![image](/article-asset/2013-07/chordtabs-ex-favorite-song.png)
 
 - กด ที่รูป ☆ เมื่อต้องการเพิ่มเพลงนั้นๆ เข้าเพลงโปรด
 
