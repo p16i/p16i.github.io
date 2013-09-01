@@ -1,4 +1,4 @@
-#!/Users/goonnow/.rbenv/shims/ruby
+#!/usr/bin/env ruby
 
 print <<EOF
 Hey Dude!!!
