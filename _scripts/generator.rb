@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'fileutils'
 
 def main()
     print <<EOF
@@ -17,8 +18,10 @@ EOF
 
     filename = "#{date}-#{title}.#{format}"
     if recv_input("Would you like to create \"#{filename}\"? (y,n): ")[0].eql? "y"
+        src = "#{local_path}/_scripts/data/proto_post.md"
         actual_path = "#{local_path}/_posts/#{filename}"
-        File.new( actual_path, "w");
+
+        FileUtils.cp(src, actual_path)
         puts "Now, you get it :D"
         puts "at \"#{actual_path}\""
     else
