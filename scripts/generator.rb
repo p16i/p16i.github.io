@@ -18,7 +18,7 @@ EOF
 
     filename = "#{date}-#{title}.#{format}"
     if recv_input("Would you like to create \"#{filename}\"? (y,n): ")[0].eql? "y"
-        src = "#{local_path}/_scripts/data/proto_post.md"
+        src = "#{local_path}/scripts/data/proto_post.md"
         actual_path = "#{local_path}/_posts/#{filename}"
 
         FileUtils.cp(src, actual_path)
