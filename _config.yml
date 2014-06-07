@@ -17,6 +17,7 @@ title:            Craft Code
 description:      Something about coding by crafting.
 logo: site-logo.png
 url: http://goonnow.github.io
+disqus_shortname: craftcode
 
 # Owner/author information
 owner:
