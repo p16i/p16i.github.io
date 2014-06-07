@@ -4,6 +4,7 @@ title: Setting a private proxy for Spotify via SSH
 description:  using SSH as a proxy
 category: articles
 tags: [ ssh, spotify, proxy]
+comments: true
 image:
   credit: Spotify.com
   creditlink: http://spotify.com
