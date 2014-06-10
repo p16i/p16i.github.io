@@ -21,9 +21,9 @@ image:
 	ssh root@<server_ip> "echo `cat ~/.ssh/id_rsa.pub` >> ~/.ssh/authorized_keys"
 	```
 
-2. Setup a sock proxy on my machine.
+2. Setup a proxy on my machine.
 
-    I use **ssh** to create a **SOCK** proxy for me
+    I use **ssh** to create a **SOCKS** proxy for me
 
     ```
     ssh -NCD 127.0.0.1:8090 root@<server_ip>
