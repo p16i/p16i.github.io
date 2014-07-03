@@ -24,14 +24,19 @@ owner:
   name:           Pattarawat Chormai
   avatar:         me.png
   # Social networking links used in footer. Update and remove as you like.
-  github: goonnow
+  github: heytitle
   instagram: heytitle
 
 google_analytics: UA-42287027-1
 
 links:
-  - title: Articles
-    url: /articles
-  - title: Tags
-    url: /tags.html
+    -
+        title: Articles
+        url: /articles
+    -
+        title: Tags
+        url: /tags.html
+    -
+        title: My Design Journey
+        url: /my-design-journey.html
 
