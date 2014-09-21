@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Responsive Logos</title>
+        <style>
+            body {
+                margin: 0px;
+                top: 0px;
+                font-family: sans-serif;
+            }
+            .block {
+                position: relative;
+                height: 320px;
+                background: #252525;
+                text-align: center;
+                line-height: 320px;
+            }
+
+            .logo-container {
+                vertical-align: middle;
+                margin-top: auto;
+                margin-bottom: auto;
+                height: 300px;
+                width: 300px;
+                background: black;
+                display: inline-block;
+                background-position: center top;
+            }
+
+            #sk-watch {
+                background: url('images/responsive-logos/sk-watch.svg');
+            }
+
+            @media only screen and (min-width: 15em) {
+                #sk-watch {background-position: left -900px;}
+            }
+            @media only screen and (min-width: 28em) {
+                #sk-watch {background-position: left -600px;}
+            }
+            @media only screen and (min-width: 45em) {
+                #sk-watch {background-position: left -300px;}
+            }
+            @media only screen and (min-width: 60em) {
+                #sk-watch {background-position: left 0px;}
+            }
+
+            .block.empty {
+                background: #d8d6d6;
+            }
+
+            .footer {
+                background: black;
+                height: 50px;
+                line-height: 50px;
+                width: 100%;
+                color: gray;
+                padding-left: 10px;
+                font-size: small;
+            }
+
+            .footer a {
+                color: gray;
+            }
+
+            .header {
+                height: 60px;
+                width: 100%;
+                line-height: 60px;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+    <div class="header">A logo is scalable, please try to resize your browser. ;)</div>
+    <div class="block">
+        <div class="logo-container" id="sk-watch">
+        </div>
+    </div>
+    <div class="block empty"></div>
+    <div class="footer">
+        Concept by <a href="http://www.joeharrison.co.uk/">Joe Harrison</a> |
+        Logo designed by <a href="https://dribbble.com/heytitle">Pattarawat Chormai</a>
+    </div>
+    </body>
+</html>
