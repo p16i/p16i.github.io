@@ -1,13 +1,16 @@
 ---
 layout: post
-title: 10 lessons that AngularJS give me
+title: 10 lessons that AngularJS gives me
 category: articles
-tags: [ angularjs ]
-image:
+tags: 
+  - angularjs
+image: 
   credit: Pawel Kadysz
-  creditlink: http://dribbble.com/pawelkadysz
-  feature: joy-stick.jpg
+  creditlink: "http://dribbble.com/pawelkadysz"
+  feature: "joy-stick.jpg"
+published: true
 ---
+
 
 1. ถ้าลองใช้ `สองปีกกา` ของ AngularJS แล้วติดใจ ลองหันมาใช้ `ng-bind` ก็ไม่เลวเหมือนกัน
 2. อย่าอ่านใน [AngularJS.org][2] มาก ลองนั่งมั่วเองเร็วกว่าเยอะ
@@ -23,8 +26,3 @@ image:
 
 [1]: http://www.egghead.io "Egghead.io"
 [2]: http://www.angularjs.org "AngularJS.org"
-
-
-
-
-
