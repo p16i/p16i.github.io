@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+$icon-font-path: '../fonts/';
+
+$font:  'Fjalla One';
+
+body {
+    background: url("../images/background.jpg")no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family:$font , sans-serif;
+}
+
+.main {
+    text-align: center;
+    margin-top: 15%;
+}
+
+
+ul.menus {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    li {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+    li:nth-child(n+2) {
+        &::before {
+            content: "/";
+            margin: 0px 3px;
+        }
+    }
+}
+
+.blink {
+    $duration : 0.7s;
+  animation: blink-animation $duration steps(5, start) infinite;
+  -webkit-animation: blink-animation $duration steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
