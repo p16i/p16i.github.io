@@ -1,16 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
-
-$icon-font-path: '../fonts/';
-
-$font:  'Fjalla One';
-
 body {
     background: url("../images/background.jpg")no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family:$font , sans-serif;
 }
 
 .main {

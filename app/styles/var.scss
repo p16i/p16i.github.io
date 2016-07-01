@@ -1,0 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+$icon-font-path: '../fonts/';
+
+$font:  'Fjalla One';
+
+body {
+  font-family:$font , sans-serif;
+}
