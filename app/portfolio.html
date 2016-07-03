@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -23,23 +23,23 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
+  <body ng-controller="PortfolioController" ng-disable-scroll="openningModal">
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="portfolio">
         <div class="left">
             <div class="logo">
-                <h1>Pattarawat Chormai</h1>
+                <h1><span>Pattarawat</span> <span>Chormai</span></h1>
             </div>
 
             <ul>
                 <li>
                     <span>Photography</span>
-                    <ul>
-                        <li>Concert</li>
-                        <li>Architecture</li>
-                    </ul>
+                    <!-- <ul> -->
+                    <!--     <li>Concert</li> -->
+                    <!--     <li>Architecture</li> -->
+                    <!-- </ul> -->
                 </li>
                 <li>
                     <span>Design</span>
@@ -51,32 +51,22 @@
         </div>
         <div class="right">
             <div class="content">
-                <div class="scrollable">
-                    <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xft1/t31.0-8/13482977_10154923027723066_7755942909236006109_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpl1/t31.0-8/13301432_10154873095853066_5598080741441343952_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xla1/t31.0-8/13048266_10154761174008066_5012809722120025400_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xfl1/t31.0-8/13418594_10154887051883066_2107852063762997534_o.jpg">
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xlf1/t31.0-8/12973116_10154734509313066_7331919241982456866_o.jpg">
-
-                    <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xft1/t31.0-8/13482977_10154923027723066_7755942909236006109_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpl1/t31.0-8/13301432_10154873095853066_5598080741441343952_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xla1/t31.0-8/13048266_10154761174008066_5012809722120025400_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xfl1/t31.0-8/13418594_10154887051883066_2107852063762997534_o.jpg">
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xlf1/t31.0-8/12973116_10154734509313066_7331919241982456866_o.jpg">
-
-                    <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xft1/t31.0-8/13482977_10154923027723066_7755942909236006109_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpl1/t31.0-8/13301432_10154873095853066_5598080741441343952_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xla1/t31.0-8/13048266_10154761174008066_5012809722120025400_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xfl1/t31.0-8/13418594_10154887051883066_2107852063762997534_o.jpg">
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xlf1/t31.0-8/12973116_10154734509313066_7331919241982456866_o.jpg">
-
-                    <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xft1/t31.0-8/13482977_10154923027723066_7755942909236006109_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpl1/t31.0-8/13301432_10154873095853066_5598080741441343952_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xla1/t31.0-8/13048266_10154761174008066_5012809722120025400_o.jpg"/>
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xfl1/t31.0-8/13418594_10154887051883066_2107852063762997534_o.jpg">
-                    <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xlf1/t31.0-8/12973116_10154734509313066_7331919241982456866_o.jpg">
-                </div>
+                <ul class="scrollable">
+                    <li ng-repeat="d in data track by $index">
+                        <img  ng-src="{{d}}" ng-click="zoom($index)"/>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </div>
+    <div class="modal" ng-class="{ openningModal: openningModal }">
+        <div class="content" ng-click="close()">
+            <div class="navigation">
+                <span ng-class="{ disable: zoomIndex == 0  }" ng-click="prev($event)">Prev(j)</span> - 
+                <span ng-class="{ disable: zoomIndex == data.length - 1  }" ng-click="next($event)">Next(k)</span>
+            </div>
+            <img ng-src="{{zoomURL}}"/>
+            <!-- <div> Plugged Festival 2016 @ TU/e</div> -->
         </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -92,6 +82,8 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/ng-disable-scroll/disable-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -100,6 +92,8 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/db.js"></script>
+    <script src="scripts/portfolio.js"></script>
     <!-- endbuild -->
   </body>
 </html>
