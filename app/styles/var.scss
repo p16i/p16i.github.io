@@ -7,3 +7,10 @@ $font:  'Fjalla One';
 body {
   font-family:$font , sans-serif;
 }
+
+a {
+    text-decoration: none;
+    &:hover, &:visited {
+        color: black;
+    }
+}
