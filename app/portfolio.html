@@ -16,7 +16,6 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/var.css">
-    <link rel="stylesheet" href="styles/portfolio.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -27,48 +26,6 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="portfolio">
-        <div class="left">
-            <div class="logo">
-                <h1><span>Pattarawat</span> <span>Chormai</span></h1>
-            </div>
-
-            <ul>
-                <li>
-                    <span>Photography</span>
-                    <!-- <ul> -->
-                    <!--     <li>Concert</li> -->
-                    <!--     <li>Architecture</li> -->
-                    <!-- </ul> -->
-                </li>
-                <li>
-                    <span>Design</span>
-                </li>
-                <li class="contact">
-                    <span>Contact</span>
-                </li>
-            </ul>
-        </div>
-        <div class="right">
-            <div class="content">
-                <ul class="scrollable">
-                    <li ng-repeat="d in data track by $index">
-                        <img  ng-src="{{d}}" ng-click="zoom($index)"/>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="modal" ng-class="{ openningModal: openningModal }">
-        <div class="content" ng-click="close()">
-            <div class="navigation">
-                <span ng-class="{ disable: zoomIndex == 0  }" ng-click="prev($event)">Prev(j)</span> - 
-                <span ng-class="{ disable: zoomIndex == data.length - 1  }" ng-click="next($event)">Next(k)</span>
-            </div>
-            <img ng-src="{{zoomURL}}"/>
-            <!-- <div> Plugged Festival 2016 @ TU/e</div> -->
-        </div>
-    </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -84,6 +41,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/ng-disable-scroll/disable-scroll.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -92,7 +50,6 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script src="scripts/db.js"></script>
     <script src="scripts/portfolio.js"></script>
     <!-- endbuild -->
   </body>
