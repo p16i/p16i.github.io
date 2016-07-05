@@ -1,3 +1,8 @@
+'use strict';
+/* global myApp */
+/* global angular */
+/* global data */
+
 myApp.controller('portfolioController', function($scope, $window) {
     $scope.openningModal = false;
 
@@ -10,7 +15,7 @@ myApp.controller('portfolioController', function($scope, $window) {
     };
 
     $scope.next = function($event){
-        if( $scope.zoomIndex < $scope.data.length - 1  ) {
+        if( $scope.zoomIndex < $scope.data.length - 1 ) {
             $scope.zoomIndex = $scope.zoomIndex + 1;
             $scope.updateZoom();
             if( $event && $event.stopPropagation ){
@@ -38,18 +43,18 @@ myApp.controller('portfolioController', function($scope, $window) {
         if( !$scope.openningModal ) {
              return;
         }
-        if( e.keyCode == 27 ){
+        if( e.keyCode === 27 ){
             $scope.$apply( $scope.close );
-        }else if( e.keyCode == 74 ){
+        }else if( e.keyCode === 74 ){
             $scope.$apply( $scope.prev );
-        }else if( e.keyCode == 75 ){
+        }else if( e.keyCode === 75 ){
             $scope.$apply( $scope.next );
         }
     });
 
     $scope.updateZoom = function(){
         $scope.zoomURL = $scope.data[$scope.zoomIndex];
-    }
+    };
 
     $scope.data = data;
 });

@@ -1,4 +1,7 @@
-var myApp = angular.module('myApp',['ngRoute', 'ngDisableScroll']);
+'use strict';
+
+/* global angular */
+var myApp = angular.module('myApp', ['ngRoute', 'ngDisableScroll']);
 
 myApp.config(['$locationProvider', '$routeProvider',
         function config($locationProvider, $routeProvider) {
@@ -18,5 +21,5 @@ myApp.config(['$locationProvider', '$routeProvider',
 ]);
 
 myApp.controller('mainController', function($scope) {
-    $scope.isMain  = true;
+    $scope.isMain = true;
 });
