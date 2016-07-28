@@ -3,11 +3,42 @@
 /* global angular */
 /* global data */
 
-myApp.controller('portfolioController', function($scope, $window) {
+myApp.controller('photographyController', function($scope, $window, $flickr) {
+
+    $scope.photoSets = [
+        {
+            name: "Lifestyle",
+            id: "72157671543489895"
+        },
+        {
+            name: "Abstract",
+            id: "72157671453437906"
+        },
+        {
+            name: "Places",
+            id: "72157670749338322"
+        },
+        {
+            name: "Music & Festival",
+            id: "72157670784624421"
+        }
+    ];
+
+    $scope.loadData = function(setID){
+        $flickr.getPhotosFromSet( setID, function(photos){
+            $scope.data = photos;
+            $scope.selected_set = setID;
+            console.log($scope.data);
+        });
+    }
+
+    $scope.loadData($scope.photoSets[0].id);
+
     $scope.openningModal = false;
 
     $scope.zoom = function(zoomIndex){
         $scope.openningModal = true;
+        $scope.loading = false;
 
         $scope.zoomIndex = zoomIndex;
 
@@ -53,7 +84,14 @@ myApp.controller('portfolioController', function($scope, $window) {
     });
 
     $scope.updateZoom = function(){
-        $scope.zoomURL = $scope.data[$scope.zoomIndex];
+        $scope.loadingZoom = true;
+        $scope.zoomURL = $scope.data[$scope.zoomIndex].url_o;
+        $scope.zoomTitle = $scope.data[$scope.zoomIndex].title;
+    };
+
+    $scope.finishLoading = function(){
+        console.log("xx");
+        $scope.loadingZoom = false;
     };
 
     $scope.data = data;

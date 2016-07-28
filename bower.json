@@ -6,7 +6,9 @@
     "modernizr": "~2.8.1",
     "angular": "^1.5.7",
     "ng-disable-scroll": "^0.1.1",
-    "angular-route": "^1.5.7"
+    "angular-route": "^1.5.7",
+    "querystring": "^3.46.1",
+    "lodash": "^4.14.0"
   },
   "overrides": {
     "bootstrap-sass": {

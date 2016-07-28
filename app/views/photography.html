@@ -1,0 +1,52 @@
+<div class="photography">
+    <div class="left">
+        <div class="logo">
+            <h1><span>Pattarawat</span> <span>Chormai</span></h1>
+        </div>
+
+        <ul>
+            <li ng-repeat="s in photoSets track by $index" ng-click="loadData(s.id)">
+                {{s.name}} <span ng-if="selected_set == s.id"> - </span>
+            </li>
+        </ul>
+
+        <div class="credit">
+            <div class="contact">
+                <a href="mailto:pat.chormai@gmail.com?Subject=I like your photos">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.flickr.com/photos/132196854@N06/">
+                    <i class="fa fa-flickr" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.instagram.com/heytitle">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            © 2016 All right reserved
+        </div>
+    </div>
+    <div class="right">
+        <div class="content">
+            <ul class="scrollable">
+                <li ng-repeat="d in data track by $index">
+                    <img  ng-src="{{d.url_s}}" ng-click="zoom($index)"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="modal" ng-class="{ openningModal: openningModal }">
+    <div class="content" ng-click="close()">
+        <div class="navigation">
+            <span ng-class="{ disable: zoomIndex == 0  }" ng-click="prev($event)">Prev(j)</span> - 
+            <span>Close(esc)</span> -
+            <span ng-class="{ disable: zoomIndex == data.length - 1  }" ng-click="next($event)">Next(k)</span>
+        </div>
+        <div ng-class="{ hiddenZoom: loadingZoom }">
+            <img ng-src="{{zoomURL}}" image-onload="finishLoading()"/>
+            <div>{{ zoomTitle }}</div>
+        </div>
+        <img ng-if="loadingZoom" src="http://www.bedbathandbeyond.com/_assets/global/images/image-preloader.gif"/>
+    </div>
+</div>
+

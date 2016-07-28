@@ -4,7 +4,7 @@
 //     // overflow: hidden;
 // }
 
-.portfolio {
+.photography {
     padding: 0px 50px;
 
     .left, .right {
@@ -13,7 +13,7 @@
     font-size: 0.95em;
 }
 
-.portfolio .left {
+.photography .left {
     // background-color: yellow;
     width: 20%;
     padding: 0px;
@@ -65,9 +65,21 @@
             }
         }
     }
+    .credit {
+        position: absolute;
+        bottom: 4em;
+        margin-top: 200px;
+        font-size: 10px;
+        font-family: sans-serif;
+        .contact {
+            font-size: 13px;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+    }
 }
 
-.portfolio .right {
+.photography .right {
     width: 80%;
 
     margin-top: 12.95em;
@@ -95,7 +107,7 @@
 
         img {
             display: inline-block;
-            max-height: 200px;
+            max-height: 134px;
             margin-bottom: 3px;
             margin-right: 3px;
             cursor: pointer;
@@ -143,5 +155,11 @@
              text-transform: uppercase;
             font-family: sans-serif;
         }
+        .hiddenZoom {
+            display: none;
+            background: red;
+        }
     }
+
+
 }
