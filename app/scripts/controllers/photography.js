@@ -28,7 +28,6 @@ myApp.controller('photographyController', function($scope, $window, $flickr) {
         $flickr.getPhotosFromSet( setID, function(photos){
             $scope.data = photos;
             $scope.selected_set = setID;
-            console.log($scope.data);
         });
     }
 
@@ -93,8 +92,6 @@ myApp.controller('photographyController', function($scope, $window, $flickr) {
         console.log("xx");
         $scope.loadingZoom = false;
     };
-
-    $scope.data = data;
 });
 
 
