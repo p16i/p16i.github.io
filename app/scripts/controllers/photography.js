@@ -1,35 +1,34 @@
 'use strict';
 /* global myApp */
 /* global angular */
-/* global data */
 
 myApp.controller('photographyController', function($scope, $window, $flickr) {
 
     $scope.photoSets = [
         {
-            name: "Lifestyle",
-            id: "72157671543489895"
+            name: 'Lifestyle',
+            id: '72157671543489895'
         },
         {
-            name: "Abstract",
-            id: "72157671453437906"
+            name: 'Abstract',
+            id: '72157671453437906'
         },
         {
-            name: "Places",
-            id: "72157670749338322"
+            name: 'Places',
+            id: '72157670749338322'
         },
         {
-            name: "Music & Festival",
-            id: "72157670784624421"
+            name: 'Music & Festival',
+            id: '72157670784624421'
         }
     ];
 
     $scope.loadData = function(setID){
         $flickr.getPhotosFromSet( setID, function(photos){
             $scope.data = photos;
-            $scope.selected_set = setID;
+            $scope.selectedSet = setID;
         });
-    }
+    };
 
     $scope.loadData($scope.photoSets[0].id);
 
@@ -89,7 +88,6 @@ myApp.controller('photographyController', function($scope, $window, $flickr) {
     };
 
     $scope.finishLoading = function(){
-        console.log("xx");
         $scope.loadingZoom = false;
     };
 });

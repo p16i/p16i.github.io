@@ -1,6 +1,11 @@
 'use strict';
 
 /* global angular */
+/* global _ */
+/* global querystring */
+
+/* eslint camelcase: ["error", {properties: "never"}] */
+
 var myApp = angular.module('myApp', ['ngRoute', 'ngDisableScroll']);
 
 myApp.config(['$locationProvider', '$routeProvider',
@@ -25,11 +30,11 @@ myApp.controller('mainController', function($scope) {
 });
 
 myApp.factory('$flickr', function($http) {
-    var API_ENDPOINT = "https://api.flickr.com/services/rest/";
+    var API_ENDPOINT = 'https://api.flickr.com/services/rest/';
     var defaultParams = {
-        api_key: "1544bf28b9a934d93c67dfe74c344504",
-        user_id: "132196854@N06"
-    }
+        api_key: '1544bf28b9a934d93c67dfe74c344504',
+        user_id: '132196854@N06'
+    };
 
     var flickr = {
         getPhotosFromSet: function( setID, callback ){
@@ -37,27 +42,26 @@ myApp.factory('$flickr', function($http) {
                 method: 'flickr.photosets.getPhotos',
                 per_page: 500,
                 photoset_id: setID,
-                extras: "url_s,url_m,url_o",
-                format: "json",
+                extras: 'url_s,url_m,url_o',
+                format: 'json',
                 nojsoncallback: 1
             };
 
-            params  = _.merge( params, defaultParams );
-            var url = this._generateRequest(params );
+            params = _.merge( params, defaultParams );
+            var url = this.generateRequest(params );
 
             $http({
                 method: 'GET',
                 url: url
             }).then(function successCallback(response) {
                 callback(response.data.photoset.photo);
-            }, function errorCallback(response) {
             });
 
         },
-        _generateRequest: function(params){
-            return API_ENDPOINT + "?" + querystring.stringify(params);
+        generateRequest: function(params){
+            return API_ENDPOINT + '?' + querystring.stringify(params);
         }
-    }
+    };
     return flickr;
 });
 
@@ -66,11 +70,7 @@ myApp.directive('imageOnload', function() {
         restrict: 'A',
         link: function(scope, element, attrs) {
             element.bind('load', function() {
-                // call the function that was passed
-                console.log("DONE");
                 scope.$apply(attrs.imageOnload);
-
-                // usage: <img ng-src="src" image-onload="imgLoadedCallback()" />
             });
         }
     };
