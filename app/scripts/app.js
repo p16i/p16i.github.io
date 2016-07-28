@@ -32,7 +32,7 @@ myApp.controller('mainController', function($scope) {
 myApp.factory('$flickr', function($http) {
     var API_ENDPOINT = 'https://api.flickr.com/services/rest/';
     var defaultParams = {
-        api_key: '1544bf28b9a934d93c67dfe74c344504',
+        api_key: '93f5faaf8c085c222449e0f62cf97734',
         user_id: '132196854@N06'
     };
 
