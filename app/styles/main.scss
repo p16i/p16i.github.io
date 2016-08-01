@@ -1,5 +1,5 @@
 .main-bg {
-    background: url("../images/background.jpg")no-repeat center center fixed; 
+    background: url("../images/background.jpg")no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -32,7 +32,7 @@ ul.menus {
     }
     li:nth-child(n+2) {
         &::before {
-            content: "/";
+            content: " / ";
             text-decoration: none !important;
             margin: 0px 3px;
         }
@@ -56,3 +56,11 @@ ul.menus {
   }
 }
 
+.footer-main {
+  text-align: center;
+  font-size: 8px;
+  font-family: sans-serif;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}

@@ -31,7 +31,6 @@
         line-height: 0.85em;
 
         span {
-             background: #D4D4D4;
              display: inline-block;
              padding-right: 0.1em;
              &:first-child {
@@ -65,17 +64,19 @@
             }
         }
     }
-    .credit {
-        position: absolute;
-        bottom: 4em;
-        margin-top: 200px;
-        font-size: 10px;
-        font-family: sans-serif;
-        .contact {
-            font-size: 13px;
-            text-align: center;
-            margin-bottom: 3px;
-        }
+}
+
+.credit {
+    position: fixed;
+    bottom: 10px;
+    left: 50px;
+    font-size: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    .contact {
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 3px;
     }
 }
 
