@@ -21,6 +21,10 @@ myApp.config(['$locationProvider', '$routeProvider',
                      controller: 'photographyController',
                      templateUrl: 'views/photography.html'
                  }).
+                 when('/about', {
+                     controller: 'aboutController',
+                     templateUrl: 'views/about.html'
+                 }).
                  otherwise('/');
              }
 ]);
