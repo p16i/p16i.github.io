@@ -16,10 +16,18 @@ $yellow: #F5DB0D;
     }
   }
   .right-pane {
+    position: relative;
     width: 65%;
     background-color: $yellow;
     float: left;
     height: 100%;
+    overflow: hidden;
+    .content { height: 100% }
+    .right-box{
+      text-align: right;
+      padding-right: 15px;
+      z-index: 100;
+    }
   }
   .left-pane {
     width: 35%;
@@ -28,6 +36,7 @@ $yellow: #F5DB0D;
     float: left;
     height: 100%;
     position: relative;
+    overflow: hidden;
     .right-box {
       text-align: right;
       z-index: 1000;
@@ -55,5 +64,59 @@ $yellow: #F5DB0D;
         display: inline;
       }
     }
+  }
+
+  #skills-net {
+    // background: red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    svg{
+      width: 100%;
+      height: 100%;
+      .node {
+        fill: black;
+        cursor: pointer;
+      }
+      .anchorNode { cursor: pointer };
+      .link {
+        stroke: black;
+        stroke-dasharray: 5;
+      }
+    }
+  }
+  .legends {
+    padding-left: 15px;
+    margin: 0px;
+    list-style: none;
+    position: absolute;
+    bottom: 15px;
+    font-family: sans-serif;
+  }
+  $size: 20px;
+  li {
+    text-transform: capitalize;
+    font-size: 9px;
+    svg {
+      width: $size;
+      display: inline-block;
+      // background: pink;
+      vertical-align: middle;
+      margin-right: 5px;
+      circle {
+        fill: black;
+      }
+    }
+  }
+  li span {
+      line-height: $size;
+      vertical-align: middle;
+    display: none;
+  }
+  li:nth-child(1) span, li:last-child span{
+    display: inline-block;
   }
 }
