@@ -2,7 +2,7 @@
   <div class="right-pane">
     <ul class="legends">
       <li ng-repeat="l in legends">
-        <svg style="height:{{r($index)*2 + 6 }}px"><circle r="{{r($index)}}" cx="10" cy="{{r($index)+3}}"></svg></circle><span>{{l}}</span>
+        <svg style="height:{{r($index)*2 + 6 }}px"><circle ng-cloak r="{{r($index)}}" cx="10" cy="{{(r($index)+3)}}"></svg></circle><span>{{l}}</span>
       </li>
     </ul>
     <div class="right-box">

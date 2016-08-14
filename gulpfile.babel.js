@@ -60,6 +60,11 @@ gulp.task('copy:view', () => {
     .pipe(gulp.dest('dist/views'));
 });
 
+gulp.task('copy:data', () => {
+  return gulp.src('app/data/*.json')
+    .pipe(gulp.dest('dist/data'));
+});
+
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
@@ -162,7 +167,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint','html', 'images', 'fonts', 'extras', 'copy:view'], () => {
+gulp.task('build', ['lint','html', 'images', 'fonts', 'extras', 'copy:view', 'copy:data'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

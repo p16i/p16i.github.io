@@ -52,7 +52,7 @@ fs.readFile("skills-net.txt", "utf8", function(err, data){
         links : rels
     };
 
-    fs.writeFile("./app/scripts/skills-net.js", "var skillsNet = " + JSON.stringify(data), function(err){
+    fs.writeFile("./app/data/skills-net.json", JSON.stringify(data), function(err){
         if(err) {
             return console.log(err);
         }
