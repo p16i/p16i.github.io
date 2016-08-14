@@ -25,11 +25,9 @@ myApp.controller('aboutController', function( $scope, $window, d3Service ) {
     .domain([0, 4]) // Level of competence
     .range([3,maxR]);
 
-//$scope.$apply(function(){
     $scope.r = function(i){
       return scLinear(legends.length - i);
     };
-//});
 
 
     var w = document.getElementById("skills-net").offsetWidth;
@@ -66,28 +64,18 @@ myApp.controller('aboutController', function( $scope, $window, d3Service ) {
 
 
     /* Set up data */
-    for(var i = 0; i < 30; i++) {
-      var node = {
-        label : "node " + i
-      };
-      nodes.push(node);
-      labelAnchors.push({
-        node : node
-      });
-      labelAnchors.push({
-        node : node
-      });
-    };
+    nodes = skillsNet.nodes;
+    links = skillsNet.links;
+    _.each( nodes, function(node){
+        labelAnchors.push({
+            node : node
+        });
+        labelAnchors.push({
+            node : node
+        });
+    });
 
     for(var i = 0; i < nodes.length; i++) {
-      for(var j = 0; j < i; j++) {
-        if(Math.random() > .95)
-        links.push({
-          source : i,
-          target : j,
-          weight : Math.random()
-        });
-      }
       labelAnchorLinks.push({
         source : i * 2,
         target : i * 2 + 1,
@@ -118,8 +106,8 @@ myApp.controller('aboutController', function( $scope, $window, d3Service ) {
     .attr("class", "link");
 
     var node = vis.selectAll("g.node").data(force.nodes()).enter().append("svg:g").attr("class", "node");
-    node.append("svg:circle").attr("r", function(){
-      return Math.ceil( Math.random()*5+5 );
+    node.append("svg:circle").attr("r", function(d){
+      return scLinear(d.competency);
     });
     node.call(force.drag);
 
@@ -185,8 +173,5 @@ myApp.controller('aboutController', function( $scope, $window, d3Service ) {
       anchorLink.call(updateLink);
 
     });
-
-    // d3 is the raw d3 object
-    console.log("XXX");
   });
 });

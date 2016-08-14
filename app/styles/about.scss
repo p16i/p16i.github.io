@@ -88,6 +88,7 @@ $yellow: #F5DB0D;
       }
     }
   }
+  $size: 20px;
   .legends {
     padding-left: 15px;
     margin: 0px;
@@ -95,28 +96,27 @@ $yellow: #F5DB0D;
     position: absolute;
     bottom: 15px;
     font-family: sans-serif;
-  }
-  $size: 20px;
-  li {
-    text-transform: capitalize;
-    font-size: 9px;
-    svg {
-      width: $size;
-      display: inline-block;
-      // background: pink;
-      vertical-align: middle;
-      margin-right: 5px;
-      circle {
-        fill: black;
+    li {
+      text-transform: capitalize;
+      font-size: 9px;
+      svg {
+        width: $size;
+        display: inline-block;
+        // background: pink;
+        vertical-align: middle;
+        margin-right: 5px;
+        circle {
+          fill: black;
+        }
       }
     }
-  }
-  li span {
+    li span {
       line-height: $size;
       vertical-align: middle;
-    display: none;
-  }
-  li:nth-child(1) span, li:last-child span{
-    display: inline-block;
+      display: none;
+    }
+    li:nth-child(1) span, li:last-child span{
+      display: inline-block;
+    }
   }
 }

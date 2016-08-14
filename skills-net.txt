@@ -1,0 +1,31 @@
+1 Flink : Scala
+1 Spark : Scala, Python
+4 NodeJS : AWS, Docker
+2 Go : Vim
+2 Neural Network : Python, Machine Learning
+2 Redux : ReactJS, Javascript
+2 Scala : Flink, Spark, Web Development
+3 AWS : Docker 
+3 D3 : Data Visualization
+3 Design : 
+3 Docker : Unix, OSX
+3 MongoDB 
+3 MySQL
+3 Photography : Design 
+3 Postgres
+3 ReactJS : Web Development, NodeJS
+3 Redis : Web Development
+3 Unix : Git, Vim
+4 AngularJS : Javascript
+4 Machine Learning : Python
+4 Git : TDD
+4 Javascript : D3, AngularJS, ReactJS, NodeJS
+4 Jenkins : TDD, Perl, Javascript
+4 OSX
+4 Perl : TDD, Web Development
+4 Python : Web Development
+4 Scrum Master
+4 TDD
+4 Vim : NodeJS, Go, Perl
+4 Web Development
+3 Data Visualization : D3, Design
