@@ -132,4 +132,14 @@ $yellow: #F5DB0D;
       @include highlight($skill);
     }
 
+    .back-button {
+         position: absolute;
+         font-size: 12px;
+         left: 20px;
+         top: 20px;
+         z-index: 2000;
+         padding: 5px 15px;
+         border: 1px solid black;
+    }
+
 }
