@@ -65,6 +65,11 @@ gulp.task('copy:data', () => {
     .pipe(gulp.dest('dist/data'));
 });
 
+gulp.task('copy:files', () => {
+  return gulp.src(['app/CNAME'])
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
@@ -167,7 +172,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint','html', 'images', 'fonts', 'extras', 'copy:view', 'copy:data'], () => {
+gulp.task('build', ['lint','html', 'images', 'fonts', 'extras', 'copy:view', 'copy:data', 'copy:files'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
