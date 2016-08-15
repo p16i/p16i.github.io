@@ -1,15 +1,18 @@
 <div id="about-me-page">
   <div class="right-pane">
     <ul class="legends">
-      <li ng-repeat="l in legends">
-        <svg style="height:{{r($index)*2 + 6 }}px"><circle ng-cloak r="{{r($index)}}" cx="10" cy="{{(r($index)+3)}}"></svg></circle><span>{{l}}</span>
+      <li ng-repeat="l in legends" ng-mouseover="setHighlight(l)">
+        <svg style="height:{{r($index)*2 + 6 }}px">
+            <circle ng-cloak r="{{r($index)}}" cx="10" cy="{{(r($index)+3)}}"/>
+        </svg>
+        <span ng-show="showLegends(l)" ng-class="{highlight: l == highlight }">{{l}}</span>
       </li>
     </ul>
     <div class="right-box">
       <!-- <h2>Skills Net</h2> -->
-      <h2>S K I L L - N E T </h2>
+      <h2>S K I L L - N E T</h2>
     </div>
-    <div id="skills-net">
+    <div id="skills-net" class="highlight-{{highlight}}">
         <svg></svg>
     </div>
   </div>

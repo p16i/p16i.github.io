@@ -89,7 +89,7 @@ $yellow: #F5DB0D;
       }
     }
   }
-  $size: 20px;
+  $size: 25px;
   .legends {
     padding-left: 15px;
     margin: 0px;
@@ -97,6 +97,7 @@ $yellow: #F5DB0D;
     position: absolute;
     bottom: 15px;
     font-family: sans-serif;
+    z-index: 1000;
     li {
       text-transform: capitalize;
       font-size: 9px;
@@ -110,14 +111,25 @@ $yellow: #F5DB0D;
           fill: black;
         }
       }
+      span.highlight {
+           font-weight: bold;
+      }
     }
     li span {
       line-height: $size;
       vertical-align: middle;
-      display: none;
-    }
-    li:nth-child(1) span, li:last-child span{
-      display: inline-block;
     }
   }
+  @mixin highlight($class){
+      .highlight-#{$class} .node-#{$class} {
+        stroke: white;
+        stroke-width: 3px;
+      }
+  }
+
+    $skills: beginner intermediate advanced expert;
+    @each $skill in $skills {
+      @include highlight($skill);
+    }
+
 }

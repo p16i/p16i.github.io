@@ -7,9 +7,19 @@ myApp.controller('aboutController', function( $scope, $window, d3Service, $q, $h
         'intermediate',
         'advanced',
         'expert'
-    ].reverse();
+    ];
 
-    $scope.legends = legends;
+    $scope.legends = _.clone(legends).reverse();
+
+    $scope.setHighlight = function(l){
+        $scope.highlight = l;
+    };
+
+    $scope.showLegends = function(l){
+        if( _.includes( ["beginner","expert"], l ) || l == $scope.highlight ) {
+            return true;
+        }
+    };
 
     $scope.r = function(){ return 0; };
 
@@ -89,7 +99,9 @@ myApp.controller('aboutController', function( $scope, $window, d3Service, $q, $h
             .append('svg:line')
             .attr('class', 'link');
 
-        var node = vis.selectAll('g.node').data(force.nodes()).enter().append('svg:g').attr('class', 'node');
+        var node = vis.selectAll('g.node').data(force.nodes()).enter().append('svg:g').attr('class', function(d){
+            return "node " + "node-"+legends[d.competency-1];
+        });
         node.append('svg:circle').attr('r', function(d){
             return scLinear(d.competency);
         });
