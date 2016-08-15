@@ -16,7 +16,7 @@ myApp.controller('aboutController', function( $scope, $window, d3Service, $q, $h
     };
 
     $scope.showLegends = function(l){
-        if( _.includes( ["beginner","expert"], l ) || l == $scope.highlight ) {
+        if( _.includes( ['beginner', 'expert'], l ) || l === $scope.highlight ) {
             return true;
         }
     };
@@ -100,7 +100,7 @@ myApp.controller('aboutController', function( $scope, $window, d3Service, $q, $h
             .attr('class', 'link');
 
         var node = vis.selectAll('g.node').data(force.nodes()).enter().append('svg:g').attr('class', function(d){
-            return "node " + "node-"+legends[d.competency-1];
+            return 'node ' + 'node-' + legends[ d.competency - 1 ];
         });
         node.append('svg:circle').attr('r', function(d){
             return scLinear(d.competency);
