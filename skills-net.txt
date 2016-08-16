@@ -17,14 +17,14 @@
 3 Redis : Web Development
 3 Unix : Git, Vim
 4 AngularJS : Javascript
-4 Machine Learning : Python
+2 Machine Learning : Python
 4 Git : TDD
 4 Javascript : D3, AngularJS, ReactJS, NodeJS
 4 Jenkins : TDD, Perl, Javascript
 4 OSX
 4 Perl : TDD, Web Development
 4 Python : Web Development
-4 Scrum Master
+3 Scrum Master
 4 TDD
 4 Vim : NodeJS, Go, Perl
 4 Web Development
