@@ -6,7 +6,10 @@
 
 /* eslint camelcase: ["error", {properties: "never"}] */
 
-var myApp = angular.module('myApp', ['ngRoute', 'ngDisableScroll', 'd3']);
+var myApp = angular.module('myApp', [
+  'ngRoute', 'ngDisableScroll', 'd3',
+  'angulartics', 'angulartics.google.analytics'
+]);
 
 myApp.config(['$locationProvider', '$routeProvider',
              function config($locationProvider, $routeProvider) {
