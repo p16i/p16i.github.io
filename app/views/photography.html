@@ -5,8 +5,8 @@
         </div>
 
         <ul>
-            <li ng-repeat="s in photoSets track by $index" ng-click="loadData(s.id)">
-                {{s.name}} <span ng-if="selectedSet == s.id"> - </span>
+            <li ng-repeat="s in photoSets track by $index" ng-click="loadData($index)">
+                {{s.name}} <span ng-if="selectedSet == $index"> - </span>
             </li>
         </ul>
 

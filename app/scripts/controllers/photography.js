@@ -2,35 +2,18 @@
 /* global myApp */
 /* global angular */
 
-myApp.controller('photographyController', function($scope, $window, $flickr) {
+myApp.controller('photographyController', function($scope, $window, $http) {
 
-    $scope.photoSets = [
-        {
-            name: 'Lifestyle',
-            id: '72157671543489895'
-        },
-        {
-            name: 'Abstract',
-            id: '72157671453437906'
-        },
-        {
-            name: 'Places',
-            id: '72157670749338322'
-        },
-        {
-            name: 'Music & Festival',
-            id: '72157670784624421'
-        }
-    ];
+    $http.get('data/gallery.json').then(function(res){
+        $scope.photoSets = res.data;
+        console.log($scope.photoSets);
+        $scope.loadData(0);
+    });
 
     $scope.loadData = function(setID){
-        $flickr.getPhotosFromSet( setID, function(photos){
-            $scope.data = photos;
-            $scope.selectedSet = setID;
-        });
+        $scope.data = $scope.photoSets[setID].photos;
+        $scope.selectedSet = setID;
     };
-
-    $scope.loadData($scope.photoSets[0].id);
 
     $scope.openningModal = false;
 
