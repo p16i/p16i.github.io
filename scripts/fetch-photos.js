@@ -4,6 +4,8 @@ var querystring = require('querystring');
 var _ = require('lodash');
 var fs = require('fs');
 
+require('dotenv').config()
+
 var API_ENDPOINT = 'https://api.flickr.com/services/rest/';
 var defaultParams = {
     method: 'flickr.photosets.getPhotos',
