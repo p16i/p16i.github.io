@@ -1,8 +1,6 @@
 'use strict';
 
 /* global angular */
-/* global _ */
-/* global querystring */
 
 /* eslint camelcase: ["error", {properties: "never"}] */
 
