@@ -57,17 +57,16 @@ myApp.controller('photographyController', function($scope, $window, $http) {
         }
         if( e.keyCode === 27 ){
             $scope.$apply( $scope.close );
-        }else if( e.keyCode === 74 ){
+        }else if( e.keyCode === 37 ){
             $scope.$apply( $scope.prev );
-        }else if( e.keyCode === 75 ){
+        }else if( e.keyCode === 39 ){
             $scope.$apply( $scope.next );
         }
     });
 
     $scope.updateZoom = function(){
         $scope.loadingZoom = true;
-        $scope.zoomURL = $scope.data[$scope.zoomIndex].url_o;
-        $scope.zoomTitle = $scope.data[$scope.zoomIndex].title;
+        $scope.zoomObject = $scope.data[$scope.zoomIndex];
     };
 
     $scope.finishLoading = function(){

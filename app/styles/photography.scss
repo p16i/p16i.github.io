@@ -141,7 +141,7 @@
             margin-top: 5px;
             margin-bottom: 5px;
             max-width: 1000px;
-            max-height: 700px;
+            max-height: 600px;
         }
         .navigation {
              font-size: 0.8em;
@@ -155,6 +155,12 @@
         div {
              text-transform: uppercase;
             font-family: sans-serif;
+            font-weight: bold;
+        }
+        span {
+             font-size: 11px;
+             text-transform: none;
+             font-weight: normal;
         }
         .hiddenZoom {
             display: none;

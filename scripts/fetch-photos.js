@@ -37,30 +37,50 @@ var albums = [
 ];
 
 Promise.map( albums, function(album){
-        var params = _.merge(
-            defaultParams,
-            {
-                api_key: process.env.FLICKR_API_KEY,
-                user_id: process.env.FLICKR_USER_ID,
-                photoset_id: album.id
-            }
-        );
+    var params = _.merge(
+        defaultParams,
+        {
+            api_key: process.env.FLICKR_API_KEY,
+            user_id: process.env.FLICKR_USER_ID,
+            photoset_id: album.id
+        }
+    );
 
-        var url = API_ENDPOINT + '?' + querystring.stringify(params);
-        return request(url).then(function(response) {
-            var data = JSON.parse(response.body);
+    var url = API_ENDPOINT + '?' + querystring.stringify(params);
+    return request(url).then(function(response) {
+        var data = JSON.parse(response.body);
+        return Promise.map( data.photoset.photo, function(photo){
+            var photoParams = _.merge(
+                defaultParams,
+                {
+                    method: 'flickr.photos.getInfo',
+                    api_key: process.env.FLICKR_API_KEY,
+                    photo_id: photo.id,
+                    secret: photo.secret
+                }
+            );
+            var photoUrl = API_ENDPOINT + '?' + querystring.stringify(photoParams);
+            return request(photoUrl).then(function(response){
+                var data = JSON.parse(response.body);
+                photo['description'] = data.photo.description._content;
+                delete photo['secret'];
+
+                return photo
+            });
+        }).then(function(photos){
             return  {
                 name: album.name,
-                photos: data.photoset.photo
+                photos: photos
             };
         });
-    })
-    .then(function(data){
-        var prettyData = JSON.stringify(data, null, 4);
-        fs.writeFile("./app/data/gallery.json", prettyData, function(err){
-            if(err) {
-                return console.log(err);
-            }
-            console.log("DONE!");
-        });
     });
+})
+.then(function(data){
+    var prettyData = JSON.stringify(data, null, 4);
+    fs.writeFile("./app/data/gallery.json", prettyData, function(err){
+        if(err) {
+            return console.log(err);
+        }
+        console.log("DONE!");
+    });
+});
