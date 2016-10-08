@@ -128,11 +128,25 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
 
+    .loading {
+        width: 20px;
+        height: 20px;
+    }
+
     &.openningModal {
         display: block;
     }
+    .overlay {
+        z-index: 0;
+        background: black;
+        opacity: 0.9;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
     .content {
-        background: white;
+        position: relative;
+        color: white;
         padding-top: 50px;
         width: 100%;
         height: 100%;

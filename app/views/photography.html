@@ -22,6 +22,7 @@
     </div>
 </div>
 <div class="modal" ng-class="{ openningModal: openningModal }">
+    <div class="overlay"></div>
     <div class="content" ng-click="close()">
         <div class="navigation">
             <span ng-class="{ disable: zoomIndex == 0  }" ng-click="prev($event)">Prev(←)</span> -
@@ -33,7 +34,7 @@
             <div>{{ zoomObject.title }}</div>
             <span>{{ zoomObject.description }}</span>
         </div>
-        <img ng-if="loadingZoom" src="http://www.bedbathandbeyond.com/_assets/global/images/image-preloader.gif"/>
+        <img class="loading" ng-if="loadingZoom" src="images/loading.svg"/>
     </div>
 </div>
 
