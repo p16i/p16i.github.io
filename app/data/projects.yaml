@@ -1,0 +1,26 @@
+---
+-
+    title: Black Box Optimization using RNNs
+    date: 2017
+    desc: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+    url: https://github.com/heytitle/blackbox-optimization-using-rnns
+    tags:
+        - deeplearning
+        - bayesianoptimization
+        - tensorflow
+-
+    title: Spotify Looper
+    date: 2017
+    desc: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+    url: https://gist.github.com/heytitle/a3541d61c9b597eac74ff515f0e37f9a
+    tags:
+        - applescript
+        - sh
+-
+    title: ABC Random Project
+    date: 2017
+    desc: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+    url: http://www.soccersuck.com
+    tags:
+        - applescript
+        - hack

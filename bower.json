@@ -9,7 +9,8 @@
     "angular-route": "^1.5.7",
     "querystring": "^3.46.1",
     "lodash": "^4.14.0",
-    "angulartics-google-analytics": "^0.2.1"
+    "angulartics-google-analytics": "^0.2.1",
+    "yaml-js": "^0.2.0"
   },
   "overrides": {
     "bootstrap-sass": {

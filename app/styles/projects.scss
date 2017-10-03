@@ -1,0 +1,119 @@
+$normal-font: sans-serif;
+
+#project-page {
+    text-align: center;
+    font-family: $normal-font;
+
+    h1 {
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-family: Times;
+        padding: 2em 2em 1em 2em;
+    }
+
+    ul.available-tags {
+        // background: yellow;
+
+        width: 40%;
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+        li.tag {
+            cursor: pointer;
+            display: inline-block;
+            list-style: none;
+            border : black 0.1em solid;
+            padding: 0.2em 0.6em;
+            margin: 0.2em;
+            text-transform: lowercase;
+
+            &.selected {
+                background: black;
+                color: white;
+            }
+        }
+    }
+
+    div.projects {
+        margin: 1em auto;
+        padding: 0px;
+
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        max-width: 980px;
+        // border: black dotted 0.5px;
+
+       -webkit-flex-flow: row wrap;
+       flex-flow: row wrap;
+
+
+        div.project {
+            margin: 20px;
+            // background: red;
+            width: 450px;
+            height:200px;
+            text-align: left;
+            border-top: black solid 3px;
+            border-bottom: black solid 1px;
+            position: relative;
+
+            .project-content {
+                 position: relative;
+                 padding: 0em;
+
+                 h3 {
+                    margin: 1em 0em 0.5 0;
+                 }
+
+                 .description {
+                    max-height: 100px;
+
+                    .more-detail {
+                        cursor: pointer;
+                        font-style: italic;
+                        font-weight: lighter;
+                    }
+                 }
+
+            }
+
+            .tags, .date {
+                position: absolute;
+                bottom: 0.5em;
+                font-style: italic;
+                font-weight: lighter;
+                font-size: 0.8em;
+
+                .tag {
+                     margin: 0em 0.1em;
+                }
+
+                .tag:not(:last-child):after {
+                    content: ',';
+                }
+            }
+            .tags {
+                right: 0em;
+            }
+
+            .date {
+                left: 0em;
+            }
+
+        }
+    }
+
+
+    .toggle-selection {
+        margin-bottom: 4em;
+        cursor: pointer;
+    }
+
+    .contact {
+        position: absolute;
+        bottom: 1em;
+        right: 1em;
+    }
+}

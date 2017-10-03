@@ -26,10 +26,15 @@ myApp.config(['$locationProvider', '$routeProvider',
                      controller: 'aboutController',
                      templateUrl: 'views/about.html'
                  }).
+                 when('/projects', {
+                     controller: 'projectsController',
+                     templateUrl: 'views/projects.html'
+                 }).
                  otherwise('/');
              }
 ]);
 
+console.log('------------');
 myApp.controller('mainController', function($scope) {
     $scope.isMain = true;
 });

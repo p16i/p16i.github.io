@@ -1,0 +1,30 @@
+<div id="project-page">
+    <div class="contact">
+        <span><a href="mailto:pat.chormai@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></span>
+        <span><a href="https://www.spannkedin.com/in/pchormai"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></span>
+        <span><a href="https://www.facebook.com/pattarawat.chormai"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></span>
+    </div>
+    <h1>Projects</h1>
+
+    <ul class="available-tags">
+        <li class="tag" ng-class="{ selected: t.isSelected }" ng-repeat="t in availableTags track by $index" ng-click="selectTag($index)">{{t.name}}</li>
+    </ul>
+
+    <div class="toggle-selection" ng-click="clearSelection()">(clear selection)</div>
+
+    <div class="projects">
+        <div class="project" ng-repeat="p in filteredProjects">
+            <div class="project-content">
+                <h3>{{p.title}}</h3>
+                <div class="description">
+                    {{p.desc}}
+                    <a class="more-detail" ng-href="{{p.url}}" target="_blank"> - more detail</a>
+                </div>
+            </div>
+            <div class="date">{{p.date}}</div>
+            <div class="tags">
+                <span ng-repeat="t in p.tags" class="tag">{{t}}</span>
+            </div>
+        </div>
+    </div>
+</div>
