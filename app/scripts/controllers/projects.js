@@ -9,19 +9,19 @@ myApp.controller('projectsController', function($scope, $http) {
     $http.get('data/projects.yaml').then(function(res){
         $scope.projects = _.map(yaml.load(res.data), function(p){
             if(p.desc.length > 200) {
-                p.desc = p.desc.slice(0,295) + '[..]';
+                p.desc = p.desc.slice(0, 295) + '[..]';
             }
-            return p
+            return p;
         });
 
         $scope.filteredProjects = $scope.projects;
 
         /* build availableTags */
-        var tags = []
+        var tags = [];
         _.forEach($scope.projects, function(p){
             console.log(p);
             tags = tags.concat(p.tags);
-        })
+        });
 
         tags = _.uniq(tags);
         tags.sort();
@@ -30,7 +30,7 @@ myApp.controller('projectsController', function($scope, $http) {
             return {
                 name: t,
                 isSelected: false
-            }
+            };
         });
     });
 
@@ -47,7 +47,7 @@ myApp.controller('projectsController', function($scope, $http) {
         if(selectedTags.length > 0){
             $scope.filteredProjects = _.filter($scope.projects, function(p){
                 return _.intersection(p.tags, selectedTags).length > 0;
-            })
+            });
         } else {
             $scope.filteredProjects = $scope.projects;
         }
@@ -58,5 +58,5 @@ myApp.controller('projectsController', function($scope, $http) {
             t.isSelected = false;
         });
         $scope.filteredProjects = $scope.projects;
-    }
+    };
 });
