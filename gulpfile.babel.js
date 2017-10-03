@@ -61,7 +61,7 @@ gulp.task('copy:view', () => {
 });
 
 gulp.task('copy:data', () => {
-  return gulp.src('app/data/*.json')
+  return gulp.src(['app/data/*.json', 'app/data/*.yaml'])
     .pipe(gulp.dest('dist/data'));
 });
 
