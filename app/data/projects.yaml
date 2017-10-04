@@ -6,6 +6,7 @@
     url: https://github.com/heytitle/blackbox-optimization-using-rnns
     tags:
         - guassianprocess
+        - lstm
         - deeplearning
         - tensorflow
 -
@@ -19,10 +20,41 @@
         - spotify
 -
     title: Code Generation for Apache Flink's NormalizedKeySorter
-    date: 2017
+    date: 2016-2017
     desc: The current implementation of NormalizedKeySorter is generic for all data types which is less efficient comparing to type-specific ones. The goal of this project aims to create custom implementation for each underlying data, thus overall performance improved.
     url: https://github.com/apache/flink/pull/3511
     tags:
         - java
         - apache-flink
         - opensource
+
+-
+    title: YouPin
+    date: 2016-now
+    desc: YouPin is an opensource platform for community reporting. The goal is to make highly efficient feedback loop between community and local government possible. It provides unify reporting channel for every kinds of non-emergency problem. 
+    url: https://github.com/youpin-city/youpin-bot/pulls?q=is%3Apr+is%3Aclosed+author%3Aheytitle
+    tags:
+        - opendata
+        - nodejs
+        - chatbot
+        - contributor
+
+-
+    title: Mining IRS990 Data
+    date: 2017
+    desc: This project aims to compute statistics for IRS990 dataset, which are financial report from non-profit organizations. The dataset is stored in individual XML file for each organization that makes the mining non-trivial. I uses AWS's Lambda and MapReduce paradigm to tackle this problem.
+    url: https://github.com/heytitle/mining-irs990-data
+    tags:
+        - aws-lambda
+        - mapreduce
+
+-
+
+    title: Who find the Netherlands a new home(hope)?
+    date: 2016
+    desc: A vizualization of asylum requests to the Netherlands. My partner and I incorporated vizualization priciples into the design that balances between aesthetic and usability. Most of the important components here are implemented from scratch using d3.
+    url: http://pat.chormai.org/dutch-asylum-seeker/
+    tags:
+        - vizualization
+        - d3
+        - nodejs
