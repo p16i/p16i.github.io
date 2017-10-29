@@ -15,10 +15,11 @@
     <div class="projects">
         <div class="project" ng-repeat="p in filteredProjects">
             <div class="project-content">
-                <h3>{{p.title}}</h3>
+                <h3><a ng-href="{{p.url}}" target="_blank">{{p.title}}</a></h3>
                 <div class="description">
                     {{p.desc}}
-                    <a class="more-detail" ng-href="{{p.url}}" target="_blank"> - more detail</a>
+                    <a class="more-detail" ng-href="{{p.url}}" target="_blank"><i class="fa fa-link" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
             <div class="date">{{p.date}}</div>
