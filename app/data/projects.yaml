@@ -62,9 +62,9 @@
 
     title: Who find the Netherlands a new home(hope)?
     date: 2016
-    desc: A vizualization of asylum requests to the Netherlands. My partner and I incorporated vizualization priciples into the design that balances between aesthetic and usability. Most of the important components here are implemented from scratch using d3.
+    desc: A visualization of asylum requests to the Netherlands. My partner and I incorporated visualization principles into the design that balances between aesthetic and usability. Most of the important components here are implemented from scratch using d3.
     url: http://pat.chormai.org/dutch-asylum-seeker/
     tags:
-        - vizualization
+        - visualization
         - d3
         - nodejs
