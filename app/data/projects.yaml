@@ -1,62 +1,81 @@
 ---
 -
+    title: Designing RNNs for Explainability (MSc Thesis)
+    date: 2018
+    desc: In this thesis, we apply the explanation techniques mentioned above to RNNs. We extensively study the impact of different RNN architectures and configurations on the quality of explanations. Our experiments are based on artificial classification problems constructed from MNIST and FashionMNIST datasets. We use cosine similarity to quantify the evaluation results. Our results indicate that the quality of explanations from different RNNs, achieving comparable accuracies, can be notably different. 
+    url: https://github.com/heytitle/thesis-designing-recurrent-neural-networks-for-explainability
+    image: https://i.imgur.com/MCoGmL9.png
+    tags:
+        - machine-learning
+        - study-project
+
+-
+
+    title: Monte Carlo Particle Filter for Localization
+    date: 2018
+    desc: Particle Filter Algorithm is a nonparametric implementation of the Bayes Filter to approximate state, for example of a robot moving in a maze.
+    url: https://github.com/heytitle/particle-filter
+    image: https://i.imgur.com/KOtxyhK.gif
+    tags:
+        - machine-learning
+        - monte-carlo-methods
+        - study-project
+-
     title: LaTeX ⚡ Sketch Plugin
     date: 2017
     desc: The plugin brings LaTeX functionalities to Sketch. It allows us to create nice mathematical formulas directly inside Sketch. Its implementation is based on MathJax's API.
     url: https://github.com/heytitle/latex-sketch-plugin
+    image: https://camo.githubusercontent.com/421d45c810f894fbeceb46041488101849f09b13/68747470733a2f2f692e696d6775722e636f6d2f795044326e376d2e676966
     tags:
         - latex
-        - sketch
-        - mathjax
+        - fun-project
 
 -
     title: Black Box Optimization using RNNs
     date: 2017
     desc: We extend on the work of Chen et al., who introduce a new, learning-based, approach to global Black-Box optimization. They train a LSTM model, on functions sampled from a Gaussian process, to output an optimal sequence of sample points, i.e. a sequence of points that minimize those training functions. We verify the claims made by the authors, confirming that such a trained model is able to generalize to a wide variety of synthetic Black-Box functions, as well as to the real world problems of airfoil optimization and hyperparameter tuning of a SVM classifier. We show that the method performs comparably to state-of-the-art Black-Box optimization algorithms on these benchmarks, while outperforming them by a wide margin w.r.t. computation time. We thoroughly investigate the effects of different loss functions and training distributions on the methods performance and examine ways to improve it in the presence of prior knowledge.
     url: https://github.com/heytitle/blackbox-optimization-using-rnns
+    image: https://i.imgur.com/1fy1lg0.png
     tags:
-        - gaussianprocess
-        - lstm
-        - deeplearning
-        - tensorflow
+        - machine-learning
+        - study-project
 -
     title: MacOS Spotify Song Looper
     date: 2017
     desc: This script provides an ability to loop a part of a song played on MacOS Spotify client. This is handy for practicing a riff. It leverages Spotify's AppleScript API.
     url: https://github.com/heytitle/MacOS-Spotify-Song-Looper
+    image: https://i.imgur.com/keiHAtc.png
     tags:
         - applescript
-        - bash
-        - spotify
+        - fun-project
 -
     title: Code Generation for Apache Flink's NormalizedKeySorter
     date: 2016-2017
     desc: The current implementation of NormalizedKeySorter is generic for all data types which is less efficient comparing to type-specific ones. The goal of this project aims to create custom implementation for each underlying data, thus overall performance improved.
     url: https://github.com/apache/flink/pull/3511
+    image: https://i.imgur.com/tg3DCpv.png
     tags:
-        - java
         - apache-flink
-        - contributor
+        - study-project
 
 -
     title: YouPin
-    date: 2016-present
+    date: 2016-2017
     desc: YouPin is an opensource platform for community reporting. The goal is to make highly efficient feedback loop between community and local government possible. It provides unify reporting channel for every kinds of non-emergency problem. 
     url: https://github.com/youpin-city/youpin-bot/pulls?q=is%3Apr+is%3Aclosed+author%3Aheytitle
     tags:
         - opendata
-        - nodejs
-        - chatbot
-        - contributor
+        - opensource-contribution
 
 -
-    title: Mining IRS990 Data
+    title: Mining IRS990 Data with AWS Lambda
     date: 2017
     desc: This project aims to compute statistics for IRS990 dataset, which are financial report from non-profit organizations. The dataset is stored in individual XML file for each organization that makes the mining non-trivial. I uses AWS's Lambda and MapReduce paradigm to tackle this problem.
     url: https://github.com/heytitle/mining-irs990-data
+    image: https://camo.githubusercontent.com/67188084243f15bb42ae5c58aa184bfaff8e2234/687474703a2f2f692e696d6775722e636f6d2f536d36627a4f642e706e67
     tags:
-        - aws-lambda
-        - mapreduce
+        - aws
+        - fun-project
 
 -
 
@@ -64,7 +83,9 @@
     date: 2016
     desc: A visualization of asylum requests to the Netherlands. My partner and I incorporated visualization principles into the design that balances between aesthetic and usability. Most of the important components here are implemented from scratch using d3.
     url: http://pat.chormai.org/dutch-asylum-seeker/
+    image: https://i.imgur.com/IOKDSxP.png
     tags:
         - visualization
-        - d3
-        - nodejs
+        - study-project
+
+

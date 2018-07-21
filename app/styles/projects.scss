@@ -1,20 +1,49 @@
 $normal-font: sans-serif;
+$main-color: #2D2D2D;
+$opt-main-color: #FFF;
 
 #project-page {
     text-align: center;
     font-family: $normal-font;
 
+    .side-bar {
+        position: fixed;
+        width: 25%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: $main-color;
+        color: $opt-main-color;
+    }
+
+    .contact {
+        position: absolute;
+        bottom: 0.5em;
+        left: auto;
+        margin-left: auto;
+        // background: yellow;
+        width: 100%;
+        i {
+            color: $opt-main-color;
+        }
+    }
+
+    .main-content {
+        margin-left: 25%;
+        width: 75%;
+    }
+
     h1 {
+        text-align: left;
         letter-spacing: 0.3em;
         text-transform: uppercase;
-        font-family: Times;
+        // font-family: Times;
         padding: 2em 2em 1em 2em;
     }
 
     ul.available-tags {
-        // background: yellow;
 
-        width: 40%;
+        width: 100%;
         display: inline-block;
         text-align: center;
         padding: 0;
@@ -22,14 +51,14 @@ $normal-font: sans-serif;
             cursor: pointer;
             display: inline-block;
             list-style: none;
-            border : black 0.1em solid;
+            border : $opt-main-color 0.1em solid;
             padding: 0.2em 0.6em;
             margin: 0.2em;
             text-transform: lowercase;
 
             &.selected {
-                background: black;
-                color: white;
+                background: $opt-main-color;
+                color: $main-color;
             }
         }
     }
@@ -50,25 +79,23 @@ $normal-font: sans-serif;
 
 
         div.project {
-            margin: 20px;
-            // background: red;
-            width: 450px;
-            height:200px;
+            margin: 10px;
+            width: 100%;
             text-align: left;
-            border-top: black solid 3px;
-            border-bottom: black solid 1px;
+            // border-top: black solid 1px;
             position: relative;
 
             .project-content {
+                 margin-top: 2em;
                  position: relative;
                  padding: 0em;
 
                  h3 {
-                    margin: 1em 0em 0.5 0;
+                    margin: 1em 0em 0.5em 0;
                  }
 
                  .description {
-                    max-height: 100px;
+                     margin-top: 0.5em;
                     text-indent: 1em;
 
                     .more-detail {
@@ -79,15 +106,29 @@ $normal-font: sans-serif;
                     }
                  }
 
+                .image {
+                    left: auto;
+                    margin: 1em auto 0;
+                    position: relative;
+                    width: auto;
+                    max-width: 100%;
+                    max-height: 400px;
+                }
+            }
+
+            .subtitle {
+                position: relative;
             }
 
             .tags, .date {
-                position: absolute;
-                bottom: 0.5em;
-                font-style: italic;
-                font-weight: lighter;
                 font-size: 0.8em;
 
+            }
+            .tags {
+                float: right;
+                right: 0em;
+                font-weight: lighter;
+                font-style: italic;
                 .tag {
                      margin: 0em 0.1em;
                 }
@@ -96,11 +137,9 @@ $normal-font: sans-serif;
                     content: ',';
                 }
             }
-            .tags {
-                right: 0em;
-            }
 
             .date {
+                float: left;
                 left: 0em;
             }
 
@@ -113,9 +152,4 @@ $normal-font: sans-serif;
         cursor: pointer;
     }
 
-    .contact {
-        position: fixed;
-        bottom: 1em;
-        right: 1.5em;
-    }
 }

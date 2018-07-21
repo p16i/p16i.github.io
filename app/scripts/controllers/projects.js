@@ -29,9 +29,10 @@ myApp.controller('projectsController', function($scope, $http) {
         $scope.availableTags = _.map(tags, function(t){
             return {
                 name: t,
-                isSelected: false
+                isSelected: true
             };
         });
+
     });
 
     $scope.selectTag = function(index) {
