@@ -19,16 +19,20 @@ var DATAPATH = './data/gallery.json';
 
 var albums = [
     {
-        name: 'Lifestyle',
-        id: '72157671543489895'
-    },
-    {
         name: 'Abstract',
         id: '72157671453437906'
     },
     {
+        name: 'People',
+        id: '72157671543489895'
+    },
+    {
         name: 'Places',
         id: '72157670749338322'
+    },
+    {
+        name: 'Lectures',
+        id: '72157700778858094'
     },
     {
         name: 'Music & Festival',
