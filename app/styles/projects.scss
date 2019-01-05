@@ -77,24 +77,25 @@ $opt-main-color: #FFF;
 
 
         div.project {
-            margin: 10px;
+            margin: 5px 10px;
             width: 100%;
             text-align: left;
             // border-top: black solid 1px;
             position: relative;
+            border-bottom: 1px dashed #CCC;
 
             .project-content {
-                 margin-top: 2em;
+                 margin-top: 1em;
                  position: relative;
                  padding: 0em;
 
                  h3 {
-                    margin: 1em 0em 0.5em 0;
+                    margin: 0.5em 0em 1em 0;
                  }
 
                  .description {
-                     margin-top: 0.5em;
-                    text-indent: 1em;
+                    margin-top: 1em;
+                    text-indent: 2em;
 
                     .more-detail {
                         text-indent: 0px;
@@ -106,7 +107,7 @@ $opt-main-color: #FFF;
 
                 .image {
                     left: auto;
-                    margin: 1em auto 0;
+                    margin: 1em auto 1em;
                     position: relative;
                     width: auto;
                     max-width: 100%;
@@ -120,8 +121,23 @@ $opt-main-color: #FFF;
 
             .tags, .date {
                 font-size: 0.8em;
-
             }
+
+            .date span {
+                margin-right: 5px;
+                background: #CCC;
+                padding: 5px;
+                border-radius: 2px;
+            }
+
+            .date .clickable {
+                cursor: pointer
+            }
+
+            .date .clickable:hover {
+                background: #DDD;
+            }
+
             .tags {
                 float: right;
                 right: 0em;

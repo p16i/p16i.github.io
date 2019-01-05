@@ -20,26 +20,39 @@
                 <div class="project-content">
                     <a ng-href="{{p.url}}" target="_blank">
                         <h3>{{p.title}}</h3>
-
-                        <div class="subtitle">
-                            <div class="date">
-                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                                {{p.date}}
-                            </div>
-                            <div class="tags">
-                                <i class="fa fa-tags" aria-hidden="true"></i>
-                                <span ng-repeat="t in p.tags" class="tag">{{t}}</span>
-                            </div>
-                            <div class="clear-fix"></div>
-                        </div>
-
-                        <div class="description">
-                            {{p.desc}}
-                        </div>
-                        <div class="center">
-                            <img class="image" src="{{p.image}}"/>
-                        </div>
                     </a>
+                    <div class="subtitle">
+                        <div class="date">
+                            <span>
+                            <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                            {{p.date}}
+                            </span>
+                            <span class="clickable">
+                                <a ng-href="{{p.url}}" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                    Link
+                                </a>
+                            </span>
+                            <span class="clickable"  ng-show="p.code_url">
+                                <a ng-href="{{p.code_url}}" target="_blank">
+                                    <i class="fa fa-code" aria-hidden="true"></i>
+                                    Code
+                                </a>
+                            </span>
+                        </div>
+                        <div class="tags">
+                            <i class="fa fa-tags" aria-hidden="true"></i>
+                            <span ng-repeat="t in p.tags" class="tag">{{t}}</span>
+                        </div>
+                        <div class="clear-fix"></div>
+                    </div>
+
+                    <div class="description">
+                        {{p.desc}}
+                    </div>
+                    <div class="center">
+                        <img class="image" src="{{p.image}}"/>
+                    </div>
                 </div>
             </div>
         </div>
