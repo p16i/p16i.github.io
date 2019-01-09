@@ -123,7 +123,7 @@ $opt-main-color: #FFF;
                 font-size: 0.8em;
             }
 
-            .date span {
+            .date .button {
                 margin-right: 5px;
                 background: #CCC;
                 padding: 5px;
@@ -155,6 +155,11 @@ $opt-main-color: #FFF;
             .date {
                 float: left;
                 left: 0em;
+            }
+
+            .year {
+                position: absolute;
+                right: 0px;
             }
 
         }

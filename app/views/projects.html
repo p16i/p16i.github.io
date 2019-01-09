@@ -1,4 +1,5 @@
 <div id="project-page">
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
     <div class="side-bar">
         <h1>PAT's <br>Projects</h1>
 
@@ -19,21 +20,23 @@
             <div class="project" ng-repeat="p in filteredProjects">
                 <div class="project-content">
                     <a ng-href="{{p.url}}" target="_blank">
-                        <h3>{{p.title}}</h3>
-                    </a>
-                    <div class="subtitle">
-                        <div class="date">
-                            <span>
+                        <h3>{{p.title}}
+
+                            <span class="year">
                             <i class="fa fa-calendar-o" aria-hidden="true"></i>
                             {{p.date}}
                             </span>
-                            <span class="clickable">
+                        </h3>
+                    </a>
+                    <div class="subtitle">
+                        <div class="date">
+                            <span class="button clickable">
                                 <a ng-href="{{p.url}}" target="_blank">
                                     <i class="fa fa-link" aria-hidden="true"></i>
                                     Link
                                 </a>
                             </span>
-                            <span class="clickable"  ng-show="p.code_url">
+                            <span class="button clickable"  ng-show="p.code_url">
                                 <a ng-href="{{p.code_url}}" target="_blank">
                                     <i class="fa fa-code" aria-hidden="true"></i>
                                     Code

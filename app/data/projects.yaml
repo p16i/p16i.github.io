@@ -13,11 +13,10 @@
     image: https://i.imgur.com/9K99eHp.jpg
     tags:
         - machine-learning 
-        - fun-project
+        - hobby
 -
     title: Loopify
     date: 2018
-    # desc: This script provides an ability to loop a part of a song played on MacOS Spotify client. This is handy for practicing a riff. It leverages Spotify's AppleScript API.
     desc:
         >
         If you happen to use Spotify and play a music instrustument like me, you might sometimes want to
@@ -26,8 +25,7 @@
     code_url: https://github.com/heytitle/loopify
     image: https://camo.githubusercontent.com/92b879a8c994d5cf051fed6b61d2fd40d96513cd/68747470733a2f2f692e696d6775722e636f6d2f615355754252782e706e67
     tags:
-        - applescript
-        - fun-project
+        - hobby
 -
     title: Designing RNNs for Explainability (M.Sc. Thesis)
     date: 2018
@@ -42,10 +40,8 @@
     image: https://i.imgur.com/MCoGmL9.png
     tags:
         - machine-learning
-        - study-project
-
+        - study
 -
-
     title: Monte Carlo Particle Filter for Localization
     date: 2018
     desc: 
@@ -57,8 +53,7 @@
     image: https://raw.githubusercontent.com/heytitle/particle-filter/master/experiments/gifs/scene-2-2000-particles.mp4.gif
     tags:
         - machine-learning
-        - monte-carlo-methods
-        - study-project
+        - study
 -
     title: LaTeX ⚡ Sketch Plugin
     date: 2017
@@ -71,8 +66,7 @@
     code_url: https://github.com/heytitle/latex-sketch-plugin
     image: https://camo.githubusercontent.com/421d45c810f894fbeceb46041488101849f09b13/68747470733a2f2f692e696d6775722e636f6d2f795044326e376d2e676966
     tags:
-        - latex
-        - fun-project
+        - hobby
 
 -
     title: Black Box Optimization using RNNs
@@ -89,7 +83,7 @@
     image: https://i.imgur.com/VZRkTPb.png
     tags:
         - machine-learning
-        - study-project
+        - study
 -
     title: Code Generation for Apache Flink's NormalizedKeySorter
     date: 2016-2017
@@ -107,7 +101,6 @@
     url: https://cwiki.apache.org/confluence/display/FLINK/FLIP-18%3A+Code+Generation+for+improving+sorting+performance
     image: https://i.imgur.com/Tk3pU1d.png
     tags:
-        - code-generation
         - opensource-contribution
 
 # -
@@ -134,11 +127,9 @@
     url: https://github.com/heytitle/mining-irs990-data
     image: https://camo.githubusercontent.com/67188084243f15bb42ae5c58aa184bfaff8e2234/687474703a2f2f692e696d6775722e636f6d2f536d36627a4f642e706e67
     tags:
-        - aws
-        - fun-project
+        - hobby
 
 -
-
     title: Who find the Netherlands a new home(hope)?
     date: 2016
     desc: 
@@ -151,6 +142,6 @@
     image: https://i.imgur.com/IOKDSxP.png
     tags:
         - visualization
-        - study-project
+        - study
 
 
