@@ -1,6 +1,6 @@
 ---
 -
-    title:  Visually Similar Image Search (in progress)
+    title:  Visually Similar Image Search
     date: 2019
     desc: 
         > 
@@ -9,7 +9,7 @@
         over features produced by pretrained neural networks. Currently, we are testing with techniques such as
         autoencoders, Siamese networks, and TripetLoss.
     code_url: https://github.com/heytitle/visually-similar-image-search
-    url: http://pat.chormai.org/visually-similar-image-search-analysis-tool/
+    url: http://pat.chormai.org/visually-similar-image-search
     image: https://i.imgur.com/9K99eHp.jpg
     tags:
         - machine-learning 
