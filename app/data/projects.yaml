@@ -1,5 +1,44 @@
 ---
 -
+    title: Live Scoreboard Website for Thailand's General Election 2562 (2019)
+    date: 2019
+    desc: 
+        > 
+    code_url: https://github.com/codeforthailand/election-live
+    url: https://elect.thematter.co
+    image: https://github.com/codeforthailand/election-live/raw/master/docs/images/screenshot.png
+    tags:
+        - contributor
+        - hobby
+-
+    title: Thailand's Politics and Business
+    date: 2019
+    desc: 
+        >
+        The goal of this visualization is to reveal business activities of each politician.
+        From the visualisation, one can see the relationships between political parties and companies that support them.
+        Moreover, integrating with Thailand's government spending data allows us to see the connections between producement campaigns and those companies.
+    code_url: https://github.com/heytitle/politics-and-business
+    url: https://elect.in.th/politics-and-business
+    image: https://i.imgur.com/WeIQVbl.png
+    tags:
+        - opendata
+        - hobby
+-
+    title: Thailand's General Election 2562 (2019) Zone and Candidate Browsing Website
+    date: 2019
+    desc: 
+        > 
+        This website provides a quick and simple way, using postcode, for Thais to see who are candidates in their area.
+        As zone and candidate data is rarely changed, the website is a static website without the use of backend and database.
+    code_url: https://github.com/codeforthailand/dataset-election-62-candidates
+    url: https://elect.in.th/candidates/
+    image: https://i.imgur.com/6HtUGrI.png
+    tags:
+        - opendata
+        - hobby
+
+-
     title:  Visually Similar Image Search
     date: 2019
     desc: 
