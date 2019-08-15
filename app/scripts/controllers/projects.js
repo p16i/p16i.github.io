@@ -23,18 +23,17 @@ myApp.controller('projectsController', function($scope, $http) {
         tags = _.uniq(tags);
         tags.sort();
 
-
-        let tagToIx = {}
+        var tagToIx = {};
 
         $scope.availableTags = _.map(tags, function(t, i){
-            tagToIx[t] = i
+            tagToIx[t] = i;
             return {
                 name: t,
                 isSelected: false
             };
         });
 
-        $scope.selectTag(tagToIx['selected'])
+        $scope.selectTag(tagToIx.selected);
 
     });
 
