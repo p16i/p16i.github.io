@@ -34,7 +34,7 @@
         Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
         a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
         We plan to release our final models under PyThaiNLP's distribution.
-    code_url: something
+    code_url: not-avaiable-yet
     url: https://drive.google.com/file/d/16AUNZv1HXVmERgryfBf4JpCo1QrQyHHE/view?usp=sharing
     image: https://i.imgur.com/ooTH7va.png
     tags:
@@ -106,6 +106,7 @@
     image: https://i.imgur.com/9K99eHp.jpg
     tags:
         - machine-learning
+        - hobby
 -
     title: Loopify
     date: 2018
@@ -145,6 +146,7 @@
     image: https://raw.githubusercontent.com/heytitle/particle-filter/master/experiments/gifs/scene-2-2000-particles.mp4.gif
     tags:
         - machine-learning
+        - selected
 -
     title: LaTeX ⚡ Sketch Plugin
     date: 2017

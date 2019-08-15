@@ -8,9 +8,6 @@ myApp.controller('projectsController', function($scope, $http) {
 
     $http.get('data/projects.yaml').then(function(res){
         $scope.projects = _.map(yaml.load(res.data), function(p){
-            // if(p.desc.length > 200) {
-            //     p.desc = p.desc.slice(0, 295) + '[..]';
-            // }
             return p;
         });
 
@@ -26,12 +23,18 @@ myApp.controller('projectsController', function($scope, $http) {
         tags = _.uniq(tags);
         tags.sort();
 
-        $scope.availableTags = _.map(tags, function(t){
+
+        let tagToIx = {}
+
+        $scope.availableTags = _.map(tags, function(t, i){
+            tagToIx[t] = i
             return {
                 name: t,
                 isSelected: false
             };
         });
+
+        $scope.selectTag(tagToIx['selected'])
 
     });
 
