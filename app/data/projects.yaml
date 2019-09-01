@@ -34,8 +34,8 @@
         Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
         a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
         We plan to release our final models under PyThaiNLP's distribution.
-    code_url: not-avaiable-yet
-    url: https://drive.google.com/file/d/16AUNZv1HXVmERgryfBf4JpCo1QrQyHHE/view?usp=sharing
+    code_url: https://github.com/PyThaiNLP/attacut
+    url: https://pythainlp.github.io/attacut/
     image: https://i.imgur.com/ooTH7va.png
     tags:
         - NLP
