@@ -7,6 +7,21 @@ import IconRotation from "../images/icons/sg-rotation-prenzlauer-berg.png"
 import IconPusphaira from "../images/icons/pusphaira.png"
 import OutLink from "../components/outlink";
 
+import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
+
+const images = [
+    "https://farm9.staticflickr.com/8697/16360574173_ca64f9295f_m.jpg",
+    "https://farm9.staticflickr.com/8544/28466959421_24ea695cd9_m.jpg",
+    "https://farm9.staticflickr.com/8718/16879877618_411b928176_o.jpg",
+    "https://farm5.staticflickr.com/4600/38167324035_ec6a32d785_m.jpg",
+    "https://farm2.staticflickr.com/1848/44531598421_6c67af8708_o.jpg",
+    "https://farm2.staticflickr.com/1883/43622328565_0cfebce305_o.jpg",
+    "https://farm2.staticflickr.com/1891/43622330395_b4f3bf4ff4_o.jpg",
+    "https://farm2.staticflickr.com/1699/25144471672_539606bc1f_o.jpg",
+    "https://farm1.staticflickr.com/823/42258114941_cbf8ce299b_o.jpg",
+    "https://farm5.staticflickr.com/4463/37421692286_ec9af1ed7f_o.jpg",
+]
+
 const Header = ({children}) => {
     return <h3 css={{marginBottom: "20px"}}>
         {children}
@@ -50,6 +65,22 @@ const About = () => {
         I also enjoy <b>Photography</b>, mostly taking b/w photos. Theses are some of my photos.
         More can been seen on my Instragram: <OutLink href="https://www.instagram.com/heytitle/">@heytitle</OutLink>.
     </p>
+    <div>
+        {
+            images.map(src => {
+                return <img src={src} css={{
+                    float: "left",
+                    marginBottom: "0",
+                    height: "80px",
+                    [media(DESKTOP_MIN_WIDTH)]: {
+                        height: "150px",
+                    }
+                }}
+                />
+            })
+        }
+        <div css={{clear: "both"}}></div>
+    </div>
   </Layout>
 }
 
