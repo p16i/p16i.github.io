@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import SocialIcons from "../components/social-buttons";
 import Project from "../components/project";
 
+import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
 import { useStaticQuery, graphql } from "gatsby"
 
 const leftColumnCSS = {
@@ -43,12 +44,37 @@ const IndexPage = () => {
   return <Layout>
     <SEO title="Home" />
     <div>
-      <div css={{float: "left", display: "inline", ...leftColumnCSS}}>
-        <img style={{margin: 0}} src={MyImage}/>
-        <SocialIcons/>
+      <div css={{
+          width: "100%",
+          textAlign: "center",
+          [media(DESKTOP_MIN_WIDTH)]: {
+            float: "left", display: "inline", ...leftColumnCSS
+          }
+        }}>
+          <div css={{
+            margin: "auto",
+            width: "150px",
+            [media(DESKTOP_MIN_WIDTH)]: {
+              ...leftColumnCSS
+            }
+          }}>
+            <img style={{margin: 0}} src={MyImage}/>
+            <SocialIcons/>
+          </div>
       </div>
-      <div css={{display: "inline", float: "left", width: "calc(960px - 200px)"}}>
-        <div css={{ paddingLeft: "20px"}}>
+      <div css={{
+          width: "100%",
+          [media(DESKTOP_MIN_WIDTH)]: {
+            width: "calc(960px - 200px)",
+            display: "inline",
+            float: "left",
+          }
+      }}>
+        <div css={{ 
+            [media(DESKTOP_MIN_WIDTH)]: {
+              paddingLeft: "20px"
+            }
+          }}>
           <h1>Pattarawat Chormai</h1>
           <p>Currently, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat in fermentum posuere. Enim praesent elementum facilisis leo vel. Turpis tincidunt id aliquet risus feugiat. Amet massa vitae tortor condimentum lacinia quis vel eros.</p>
           <p>Previously, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat in fermentum posuere. Enim praesent elementum facilisis leo vel. Turpis tincidunt id aliquet risus feugiat. Amet massa vitae tortor condimentum lacinia quis vel eros.</p>
