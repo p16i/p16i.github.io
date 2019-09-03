@@ -23,6 +23,10 @@ const IndexPage = () => {
               node {
                 title
                 date
+                tags
+                image
+                code_url
+                url
               }
             }
           }
@@ -32,8 +36,10 @@ const IndexPage = () => {
   )
 
   const projects = allProjectsYaml.edges
-
-  console.log(projects)
+  .filter(x => {
+    return x.node.tags.find(t => t === "selected") === "selected"
+  })
+  .slice(0, 4)
 
   return <Layout>
     <SEO title="Home" />
@@ -55,7 +61,9 @@ const IndexPage = () => {
     <div>
       <h2>Selected Projects (more)</h2>
       <div>
-        <Project/>
+        {
+          projects.map(p => <Project key={p.node.title} details={p.node}/>)
+        }
       </div>
     </div>
   </Layout>

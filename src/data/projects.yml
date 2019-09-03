@@ -1,4 +1,19 @@
 -
+    title: "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai"
+    date: "2019"
+    desc: 
+        > 
+        Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
+        a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
+        We plan to release our final models under PyThaiNLP's distribution.
+    code_url: https://github.com/PyThaiNLP/attacut
+    url: https://pythainlp.github.io/attacut/
+    image: https://pythainlp.github.io/attacut/_static/logo.png
+    tags:
+        - NLP
+        - PyThaiNLP
+        - selected
+-
     title: Parliament Listening (beta)
     date: "2019"
     desc: 
@@ -25,21 +40,6 @@
     image: https://codeforthailand.github.io/pedigree-mate/manual/sample-result.png
     tags:
         - codeforthailand
--
-    title: "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai"
-    date: "2019"
-    desc: 
-        > 
-        Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
-        a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
-        We plan to release our final models under PyThaiNLP's distribution.
-    code_url: https://github.com/PyThaiNLP/attacut
-    url: https://pythainlp.github.io/attacut/
-    image: https://i.imgur.com/ooTH7va.png
-    tags:
-        - NLP
-        - PyThaiNLP
-        - selected
 -
     title: Tokenization Benchmark Visualization
     date: "2019"
@@ -142,6 +142,7 @@
         the posterior distribution of some random processes. In this project, we develop a robot
         simulator and implement the algorithm to localize the location of a robot in mazes.
     url: https://github.com/heytitle/particle-filter
+    code_url: https://github.com/heytitle/particle-filter
     image: https://raw.githubusercontent.com/heytitle/particle-filter/master/experiments/gifs/scene-2-2000-particles.mp4.gif
     tags:
         - machine-learning
