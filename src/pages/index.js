@@ -75,7 +75,12 @@ const IndexPage = () => {
               paddingLeft: "20px"
             }
           }}>
-          <h1>Pattarawat Chormai</h1>
+          <h1 css={{
+            textAlign: "center",
+            [media(DESKTOP_MIN_WIDTH)]: {
+              textAlign: "left"
+            }
+          }}>Pattarawat Chormai</h1>
           <p>Currently, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat in fermentum posuere. Enim praesent elementum facilisis leo vel. Turpis tincidunt id aliquet risus feugiat. Amet massa vitae tortor condimentum lacinia quis vel eros.</p>
           <p>Previously, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat in fermentum posuere. Enim praesent elementum facilisis leo vel. Turpis tincidunt id aliquet risus feugiat. Amet massa vitae tortor condimentum lacinia quis vel eros.</p>
         </div>
