@@ -12,7 +12,16 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import OutLink from "./outlink";
+import { Link } from "gatsby"
 import SocialIcons from "./social-buttons";
+
+const LinkCss = {
+  color: "black"
+}
+
+const HeaderLink = ({children, to}) => {
+  return <Link css={{color: "black", padding: "0px 5px"}} to={to}>{children}</Link>
+}
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,6 +43,11 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
+        <div css={{ width: "100%", textAlign: "right", padding: "10px 0 20px 0"}}>
+          <HeaderLink to="/">Home</HeaderLink>
+          <HeaderLink to="/projects">Projects</HeaderLink>
+          {/* <HeaderLink to="/">Photos</HeaderLink> */}
+        </div>
         <main>{children}</main>
         <hr></hr>
         <footer css={{textAlign: "center"}}>

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import MyImage from "../images/me.jpg"
@@ -7,33 +6,15 @@ import SEO from "../components/seo"
 import SocialIcons from "../components/social-buttons";
 import Project from "../components/project";
 
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery } from "gatsby"
+import { allProjectsQuery } from "../db"
 
 const leftColumnCSS = {
   width: "200px"
 }
 
 const IndexPage = () => {
-  const { allProjectsYaml } = useStaticQuery(
-    graphql`
-      query 
-        {
-          allProjectsYaml {
-            edges {
-              node {
-                title
-                date
-                tags
-                image
-                code_url
-                url
-              }
-            }
-          }
-        }
-      
-    `
-  )
+  const { allProjectsYaml } = useStaticQuery(allProjectsQuery)
 
   const projects = allProjectsYaml.edges
   .filter(x => {
@@ -43,7 +24,6 @@ const IndexPage = () => {
 
   return <Layout>
     <SEO title="Home" />
-    <div css={{ width: "100%", textAlign: "right", padding: "10px 0 20px 0"}}>Menu 1 / Menu 2</div>
     <div>
       <div css={{float: "left", display: "inline", ...leftColumnCSS}}>
         <img style={{margin: 0}} src={MyImage}/>
@@ -59,7 +39,7 @@ const IndexPage = () => {
       <div style={{clear: "both"}}></div>
     </div>
     <div>
-      <h2>Selected Projects (more)</h2>
+      <h2>Selected Projects</h2>
       <div>
         {
           projects.map(p => <Project key={p.node.title} details={p.node}/>)
