@@ -21,7 +21,7 @@ const Project = ({details}) => {
                 width: "auto",
             }
         }}>
-            <img src={details.image} 
+            <img alt={details.title} src={details.image} 
                 css={{
                     margin: "auto",
                     marginBottom: 0,

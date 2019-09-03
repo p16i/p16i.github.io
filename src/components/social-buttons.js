@@ -7,7 +7,7 @@ import GScholarIcon from "../images/icons/google-scholar.svg"
 
 import OutLink from "./outlink";
 
-const Icon = ({src, link}) => <OutLink href={link}><img css={{marginBottom: 0, width: "30px"}} src={src}/></OutLink>
+const Icon = ({src, link}) => <OutLink href={link}><img alt="some icon" css={{marginBottom: 0, width: "30px"}} src={src}/></OutLink>
 
 const SocialIcons = () => {
     return <div css={{textAlign: "center"}}>

@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 
 import { Location } from '@reach/router'
 
@@ -18,10 +17,6 @@ import OutLink from "./outlink";
 import { Link } from "gatsby"
 import SocialIcons from "./social-buttons";
 
-const LinkCss = {
-  color: "black"
-}
-
 const HeaderLink = ({children, to, location}) => {
   return <Link css={{
     color: "black",
@@ -30,18 +25,7 @@ const HeaderLink = ({children, to, location}) => {
   }} to={to}>{children}</Link>
 }
 
-const Layout = ({ children, props }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  console.log(props)
+const Layout = ({ children }) => {
 
   return (
     <>
@@ -95,7 +79,7 @@ const Layout = ({ children, props }) => {
           }
 
         }}>{children}</main>
-        <footer css={{textAlign: "center", margin: "20px 0", borderTop: "1px dotted black", padding: "20px 0"}}>
+        <footer css={{textAlign: "center", margin: "20px 0", padding: "20px 0"}}>
           Pattarawat Chormai
           <SocialIcons/>
           <div css={{color: "gray"}}>

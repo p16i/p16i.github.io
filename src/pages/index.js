@@ -15,9 +15,6 @@ const leftColumnCSS = {
   width: "200px"
 }
 
-const desc = `
-`
-
 const IndexPage = () => {
   const { allProjectsYaml } = useStaticQuery(
     graphql`
@@ -63,7 +60,7 @@ const IndexPage = () => {
               ...leftColumnCSS
             }
           }}>
-            <img style={{margin: 0}} src={MyImage}/>
+            <img alt="social icon" style={{margin: 0}} src={MyImage}/>
             <SocialIcons/>
           </div>
       </div>
