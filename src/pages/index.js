@@ -5,6 +5,8 @@ import MyImage from "../images/me.jpg"
 import SEO from "../components/seo"
 import SocialIcons from "../components/social-buttons";
 import Project from "../components/project";
+import ReactMarkdown from "react-markdown"
+import {shortProfile} from "../shared/profiles"
 
 import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
 import { useStaticQuery, graphql } from "gatsby"
@@ -12,6 +14,9 @@ import { useStaticQuery, graphql } from "gatsby"
 const leftColumnCSS = {
   width: "200px"
 }
+
+const desc = `
+`
 
 const IndexPage = () => {
   const { allProjectsYaml } = useStaticQuery(
@@ -81,8 +86,7 @@ const IndexPage = () => {
               textAlign: "left"
             }
           }}>Pattarawat Chormai</h1>
-          <p>Currently, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat in fermentum posuere. Enim praesent elementum facilisis leo vel. Turpis tincidunt id aliquet risus feugiat. Amet massa vitae tortor condimentum lacinia quis vel eros.</p>
-          <p>Previously, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nec feugiat in fermentum posuere. Enim praesent elementum facilisis leo vel. Turpis tincidunt id aliquet risus feugiat. Amet massa vitae tortor condimentum lacinia quis vel eros.</p>
+          <ReactMarkdown source={shortProfile}/>
         </div>
       </div>
       <div style={{clear: "both"}}></div>
