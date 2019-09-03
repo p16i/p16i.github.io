@@ -54,6 +54,7 @@
     tags:
         - NLP
         - PyThaiNLP
+        - selected
 -
     title: Live Scoreboard Website for Thailand's General Election 2562 (2019)
     date: "2019"
@@ -105,7 +106,7 @@
     image: https://i.imgur.com/9K99eHp.jpg
     tags:
         - machine-learning
-        - hobby
+        - other
 -
     title: Loopify
     date: "2018"
@@ -117,7 +118,7 @@
     code_url: https://github.com/heytitle/loopify
     image: https://camo.githubusercontent.com/92b879a8c994d5cf051fed6b61d2fd40d96513cd/68747470733a2f2f692e696d6775722e636f6d2f615355754252782e706e67
     tags:
-        - hobby
+        - other
 -
     title: Designing RNNs for Explainability (M.Sc. Thesis)
     date: "2018"
@@ -159,7 +160,7 @@
     code_url: https://github.com/heytitle/latex-sketch-plugin
     image: https://camo.githubusercontent.com/421d45c810f894fbeceb46041488101849f09b13/68747470733a2f2f692e696d6775722e636f6d2f795044326e376d2e676966
     tags:
-        - hobby
+        - other
 -
     title: Black Box Optimization using RNNs
     date: "2017"
@@ -178,7 +179,7 @@
         - selected
 -
     title: Code Generation for Apache Flink's NormalizedKeySorter
-    date: "2016-2017"
+    date: "2016"
     desc:
         >
         The current implementation of NormalizedKeySorter is a generic implementation for all data types. Although this implementation
@@ -190,6 +191,7 @@
     image: https://i.imgur.com/Tk3pU1d.png
     tags:
         - bigdata
+        - other
 -
     title: Mining IRS990 Data with AWS Lambda
     date: "2017"
@@ -201,7 +203,7 @@
     url: https://github.com/heytitle/mining-irs990-data
     image: https://camo.githubusercontent.com/67188084243f15bb42ae5c58aa184bfaff8e2234/687474703a2f2f692e696d6775722e636f6d2f536d36627a4f642e706e67
     tags:
-        - hobby
+        - other
 -
     title: Who find the Netherlands a new home(hope)?
     date: "2016"
@@ -215,3 +217,4 @@
     image: https://i.imgur.com/IOKDSxP.png
     tags:
         - visualization
+        - other

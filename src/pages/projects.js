@@ -26,7 +26,7 @@ const options = [
   },
   {
     name: "Others",
-    value: "others",
+    value: "other",
     desc: "Experimental or freetime hacking projects. They were either playing with new technologies and frameworks, or testing ideas."
   }
 ]
