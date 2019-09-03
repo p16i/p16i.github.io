@@ -26,6 +26,7 @@ const IndexPage = () => {
                 image
                 code_url
                 url
+                desc
               }
             }
           }

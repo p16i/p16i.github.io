@@ -21,6 +21,7 @@ const Projects = () => {
                 image
                 code_url
                 url
+                desc
               }
             }
           }
@@ -39,7 +40,6 @@ const Projects = () => {
         }
       </div>
   </Layout>
-
 }
 
 export default Projects

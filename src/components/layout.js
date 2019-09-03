@@ -9,7 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import { Location } from '@reach/router'
+
+
 import "./layout.css"
 import OutLink from "./outlink";
 import { Link } from "gatsby"
@@ -19,11 +21,15 @@ const LinkCss = {
   color: "black"
 }
 
-const HeaderLink = ({children, to}) => {
-  return <Link css={{color: "black", padding: "0px 5px"}} to={to}>{children}</Link>
+const HeaderLink = ({children, to, location}) => {
+  return <Link css={{
+    color: "black",
+    padding: "0px 5px",
+    textDecoration: location.pathname === to ? "underlined" : "none"
+  }} to={to}>{children}</Link>
 }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, props }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -34,23 +40,50 @@ const Layout = ({ children }) => {
     }
   `)
 
+  console.log(props)
+
   return (
     <>
+      <div
+        style={{
+          paddingTop: 0,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          zIndex: 1000
+        }}
+      >
+        <div css={{
+          width: "100%", textAlign: "right", padding: "20px 0 20px 0",
+          top: "0px", left: "0px",
+          margin: `0 auto`,
+          maxWidth: 960,
+          background: "white",
+          }}>
+          <Location>
+            {({ location }) => {
+              return <>
+                <HeaderLink location={location} to="/">Home</HeaderLink>
+                <HeaderLink location={location} to="/projects">Projects</HeaderLink>
+                <HeaderLink location={location} to="/blog">Blog</HeaderLink>
+                <HeaderLink location={location} to="/about">About</HeaderLink>
+              </>
+            }}
+
+          </Location>
+        </div>
+      </div>
       <div
         style={{
           margin: `0 auto`,
           maxWidth: 960,
           paddingTop: 0,
+          position: "relative"
         }}
       >
-        <div css={{ width: "100%", textAlign: "right", padding: "10px 0 20px 0"}}>
-          <HeaderLink to="/">Home</HeaderLink>
-          <HeaderLink to="/projects">Projects</HeaderLink>
-          {/* <HeaderLink to="/">Photos</HeaderLink> */}
-        </div>
-        <main>{children}</main>
-        <hr></hr>
-        <footer css={{textAlign: "center"}}>
+        <main css={{marginTop: "100px"}}>{children}</main>
+        <footer css={{textAlign: "center", margin: "20px 0", borderTop: "1px dotted black", padding: "20px 0"}}>
           Pattarawat Chormai
           <SocialIcons/>
           <div css={{color: "gray"}}>
