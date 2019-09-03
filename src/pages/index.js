@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import SocialIcons from "../components/social-buttons";
 import Project from "../components/project";
 
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import { allProjectsQuery } from "../db"
 
 const leftColumnCSS = {
@@ -14,7 +14,26 @@ const leftColumnCSS = {
 }
 
 const IndexPage = () => {
-  const { allProjectsYaml } = useStaticQuery(allProjectsQuery)
+  const { allProjectsYaml } = useStaticQuery(
+    graphql`
+      query 
+        {
+          allProjectsYaml {
+            edges {
+              node {
+                title
+                date
+                tags
+                image
+                code_url
+                url
+              }
+            }
+          }
+        }
+      
+    `
+  )
 
   const projects = allProjectsYaml.edges
   .filter(x => {
