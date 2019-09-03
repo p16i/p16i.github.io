@@ -7,7 +7,6 @@ import SocialIcons from "../components/social-buttons";
 import Project from "../components/project";
 
 import { useStaticQuery, graphql } from "gatsby"
-import { allProjectsQuery } from "../db"
 
 const leftColumnCSS = {
   width: "200px"
@@ -31,7 +30,6 @@ const IndexPage = () => {
             }
           }
         }
-      
     `
   )
 

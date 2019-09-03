@@ -4,12 +4,29 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 
-import { useStaticQuery } from "gatsby"
-import { allProjectsQuery } from "../db"
+import { useStaticQuery, graphql } from "gatsby"
 import Project from "../components/project";
 
 const Projects = () => {
-  const { allProjectsYaml } = useStaticQuery(allProjectsQuery)
+  const { allProjectsYaml } = useStaticQuery(
+    graphql`
+      query 
+        {
+          allProjectsYaml {
+            edges {
+              node {
+                title
+                date
+                tags
+                image
+                code_url
+                url
+              }
+            }
+          }
+        }
+    `
+  )
 
   const projects = allProjectsYaml.edges
 
