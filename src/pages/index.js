@@ -2,18 +2,40 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import MyImage from "../images/me.jpg"
 import SEO from "../components/seo"
 import SocialIcons from "../components/social-buttons";
 import Project from "../components/project";
 
+import { useStaticQuery, graphql } from "gatsby"
+
 const leftColumnCSS = {
   width: "200px"
 }
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = () => {
+  const { allProjectsYaml } = useStaticQuery(
+    graphql`
+      query 
+        {
+          allProjectsYaml {
+            edges {
+              node {
+                title
+                date
+              }
+            }
+          }
+        }
+      
+    `
+  )
+
+  const projects = allProjectsYaml.edges
+
+  console.log(projects)
+
+  return <Layout>
     <SEO title="Home" />
     <div css={{ width: "100%", textAlign: "right", padding: "10px 0 20px 0"}}>Menu 1 / Menu 2</div>
     <div>
@@ -37,6 +59,6 @@ const IndexPage = () => (
       </div>
     </div>
   </Layout>
-)
+}
 
 export default IndexPage
