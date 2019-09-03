@@ -15,6 +15,7 @@ deploy:
   on:
     branch: develop
   target_branch: master
+  fqdn: pat.chormai.org
 before_script:
   - "npm i -g gatsby"
   - "npm i"
