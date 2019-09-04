@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 
@@ -6,21 +6,14 @@ import IconBosna from "../images/icons/sc-bosna-berlin.png"
 import IconRotation from "../images/icons/sg-rotation-prenzlauer-berg.png"
 import IconPusphaira from "../images/icons/pusphaira.png"
 import OutLink from "../components/outlink";
+import Gallery from "../data/gallery.json";
 
 import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
 
-const images = [
-    "https://farm9.staticflickr.com/8697/16360574173_ca64f9295f_m.jpg",
-    "https://farm9.staticflickr.com/8544/28466959421_24ea695cd9_m.jpg",
-    "https://farm9.staticflickr.com/8718/16879877618_411b928176_o.jpg",
-    "https://farm5.staticflickr.com/4600/38167324035_ec6a32d785_m.jpg",
-    "https://farm2.staticflickr.com/1848/44531598421_6c67af8708_o.jpg",
-    "https://farm2.staticflickr.com/1883/43622328565_0cfebce305_o.jpg",
-    "https://farm2.staticflickr.com/1891/43622330395_b4f3bf4ff4_o.jpg",
-    "https://farm2.staticflickr.com/1699/25144471672_539606bc1f_o.jpg",
-    "https://farm1.staticflickr.com/823/42258114941_cbf8ce299b_o.jpg",
-    "https://farm5.staticflickr.com/4463/37421692286_ec9af1ed7f_o.jpg",
-]
+
+const images = Gallery.reduce( (r, c) => {
+    return r.concat(c.photos);
+}, []); 
 
 const Header = ({children}) => {
     return <h3 css={{marginBottom: "20px"}}>
@@ -32,7 +25,18 @@ const TeamIcon = ({icon}) => {
     return <img alt="team icon" css={{width: "50px", verticalAlign: "middle", marginBottom: "0px", paddingRight: "5px"}} src={icon}/>
 }
 
+
+const randomPhotos = (n=7) => {
+    return images
+        .map(x => ({ x, r: Math.random() }))
+        .sort((a, b) => a.r - b.r)
+        .map(a => a.x)
+        .slice(0, n)
+}
+
 const About = () => {
+    const [photos, setPhotos] = useState(randomPhotos())
+    
   return <Layout>
     <SEO title="About"/>
     <Header>Other interests</Header>
@@ -53,13 +57,20 @@ const About = () => {
     </ul>
     </p>
     <p>
-        I also enjoy <b>Photography</b>, mostly taking b/w photos. Theses are some of my photos.
-        More can been seen on my Instagram: <OutLink href="https://www.instagram.com/heytitle/">@heytitle</OutLink>.
+        I also enjoy <b>Photography</b>, mostly taking b/w photos. Theses are some of my photos, and more can been seen on my Instagram: <OutLink href="https://www.instagram.com/heytitle/">@heytitle</OutLink>.
+        If you want, you can just <span css={{
+            textDecoration: "underline",
+            cursor: "pointer"
+        }} onClick={
+            () => {
+                setPhotos(randomPhotos())
+            }
+        }>🕶 randomly view</span> the rest here.
     </p>
     <div>
         {
-            images.map( (src, i) => {
-                return <img alt={`something ${i}`} src={src} css={{
+            photos.map( (x, i) => {
+                return <img alt={x.id} src={x.url_m} css={{
                     float: "left",
                     marginBottom: "0",
                     height: "80px",
