@@ -25,7 +25,11 @@ const Project = ({details}) => {
                 css={{
                     margin: "auto",
                     marginBottom: 0,
-                    maxWidth: "200px",
+                    width: "100%",
+                    [media(DESKTOP_MIN_WIDTH)]: {
+                        maxWidth: "200px",
+                        maxHeight: "none",
+                    }
             }}/>
         </div>
         <div>
