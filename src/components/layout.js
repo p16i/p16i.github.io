@@ -16,6 +16,7 @@ import "./layout.css"
 import OutLink from "./outlink";
 import { Link } from "gatsby"
 import SocialIcons from "./social-buttons";
+import ApplauseButton from "../components/applause-button";
 
 const HeaderLink = ({children, to, location}) => {
   return <Link css={{
@@ -82,11 +83,16 @@ const Layout = ({ children }) => {
         <footer css={{textAlign: "center", margin: "20px 0", padding: "20px 0"}}>
           Pattarawat Chormai
           <SocialIcons/>
-          <div css={{color: "gray"}}>
+          <div style={{marginBottom: "20px"}}>
+            There are <ApplauseButton/> for the website.
+          </div>
+          <div>
             © {new Date().getFullYear()}, Built with
             {` `}
             <OutLink href="https://www.gatsbyjs.org">Gatsby</OutLink>{` & `}
             <OutLink href="https://reactjs.org">React</OutLink>
+            {` | `}
+            Applause Service by <OutLink href="https://applause-button.com">Applause Button</OutLink>
           </div>
         </footer>
       </div>
