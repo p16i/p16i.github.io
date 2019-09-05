@@ -4,7 +4,7 @@ import axios from "axios"
 
 const API = "https://api.applause-button.com"
 const VERSION = "3.0.0"
-const webUrl = "https://pat.chormai.org"
+const mainUrl = "https://pat.chormai.org"
 
 const HEADERS = {
     "Content-Type": "text/plain"
@@ -17,7 +17,6 @@ const getClaps = async (url) => {
     });
 }
 
-
 const updateClaps = async (url, claps=1) => {
     console.log(claps)
     const query = url ? `?url=${url}` : "";
@@ -27,7 +26,7 @@ const updateClaps = async (url, claps=1) => {
         });
 }
 
-const ApplauseButton = ({url, style}) => {
+const ApplauseButton = ({url=mainUrl}) => {
     const [count, setCount] = useState(0)
     const [isClapped, setIsClapped] = useState(false)
 
@@ -35,7 +34,7 @@ const ApplauseButton = ({url, style}) => {
         if(!isClapped){
             console.log('do clapping')
             const callBackend = async () => {
-                const result = await updateClaps(webUrl, 1)
+                const result = await updateClaps(url, 1)
                 setCount(result.data)
                 setIsClapped(true)
             }
@@ -45,7 +44,7 @@ const ApplauseButton = ({url, style}) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await getClaps(webUrl)
+            const result = await getClaps(url)
             console.log(result)
             setCount(result.data)
         }
