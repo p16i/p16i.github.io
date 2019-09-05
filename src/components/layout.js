@@ -18,6 +18,10 @@ import { Link } from "gatsby"
 import SocialIcons from "./social-buttons";
 import ApplauseButton from "../components/applause-button";
 
+import "typeface-noto-serif";
+import "typeface-kanit";
+
+
 const HeaderLink = ({children, to, location}) => {
   return <Link css={{
     color: "black",
@@ -86,12 +90,15 @@ const Layout = ({ children }) => {
           <div style={{marginBottom: "20px"}}>
             There are <ApplauseButton/> for the website.
           </div>
-          <div>
-            © {new Date().getFullYear()}, Built with
-            {` `}
+          <div style={{fontSize: "0.8em", padding: "10px"}}>
+            © {new Date().getFullYear()}
+            {` ❖ `}
+             Built with {` `}
             <OutLink href="https://www.gatsbyjs.org">Gatsby</OutLink>{` & `}
             <OutLink href="https://reactjs.org">React</OutLink>
-            {` | `}
+            {` ❖ `}
+            Typography with <OutLink href="https://fonts.google.com/specimen/Noto+Serif">Noto Serif</OutLink> and <OutLink href="https://fonts.google.com/specimen/Kanit">Kanit</OutLink>
+            {` ❖ `}
             Applause Service by <OutLink href="https://applause-button.com">Applause Button</OutLink>
           </div>
         </footer>
