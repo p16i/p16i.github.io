@@ -97,7 +97,7 @@ const Layout = ({ children }) => {
             <OutLink href="https://www.gatsbyjs.org">Gatsby</OutLink>{` & `}
             <OutLink href="https://reactjs.org">React</OutLink>
             {` ❖ `}
-            Typography with <OutLink href="https://fonts.google.com/specimen/Noto+Serif">Noto Serif</OutLink> and <OutLink href="https://fonts.google.com/specimen/Kanit">Kanit</OutLink>
+            Typeface with <OutLink href="https://fonts.google.com/specimen/Noto+Serif">Noto Serif</OutLink> and <OutLink href="https://fonts.google.com/specimen/Kanit">Kanit</OutLink>
             {` ❖ `}
             Applause Service by <OutLink href="https://applause-button.com">Applause Button</OutLink>
           </div>
