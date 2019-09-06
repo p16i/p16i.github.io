@@ -18,7 +18,7 @@ import { Link } from "gatsby"
 import SocialIcons from "./social-buttons";
 import ApplauseButton from "../components/applause-button";
 
-import "typeface-noto-serif";
+import "typeface-noto-sans";
 import "typeface-kanit";
 
 
@@ -97,7 +97,7 @@ const Layout = ({ children }) => {
             <OutLink href="https://www.gatsbyjs.org">Gatsby</OutLink>{` & `}
             <OutLink href="https://reactjs.org">React</OutLink>
             {` ❖ `}
-            Typeface with <OutLink href="https://fonts.google.com/specimen/Noto+Serif">Noto Serif</OutLink> and <OutLink href="https://fonts.google.com/specimen/Kanit">Kanit</OutLink>
+            Typeface with <OutLink href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</OutLink> and <OutLink href="https://fonts.google.com/specimen/Kanit">Kanit</OutLink>
             {` ❖ `}
             Applause Service by <OutLink href="https://applause-button.com">Applause Button</OutLink>
           </div>

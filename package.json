@@ -27,7 +27,7 @@
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.2.2",
     "typeface-kanit": "0.0.72",
-    "typeface-noto-serif": "0.0.72"
+    "typeface-noto-sans": "0.0.72"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
