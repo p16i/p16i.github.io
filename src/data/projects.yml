@@ -23,7 +23,7 @@
         Hence, they would be well informed about the country's situtaion and potentially make a better decision in next elections.
     code_url: https://github.com/codeforthailand/parliament-listening
     url: https://elect.in.th/parliament-listening/
-    image: https://i.imgur.com/ozE2c5U.png
+    image: https://i.imgur.com/RCHyQVH.png
     tags:
         - codeforthailand
         - machine-learning
@@ -37,7 +37,7 @@
         This tool is developed in collaboration with Poultry Research And Development Center Kabinburi, Prachinburi, Thailand.
     code_url: https://github.com/codeforthailand/pedigree-mate
     url: https://codeforthailand.github.io/pedigree-mate
-    image: https://codeforthailand.github.io/pedigree-mate/manual/sample-result.png
+    image: https://i.imgur.com/fntennp.png
     tags:
         - codeforthailand
 -
@@ -75,7 +75,7 @@
         Moreover, integrating with Thailand's government spending data allows us to see the connections between producement campaigns and those companies.
     code_url: https://github.com/heytitle/politics-and-business
     url: https://elect.in.th/politics-and-business
-    image: https://i.imgur.com/MHX2eGx.png
+    image: https://i.imgur.com/iKICNxz.png
     tags:
         - visualization
 -
@@ -103,7 +103,7 @@
         autoencoders, Siamese networks, and TripetLoss.
     code_url: https://github.com/heytitle/visually-similar-image-search
     url: http://pat.chormai.org/visually-similar-image-search
-    image: https://i.imgur.com/9K99eHp.jpg
+    image: https://i.imgur.com/0UKd53c.png
     tags:
         - machine-learning
         - other
@@ -116,7 +116,7 @@
         repeatedly play certain pieces of songs on Spotify for practicing. Loopify is the answer for that!
     url: https://github.com/heytitle/loopify/releases
     code_url: https://github.com/heytitle/loopify
-    image: https://camo.githubusercontent.com/92b879a8c994d5cf051fed6b61d2fd40d96513cd/68747470733a2f2f692e696d6775722e636f6d2f615355754252782e706e67
+    image: https://i.imgur.com/sm1f5JD.png
     tags:
         - other
 -
@@ -130,7 +130,7 @@
         equally well in terms of an objective function.
     url: https://drive.google.com/file/d/1NE52rFWFtZTf2U9UHiFZ6Vyeo0XoGNZ-/view
     code_url: https://github.com/heytitle/thesis-designing-recurrent-neural-networks-for-explainability
-    image: https://i.imgur.com/MCoGmL9.png
+    image: https://i.imgur.com/8DDlTyR.png
     tags:
         - machine-learning
         - selected
@@ -173,7 +173,7 @@
         Our experiments show that the learning approach can produces optimizers that perform comparably to state-of-the-art Black-Box optimization algorithms on these benchmarks
     code_url: https://github.com/heytitle/blackbox-optimization-using-rnns
     url: https://github.com/heytitle/blackbox-optimization-using-rnns/blob/master/report/final-report.pdf
-    image: https://i.imgur.com/VZRkTPb.png
+    image: https://i.imgur.com/8DDlTyR.png
     tags:
         - machine-learning
         - selected
@@ -188,7 +188,7 @@
         reduces running time significantly.
     code_url: https://github.com/apache/flink/pull/3511
     url: https://cwiki.apache.org/confluence/display/FLINK/FLIP-18%3A+Code+Generation+for+improving+sorting+performance
-    image: https://i.imgur.com/Tk3pU1d.png
+    image: https://i.imgur.com/QrF99uK.png
     tags:
         - bigdata
         - other
@@ -201,7 +201,7 @@
         For the IRS990 dataset, this approach can reduces the processing time down to to 25 minutes, significantly faster than
         using other approaches, such as Apache Spark, directly.
     url: https://github.com/heytitle/mining-irs990-data
-    image: https://camo.githubusercontent.com/67188084243f15bb42ae5c58aa184bfaff8e2234/687474703a2f2f692e696d6775722e636f6d2f536d36627a4f642e706e67
+    image: https://i.imgur.com/uBVltj5.png
     tags:
         - other
 -
@@ -214,7 +214,7 @@
         implemented from scratch using d3.
     code_url: https://github.com/heytitle/dutch-asylum-seeker/
     url: http://pat.chormai.org/dutch-asylum-seeker/
-    image: https://i.imgur.com/IOKDSxP.png
+    image: https://i.imgur.com/AiovkQ6.png
     tags:
         - visualization
         - other
