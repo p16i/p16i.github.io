@@ -1,7 +1,7 @@
 
 const shortProfile = `
 I am a PhD candidate at [Max Planck School of Cognition][mps-cog]. At the intersection of computer and cognitive science,
-I attempt to investigate how we can verify and explain deep learning models. Therefore, my research interests includes:
+I attempt to investigate how we can verify and explain deep learning models. Therefore, my research interests include:
 
 - Deep Learning and its interpretability
 - Knowledge acquisition and language representation in the brain
