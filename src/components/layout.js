@@ -22,6 +22,11 @@ import "typeface-noto-sans";
 import "typeface-kanit";
 
 
+const Separator = () => {
+  return <span style={{fontSize: "1em", margin: "0 0.5em"}}>{` ❖ `}</span>
+}
+
+
 const HeaderLink = ({children, to, location}) => {
   return <Link css={{
     color: "black",
@@ -92,13 +97,13 @@ const Layout = ({ children }) => {
           </div>
           <div style={{fontSize: "0.8em", padding: "10px"}}>
             © {new Date().getFullYear()}
-            {` ❖ `}
+            <Separator/>
              Built with {` `}
             <OutLink href="https://www.gatsbyjs.org">Gatsby</OutLink>{` & `}
             <OutLink href="https://reactjs.org">React</OutLink>
-            {` ❖ `}
+            <Separator/>
             Typeface with <OutLink href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</OutLink> and <OutLink href="https://fonts.google.com/specimen/Kanit">Kanit</OutLink>
-            {` ❖ `}
+            <Separator/>
             Applause Service by <OutLink href="https://applause-button.com">Applause Button</OutLink>
           </div>
         </footer>
