@@ -35,8 +35,8 @@ const Blog = () => {
   const years = Array.from(new Set(articles.map(a => a.year)))
 
   return <Layout>
-    <SEO title="Blog"/>
-    <h1>Blog</h1>
+    <SEO title="Articles"/>
+    <h1>Articles</h1>
         {
             years.map(y => {
                 return <div css={{margin: "40px 0"}}>

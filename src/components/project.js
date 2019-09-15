@@ -3,8 +3,11 @@ import OutLink from "./outlink";
 import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
 
 const BulletIcon = ({name, url}) => {
-    return <span css={{padding: "5px 5px"}}>
-        {`[ `}<OutLink href={url}>{name}</OutLink>{` ]`}
+    // return <span css={{padding: "5px 5px"}}>
+    //     {`[ `}<OutLink href={url}>{name}</OutLink>{` ]`}
+    // </span>
+    return <span css={{padding: "5px"}}>
+        <OutLink href={url}><img src={`https://img.shields.io/badge/-${name}-success`}/></OutLink>
     </span>
 }
 
