@@ -1,4 +1,17 @@
 -
+    title: "Thailand's Local Administrative Budget and Projects"
+    date: "2019"
+    desc:
+        >
+        A data-driven article reveals how Thailand's local admistrative authorities spend their budgets in 2018.
+        Not only showing  a certain type of procurement methods highly used, the data also presents interesting connections between
+        such authorities and a number of companies.
+    code_url: https://github.com/codeforthailand/2019-local-administrative-budget-and-projects
+    url: https://codeforthailand.github.io/2019-local-administrative-budget-and-projects/
+    image: https://i.imgur.com/lmvugLw.png
+    tags:
+        - codeforthailand
+-
     title: "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai"
     date: "2019"
     desc: 
