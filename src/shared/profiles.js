@@ -1,6 +1,6 @@
 
 const shortProfile = `
-I am a PhD candidate at [Max Planck School of Cognition][mps-cog]. At the intersection of computer and cognitive science,
+I am a PhD candidate at [the Max Planck School of Cognition][mps-cog]. At the intersection of computer and cognitive sciences,
 I attempt to investigate how we can verify and explain deep learning models. Therefore, my research interests include:
 
 - Deep Learning and its interpretability
