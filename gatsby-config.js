@@ -41,5 +41,21 @@ module.exports = {
         trackingId: "UA-42287027-1",
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/blog`,
+        name: `markdown-pages`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-katex`,
+        ],
+      },
+    },
   ],
 }

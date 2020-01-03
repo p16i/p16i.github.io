@@ -1,0 +1,78 @@
+---
+path: "/blog/2019-regression-derivation"
+date: "2019-12-09"
+title: "Regression Derivation"
+---
+
+## Maximum Likelihood and Mean-Squared Error
+Consider a dataset $\mathcal{D} = \{(x_1, y_1), \dots, (x_n, y_n)\}$. We assume that $y_i$ is a corrupted measurement of $x_i$ with some noise $\epsilon \sim \mathcal{N}(0, \sigma_D^2)$, i.e.
+
+$$
+y_i = \hat{y}_i + \epsilon.
+$$
+
+The goal of regression is to find a model that can capture the relationship between $\hat{y}_i$  and $x_i$. Let $\hat \Theta = \{\theta_1, \dots,\theta_m \}$ be reasonable parameters of this model. Using **Maximum Likelihood Estimation (MLE)**, this objective can be written as 
+
+$$
+\begin{aligned}
+\hat \Theta &= \text{argmax} \prod_{i=1}^n P(y_i|x_i; \Theta)  \\
+&= \text{argmax} \sum_{i=1}^n \ln P(y_i|x_i; \Theta)
+\end{aligned}
+$$
+
+where $P(y_i|x_i; \hat \Theta)$ is the likelihood that we get such an observation $y_i$ from $x_i$ under a model with parameters $\hat \Theta$. Because we assume that $y_i$ is normally distributed, the objective above is 
+$$
+\begin{aligned}
+\hat{\Theta} &= \text{argmax} \sum_{i=1}^n \ln \frac{1}{\sigma_D\sqrt{2\pi}} e^{ - \frac{1}{2}\big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2} \\
+&= \text{argmax} \sum_{i=1}^n \ln \frac{1}{\sigma_D\sqrt{2\pi}} + \ln e^{ - \frac{1}{2}\big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2} \\
+&= \text{argmax} \sum_{i=1}^n \ln \frac{1}{\sigma_D\sqrt{2\pi}}  - \frac{1}{2}\big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2 \\
+&= \text{argmax} \sum_{i=1}^n- \frac{1}{2}\big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2    \\
+&= \text{argmin} \sum_{i=1}^n  \frac{1}{2}\big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2 \\
+&= \text{argmin} \sum_{i=1}^n  \big(y_i - \hat{y}_i \big)^2
+\end{aligned}
+$$
+where (eqconstant1) and (eqconstant2) use the fact that the terms do not depends on $\Theta$, hence no influence on the opitimization.
+
+## Maximum a Posteriori and Regularization
+The MLE approach above consider only the likelihood term in Bayes' rule:
+
+$$
+\underbrace{P(\Theta| \mathcal{D})}_{\text{Posterior} } = \frac{ \overbrace{P(\mathcal{D}|\Theta)}^{\text{Likelihood}} \overbrace{P(\Theta)}^{\text{Prior}}}{ \underbrace{P(\mathcal{D})}_{\text{Evidence}} }
+$$
+
+Because $P(\mathcal{D})$ does not depends on $\Theta$, the posterior is 
+
+$$
+P(\Theta| \mathcal{D}) \propto  P(\mathcal{D}|\Theta) P(\Theta).
+$$
+
+Using **Maximum a Posteriori (MAP)**, one can find suitable parameters $\hat{\Theta}$ by maximizing $P(\theta|\mathcal{D})$:
+
+$$
+\begin{aligned}
+\hat \Theta &= \text{argmax} \bigg( \prod_{i=1}^n P(y_i|x_i; \Theta) \bigg) P(\Theta)  \\
+&= \text{argmax} \bigg( \sum_{i=1}^n \ln P(y_i|x_i; \Theta) \bigg) +  \ln P(\Theta).
+\end{aligned}
+$$
+
+Consider each paramter $\theta_i$ is from $\mathcal{N}(0, \sigma_{\theta}^2)$. The second term is then
+
+$$
+\begin{aligned}
+\ln P(\Theta) &= \ln \prod_{j=1}^{m}  \frac{1}{\sigma_\theta \sqrt{2\pi}} e^{ - \frac{1}{2}\big(\frac{\theta_j}{\sigma_\theta}\big)^2}  \\
+& = \sum_{j=1}^m \ln \frac{1}{\sigma_\theta \sqrt{2\pi}} e^{ - \frac{1}{2}\big(\frac{\theta_j}{\sigma_\theta}\big)^2}. 
+\end{aligned}
+$$
+
+Borrowing the intermediate derivation step of the likelihood term from the previous section and substituting the prior term into the optimization yield
+
+$$
+\begin{aligned}
+\hat{\Theta} &= \text{argmax} \sum_{i=1}^n- \frac{1}{2}\big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2 + \sum_{j=1}^m \ln \frac{1}{\sigma_\theta \sqrt{2\pi}} e^{ - \frac{1}{2}\big(\frac{\theta_j}{\sigma_\theta}\big)^2} \\
+&=\text{argmax} \sum_{i=1}^n - \frac{1}{2}\big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2 - \frac{1}{2} \sum_{j=1}^m \bigg(\frac{\theta_j}{\sigma_\theta}\bigg)^2 \\
+&=\text{argmin} \sum_{i=1}^n \big(\frac{y_i - \hat{y}_i}{\sigma_D}\big)^2 + \sum_{j=1}^m \bigg(\frac{\theta_j}{\sigma_\theta}\bigg)^2 \\
+&=\text{argmin} \sum_{i=1}^n (y_i - \hat{y}_i)^2 + \underbrace{\bigg(\frac{\sigma_D}{\sigma_\theta} \bigg)^2}_\lambda  \sum_{j=1}^m \theta_j^2.
+\end{aligned}
+$$
+
+From the result above, $\lambda$ is a hyperparmeter that governs how much we would like to regularize the model: essentially, one can interpret it as the ratio between the variances of data and parameters.
