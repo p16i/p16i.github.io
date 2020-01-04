@@ -33,9 +33,13 @@ export default function Template({
             "& li":{
               listStyle: "none",
               marginBottom: 0,
+              "& p": {
+                marginBottom: 0,
+              }
             },
             "& ul": {
               marginLeft: 10,
+              marginTop: 0,
             }
           }
      }}
@@ -49,13 +53,6 @@ export default function Template({
       dangerouslySetInnerHTML={{ __html: html }}
     />
   </Layout>
-  // return (
-  //   <div className="blog-post-container">
-  //     <div className="blog-post">
-  //       <h1>{frontmatter.title}</h1>
-  //     </div>
-  //   </div>
-  // )
 }
 export const pageQuery = graphql`
   query($path: String!) {
@@ -64,7 +61,7 @@ export const pageQuery = graphql`
       tableOfContents(
         absolute: false 
         pathToSlugField: "frontmatter.path"
-        maxDepth: 2
+        maxDepth: 3
       )
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
