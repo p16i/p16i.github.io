@@ -28,10 +28,12 @@ const Separator = () => {
 
 
 const HeaderLink = ({children, to, location}) => {
+  const path = location.pathname
+
   return <Link css={{
     color: "black",
     padding: "0px 5px",
-    textDecoration: location.pathname === to ? "underlined" : "none"
+    textDecoration: (path.match(to) && to !== "/") || (path === to) ? "underlined" : "none"
   }} to={to}>{children}</Link>
 }
 
