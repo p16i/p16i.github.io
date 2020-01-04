@@ -20,6 +20,7 @@ export default function Template({
     <div css={{
           display: "none",
           [media(DESKTOP_MIN_WIDTH)]: {
+            fontSize: "0.8em",
             background: "white",
             display: "block",
             position: "fixed",
@@ -31,6 +32,7 @@ export default function Template({
             listStyle: "none",
             "& li":{
               listStyle: "none",
+              marginBottom: 0,
             },
             "& ul": {
               marginLeft: 10,

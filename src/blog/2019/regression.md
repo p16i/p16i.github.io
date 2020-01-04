@@ -81,3 +81,8 @@ $$
 \end{aligned}
 $$
 For the last step, we multiply $\sigma_D^2$, which is positive, to the equation. From the result above, $\lambda$ is a hyperparameter that governs how much we would like to regularize the model, and one can interpret it as the ratio between the variances of data and parameters.
+
+## Acknowledgements
+The content of this article is largely summarised from 
+- [Aaron Courville's Bayesian Methods for Neural Networks](https://www.cs.cmu.edu/afs/cs/academic/class/15782-f06/slides/bayesian.pdf);
+- [Geoffrey Hinton's The Bayesian interpretation of weight decay](https://www.youtube.com/watch?v=KCo8h3WAClc).
