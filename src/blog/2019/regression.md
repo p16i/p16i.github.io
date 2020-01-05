@@ -43,7 +43,7 @@ $$
 \underbrace{P(\Theta| \mathcal{D})}_{\text{Posterior} } = \frac{ \overbrace{P(\mathcal{D}|\Theta)}^{\text{Likelihood}} \overbrace{P(\Theta)}^{\text{Prior}}}{ \underbrace{P(\mathcal{D})}_{\text{Evidence}} }
 $$
 
-Because $P(\mathcal{D})$ does not depends on $\Theta$, the posterior is 
+Because $P(\mathcal{D})$ does not depend on $\Theta$, the posterior is 
 
 $$
 P(\Theta| \mathcal{D}) \propto  P(\mathcal{D}|\Theta) P(\Theta).
