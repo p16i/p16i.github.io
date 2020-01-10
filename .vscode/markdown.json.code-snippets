@@ -35,4 +35,14 @@
 		],
         "description": "Center Image"
 	}
+	"align": {
+		"prefix": ["math-align"],
+		"body": [
+			"$$",
+			"\\begin{aligned}",
+			"\\end{aligned}",
+			"$$"
+		],
+        "description": "Align Math Box"
+	}
 }
