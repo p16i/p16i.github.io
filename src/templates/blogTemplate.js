@@ -31,8 +31,9 @@ export default function Template({
             maxWidth: "400px",
             listStyle: "none",
             "& li":{
+              lineHeight: "1.2em",
               listStyle: "none",
-              marginBottom: 0,
+              marginBottom: "5px",
               "& p": {
                 marginBottom: 0,
               }
