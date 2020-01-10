@@ -240,7 +240,7 @@ $$
 ## Summary: Conjugate Gradient Algorithm
 
 <div align="center">
-  <img width="300px" src="/images/blog/2020-conjugate-1-2.png"/>
+  <img width="600px" src="/images/blog/2020-conjugate-1-2.png"/>
 </div>
 
 Consider a random starting point $x_0$ and $r_0 = d_0 = -\nabla f(x_0)$. The update step for the conjugate gradient algorithm contains
