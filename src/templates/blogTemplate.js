@@ -17,42 +17,51 @@ export default function Template({
     <SEO title={`Blog - ${frontmatter.title}`}/>
     <h1>{frontmatter.title}</h1>
     <b>{frontmatter.date}</b>
-    <div css={{
-          display: "none",
-          [media(DESKTOP_MIN_WIDTH)]: {
-            fontSize: "0.8em",
-            background: "white",
-            display: "block",
-            position: "fixed",
-            top: "20%",
-            left: "calc(50% + 500px)",
-            borderLeft: "2px solid black",
-            padding: "10px",
-            maxWidth: "400px",
-            listStyle: "none",
-            "& li":{
-              lineHeight: "1.2em",
-              listStyle: "none",
-              marginBottom: "5px",
-              "& p": {
-                marginBottom: 0,
-              }
-            },
-            "& ul": {
-              marginLeft: 10,
-              marginTop: 0,
-            }
-          }
-     }}
-    >
-      <b>{frontmatter.title}</b>
-      <div dangerouslySetInnerHTML={{__html: tableOfContents}}/>
-    </div>
     <div
-      css={{marginTop: "50px"}}
-      className="blog-post-content"
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
+      css={{
+        width:  `100%`,
+        [media(DESKTOP_MIN_WIDTH)]: {
+          width: `600px`,
+        }
+      }}
+    >
+      <div css={{
+            display: "none",
+            [media(DESKTOP_MIN_WIDTH)]: {
+              fontSize: "0.8em",
+              background: "white",
+              display: "block",
+              position: "fixed",
+              top: "20%",
+              left: "calc(50% + 150px)",
+              borderLeft: "2px solid black",
+              padding: "10px",
+              maxWidth: "300px",
+              listStyle: "none",
+              "& li":{
+                lineHeight: "1.2em",
+                listStyle: "none",
+                marginBottom: "5px",
+                "& p": {
+                  marginBottom: 0,
+                }
+              },
+              "& ul": {
+                marginLeft: 10,
+                marginTop: 0,
+              }
+            }
+      }}
+      >
+        <b>{frontmatter.title}</b>
+        <div dangerouslySetInnerHTML={{__html: tableOfContents}}/>
+      </div>
+      <div
+        css={{marginTop: "50px"}}
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </div>
   </Layout>
 }
 export const pageQuery = graphql`
