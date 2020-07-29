@@ -1,6 +1,6 @@
 ---
 path: "/blog/2020-exponential-famility-distributions"
-date: "2019-05-04"
+date: "2020-05-15"
 title: "Exponential Family Distributions"
 ---
 
