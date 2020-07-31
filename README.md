@@ -2,4 +2,4 @@
 URL: https://pat.chormai.org
 
 ## Requirements
-- NodeJS v11.4.0
+- NodeJS v10.18.0

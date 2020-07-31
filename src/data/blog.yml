@@ -42,3 +42,13 @@
   title: สิ่งที่ควรคำนึงถึง 10 ข้อ ก่อนที่คุณจะสร้างแผนภูมิเกี่ยวกับ COVID-19 (ร่วมแปล)
   url: https://medium.com/nightingale/19-5c57b7853cf4
   thumbnail: /images/blog/2020-covid.png
+
+- published_date: 2020/05/15
+  title: Exponential Family of Distributions
+  url: /blog/2020-exponential-famility-distributions
+  thumbnail: /images/blog/2020-exponential-family-thumbnail.png
+
+- published_date: 2020/07/28
+  title: ReLU and Softplus Activations
+  url: /blog/2020-relu-softplus
+  thumbnail: /images/blog/2020-relu-softplus-thumbnail.png

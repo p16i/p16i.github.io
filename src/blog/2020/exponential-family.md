@@ -1,21 +1,21 @@
 ---
 path: "/blog/2020-exponential-famility-distributions"
 date: "2020-05-15"
-title: "Exponential Family Distributions"
+title: "Exponential Family of Distributions"
 ---
 
 Exponential family is a large class of probabilistic distributions, both discrete and continuous. Some of these distributions include Gaussian and Bernouli distributions. As the name suggested, distributions in this famility are in a generic exponential form. 
 
 Consider $X$ a random variable from a exponential family distribution. Its probability mass function (if $X$ is discrete) or probability density function (if it continuous) is written as 
 $$
-p(x|\theta) = f(x) \exp( \eta(\theta) \cdot \phi x + g(\theta)),
+p(x|\theta) = f(x) \exp( \eta(\theta) \cdot \phi(x) + g(\theta)),
 $$
 where
-- $f(x)$ is ...;
-- $\theta$  is the parameter(s) of the distribution;
 - $\phi(x)$ is $X$'s sufficient statistic(s);
 - $\eta(\theta)$ is the natural parameter(s) of the distribution;
-- $g(\theta)$ is the log-partition function, which act as a normalizer:
+  - $\theta$  is the parameter(s) of the distribution;
+- $g(\theta)$ is the log-partition function, which act as a normalizer;
+- $f(x)$ is a function that depends on $x$.
 
 $$
 \begin{aligned}
@@ -24,7 +24,7 @@ p(x|\theta) &= \frac{p(x| \theta)}{ \int p(x| \theta) \text{dx}} \\
 \end{aligned}
 $$
 
-## Example Distributions
+## Some Distributions in Exponential Family
 
 ### Bernoulli Distribution
 Bernoulli distribution has one paramerter, called $p \in [0, 1]$. Its sample space $\Omega = \{0, 1\}$, e.g. coin tossing. Its probablity mass function is usally written in the following form:
@@ -66,7 +66,8 @@ where
 
 
 ## Cumulant: Moment Generating Function
-Let $\eta = \eta(\theta)$. The cumulant $A(\eta) \equiv -g(\theta)$. TODO: write 
+
+Let $\eta = \eta(\theta)$. The cumulant $A(\eta) \equiv -g(\theta)$. In the following, we are going to show that we can get the moment parameter of Bernoulli and Gaussian distributions from $A(\eta)$.
 
 ### Bernoulli Distribution
 Let recall that $g(\theta) = \log(1-p)$ for Bernouli distributions. We have
@@ -90,7 +91,7 @@ $$
 
 Therefore, we recover the mean $p$ and the variance $p(1-p)$ of Bernoulli distributions.
 
-Noting, you might notice that the function transformating $\eta$ to $p$ looks familiar; indeed, his is the sigmoid function! In generalized linear models, it is the link function.
+Noting, you might notice that the function transformating $\eta$ to $p$ looks familiar; indeed, this is the sigmoid function! In generalized linear models, it is the link function.
 
 ### Gaussian Distribution
 Recall $g(\theta)$ of the Gaussian distribution. Let $\mathbf (\eta_1, \eta_2)^T \equiv \eta(\mathbf \theta)$ and $A(\mathbf{\eta_1, \eta_2}) = -g(\theta)$. Solving the equation, we have
@@ -98,20 +99,24 @@ $$
 A(\eta_1, \eta_2) =  \frac{\eta^2_1}{4\eta_2} + \frac{1}{2}\log(-2\eta_2).
 $$
 
-We know that $\eta_1$ corresponds to $\phi(x)_1$, i.e. $x$. If we compute the partial derivative $\frac{\partial}{\partial \eta_1} A(\eta)$ and $\frac{\partial^2}{\partial \eta_1} A(\eta)$, we get
+We know that $\eta_1$ corresponds to $\phi(x)_1$, i.e. $x$. If we compute the partial derivative $\frac{\partial}{\partial \eta_1} A(\eta)$ and $\frac{\partial^2}{\partial^2 \eta_1} A(\eta)$, we get
 $$
 \begin{aligned}
 \frac{\partial}{\partial \eta_1}A(\eta_1, \eta_2) &= \frac{\eta_1}{2\eta_2} \\
 &= \mu \\
-\frac{\partial^2}{\partial \eta_1}A(\eta_1, \eta_2) &= \frac{1}{2\eta_2} \\
+\frac{\partial^2}{\partial^2 \eta_1}A(\eta_1, \eta_2) &= \frac{1}{2\eta_2} \\
 &= \sigma^2.
 \end{aligned}
 $$
 
-That means we discover $X$'s truen mean (first moment) and variance (second moment).
-
-## Acknowledgements
-- Prof. Opper & Théo
-- Berkeley coursenote
+That means we discover $X$'s true mean (first moment) and variance (second moment) of the guassian distribution by differentiating its cumulant $A(\cdot)$.
 
 ## References
+While writing this article, I was relying on Prof. M. Opper & Théo's lecture slides for [Probabilistic Bayesian Modelling course (Summer 2020)][ki] and Prof. M. Jordan's [reading matertial for his Bayesian Modeling and Inference (2010)][jordan].
+
+
+The first figure was made with [Google Colab][colab].
+
+[jordan]: https://people.eecsjk.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf
+[colab]: (https://colab.research.google.com/drive/1O1w2SVeOoTnQLLS1Me9zcxNs2iFeihCN#scrollTo=uzeD4sZphd7h)
+[ki]: https://www.ki.tu-berlin.de/menue/lehre/sommersemester_2020/
