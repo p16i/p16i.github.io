@@ -52,3 +52,8 @@
   title: ReLU and Softplus Activations
   url: /blog/2020-relu-softplus
   thumbnail: /images/blog/2020-relu-softplus-thumbnail.png
+
+- url: "/blog/2020-what-and-why-interpretability"
+  published_date: 2020/10/08
+  title: "What and Why is Interpretability Necessary?"
+  thumbnail: https://i.imgur.com/gJGPt3Q.png
