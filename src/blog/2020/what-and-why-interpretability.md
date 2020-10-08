@@ -3,7 +3,7 @@ path: "/blog/2020-what-and-why-interpretability"
 date: "2020-10-08"
 title: "What and Why is Interpretability Necessary?"
 ---
-With an increase adoption of machine models in real world, making these model safe is inevitable. Apart from robustness agains adversarial examples, interpretability is another important aspect that invites a lot discussions ranging from philosophy to technical details.
+With an increase adoption of machine models in real world, making these model safe is inevitable. Apart from robustness against adversarial examples, interpretability is another important aspect that invites a lot discussions ranging from philosophy to technical details.
 
 This blog post summarizes two positioning papers on interpretability that I find relevant to the research of machine learning interpretability. To me, these papers invite the reader to think about what important and necessary for interpretability research to be fruitful and rigor.  
 
