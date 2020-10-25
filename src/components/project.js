@@ -9,6 +9,10 @@ const BulletIcon = ({name, url}) => {
 }
 
 const Project = ({details}) => {
+    const urls = details.urls
+
+    urls.sort( (a, b) => a.name.localeCompare(b.name))
+
     return <div css={{
             margin: "10px 0px 40px 0px",
         }}>
@@ -60,11 +64,12 @@ const Project = ({details}) => {
               </span>
             </h3>
             <span>{details.desc}</span>
-            {/* <p>
-            </p> */}
             <div css={{marginTop: "10px"}}>
-                <BulletIcon name="Code" url={details.code_url}/>
-                <BulletIcon name="Link" url={details.url}/>
+                {
+                    urls.map(a => {
+                        return <BulletIcon key={a.name} name={a.name} url={a.url}/>
+                    })
+                }
             </div>
         </div>
         </div>

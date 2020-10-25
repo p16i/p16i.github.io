@@ -27,8 +27,10 @@ const IndexPage = () => {
                 date
                 tags
                 image
-                code_url
-                url
+                urls {
+                  name
+                  url
+                }
                 desc
               }
             }

@@ -15,6 +15,11 @@ const options = [
     value: "all",
   },
   {
+    name: "Research",
+    value: "research",
+    desc: ""
+  },
+  {
     name: "Selected",
     value: "selected",
     desc: "These are a set of notable projects that I've developed. At the moment, the majority were course and internship projects. In the near future, I plan to include my research code here."
@@ -25,7 +30,7 @@ const options = [
     desc: "These are civic tech projects that I have helped develop to tackle particular (technological) problems that we encounter in Thailand. One of the reasons I participate in this campaign is that I would like to promote opensource culture in the country as well as using technlogy for social goods."
   },
   {
-    name: "Others",
+    name: "Other",
     value: "other",
     desc: "Experimental or freetime hacking projects. They were either playing with new technologies and frameworks, or testing ideas."
   }
@@ -39,15 +44,17 @@ const Projects = () => {
     graphql`
       query 
         {
-          allProjectsYaml {
+          allProjectsYaml(sort: {fields: date, order: DESC}) {
             edges {
               node {
                 title
                 date
                 tags
                 image
-                code_url
-                url
+                urls {
+                  name
+                  url
+                }
                 desc
               }
             }

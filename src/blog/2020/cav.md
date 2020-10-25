@@ -51,8 +51,5 @@ S_C(\mathbf x) &= \lim_{\epsilon\rightarrow0} \frac{h(f_l(\mathbf x)+\epsilon \m
 $$
 which is the directional derivative. If we assume that $\|\mathbf v_l \|_2 = 1$, the is the orthogonal projection of $\nabla(f_l(\mathbf x))$ on $\mathbf v_l$.
 
-
-Applications ...
-
 ## Appendix
-- Directional derivative..
+A nice tutorial about direction derivative: KhanAcademy's [Directional Derivative]( https://www.youtube.com/watch?v=N_ZRcLheNv0).

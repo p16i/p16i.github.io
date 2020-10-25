@@ -57,3 +57,8 @@
   published_date: 2020/10/08
   title: "What and Why is Interpretability Necessary?"
   thumbnail: https://i.imgur.com/gJGPt3Q.png
+
+- url: "/blog/2020-cav"
+  published_date: 2020/10/25
+  title: "ANNs's Latent Representation and Concept Activation Vector"
+  thumbnail: /images/blog/2020-cav/thumbnail.png 
