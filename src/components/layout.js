@@ -65,6 +65,7 @@ const Layout = ({ children }) => {
             {({ location }) => {
               return <>
                 <HeaderLink location={location} to="/">Home</HeaderLink>
+                <HeaderLink location={location} to="/publications">Publications</HeaderLink>
                 <HeaderLink location={location} to="/projects">Projects</HeaderLink>
                 <HeaderLink location={location} to="/blog">Blog</HeaderLink>
                 <HeaderLink location={location} to="/about">About</HeaderLink>

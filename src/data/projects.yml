@@ -14,27 +14,27 @@
     image: https://i.imgur.com/lmvugLw.png
     tags:
         - codeforthailand
--
-    title: "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai"
-    date: "2019"
-    desc: 
-        > 
-        Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
-        a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
-        We plan to release our final models under PyThaiNLP's distribution.  We gave an oral presentation at NeurIPS 2019 New in ML Workshop.
-    urls:
-        - name: code
-          url: https://github.com/PyThaiNLP/attacut
-        - name: document
-          url: https://pythainlp.github.io/attacut
-        - name: arXiv
-          url: https://arxiv.org/abs/1911.07056
-    image: https://i.imgur.com/7feZxFk.png
-    tags:
-        - NLP
-        - PyThaiNLP
-        - selected
-        - research
+# -
+#     title: "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai"
+#     date: "2019"
+#     desc: 
+#         > 
+#         Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
+#         a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
+#         We plan to release our final models under PyThaiNLP's distribution.  We gave an oral presentation at NeurIPS 2019 New in ML Workshop.
+#     urls:
+#         - name: code
+#           url: https://github.com/PyThaiNLP/attacut
+#         - name: document
+#           url: https://pythainlp.github.io/attacut
+#         - name: arXiv
+#           url: https://arxiv.org/abs/1911.07056
+#     image: https://i.imgur.com/7feZxFk.png
+#     tags:
+#         - NLP
+#         - PyThaiNLP
+#         - selected
+#         - research
 -
     title: Parliament Listening
     date: "2019"

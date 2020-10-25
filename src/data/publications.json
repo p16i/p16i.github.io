@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Structuring Neural Networks for More Explainable Predictions",
+    "authors": "Laura Rieger*, Pattarawat Chormai*, Grégoire Montavon, Lars Kai Hansen, Klaus-Robert Müller",
+    "venue": "Explainable and Interpretable Models in Computer Vision and Machine Learning (book chapter)",
+    "year": 2018,
+    "urls": [
+      {
+        "name": "paper",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-319-98131-4_5"
+      }
+    ],
+    "note": "*: equal contribution"
+  },
+  {
+    "title": "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai",
+    "authors": "Pattarawat Chormai, Ponrawee Prasertsom, Attapol Rutherford",
+    "venue": "NeurIPS New in ML Workshop",
+    "year": 2019,
+    "urls": [
+      {
+        "name": "code",
+        "url": "https://github.com/PyThaiNLP/attacut"
+      },
+      {
+        "name": "paper",
+        "url": "https://arxiv.org/abs/1911.07056"
+      }
+    ]
+  },
+  {
+    "title": "Syllable based Neural Thai Word-Segmentation",
+    "authors": "Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, Attapol Rutherford",
+    "venue": "COLING (to be appeared)",
+    "year": 2020,
+    "urls": [
+      {
+        "name": "code",
+        "url": "https://github.com/heytitle/Syllable-based-Neural-Thai-Word-Segmentation"
+      },
+      {
+        "name": "paper",
+        "url": "#to-be-added"
+      }
+    ]
+  }
+]

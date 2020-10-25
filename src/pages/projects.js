@@ -15,14 +15,9 @@ const options = [
     value: "all",
   },
   {
-    name: "Research",
-    value: "research",
-    desc: ""
-  },
-  {
     name: "Selected",
     value: "selected",
-    desc: "These are a set of notable projects that I've developed. At the moment, the majority were course and internship projects. In the near future, I plan to include my research code here."
+    desc: "These are notable projects that I have developed."
   },
   {
     name: "Code for Thailand",
