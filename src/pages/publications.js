@@ -1,8 +1,8 @@
-import React, {useState} from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import BulletIcon from "../components/bulletIcon"
 
 const papers = require("../data/publications.json")
 
@@ -24,18 +24,7 @@ const Publications = () => {
                 <div css={{color: `gray`, marginBottom: `5px`}}><b>{p.venue}</b> {p.year}</div>
                 <div>
                   {
-                    p.urls.map(u => {
-                      return <a css={{
-                          marginRight: `5px`,
-                          textDecoration: `none`,
-                          borderRadius: `5px`,
-                          padding: `0px 3px`,
-                          backgroundColor: `lightgray`,
-                          color: `gray`
-                        }} href={u.url}>
-                        {u.name}
-                      </a>
-                    })
+                    p.urls.map( (u, i) => <BulletIcon key={i} name={u.name} url={u.url}/>)
                   }
                 </div>
                 {

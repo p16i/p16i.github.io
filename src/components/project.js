@@ -1,12 +1,7 @@
 import React from "react"
-import OutLink from "./outlink";
 import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
 
-const BulletIcon = ({name, url}) => {
-    return <span css={{padding: "5px"}}>
-        <OutLink href={url}><img src={`https://img.shields.io/badge/-${name}-success`}/></OutLink>
-    </span>
-}
+import BulletIcon from "../components/bulletIcon"
 
 const Project = ({details}) => {
     const urls = details.urls
@@ -67,7 +62,9 @@ const Project = ({details}) => {
             <div css={{marginTop: "10px"}}>
                 {
                     urls.map(a => {
-                        return <BulletIcon key={a.name} name={a.name} url={a.url}/>
+                        return <span>
+                            <BulletIcon key={a.name} name={a.name} url={a.url}/>
+                        </span>
                     })
                 }
             </div>
