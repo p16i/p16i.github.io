@@ -62,18 +62,18 @@ const Blog = () => {
                                 display: "block",
                                 [media(DESKTOP_MIN_WIDTH)]: {
                                     float: "left",
-                                    maxWidth: "200px",
+                                    maxWidth: "100px",
                                     maxHeight: "none",
                                     display: "inline-block",
                               }
                             }}>
-                              <img src={a.thumbnail}/>
+                              <img src={a.thumbnail} style={{width: `100px`}}/>
                             </div>
                             <div css={{
                                 float: "left",
                                 width: "100%",
                                 [media(DESKTOP_MIN_WIDTH)]: {
-                                    width: "calc(960px - 200px)"
+                                    width: "calc(960px - 100px)"
                                 }
                               }}>
                               <b css={{

@@ -1,5 +1,5 @@
 ---
-path: "/blog/draft"
+path: "/blog/2020-bayesian-decision-theory"
 date: "2020-11-07"
 title: "Bayesian Decision Theory and Discriminant Function"
 ---

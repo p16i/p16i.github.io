@@ -62,3 +62,8 @@
   published_date: 2020/10/25
   title: "ANNs's Latent Representation and Concept Activation Vector"
   thumbnail: /images/blog/2020-cav/thumbnail.png 
+
+- url: "/blog/2020-bayesian-decision-theory"
+  published_date: 2020/11/04
+  title: "Bayesian Decision Theory and Discriminant Function"
+  thumbnail: https://i.imgur.com/vApwJdS.png
