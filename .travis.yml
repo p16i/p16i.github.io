@@ -1,8 +1,9 @@
 branches:
   only:
   - develop
+language: node_js
 node_js:
-  - "stable"
+  - 14
 cache:
   directories:
   - node_modules
