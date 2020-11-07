@@ -4,6 +4,8 @@ date: "2020-11-07"
 title: "Bayesian Decision Theory and Discriminant Function"
 ---
 
+*A summary of Duda et al. (2020), Pattern Classification. Chapter 2.*
+
 Machine learning is about extracting useful information from the data we have. Often, this is referred to as modeling. Consider a situation where we have collected fish data and we want to build a classifier, classifying whether the fish is salmon.
 
 Let assume that each fish has $d$ continuous attributes, such as weights and body length, that we measure; mathematically, we write $\mathbf x \in \Reals^d$. The simplest way to build such a classifier is to choose a decision threshold  based on each class's histogram of a certain attribute.
