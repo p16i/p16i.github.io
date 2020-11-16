@@ -15,7 +15,7 @@
 
 - published_date: 2019/09/01
   title: มองระบบฟุตบอลในเยอรมนี
-  url: https://tsvd.org/blogs/มองระบบฟุตบอลในเยอรมนี/
+  url: https://tsvd.org/blogs/2019/3284
   thumbnail: https://i.imgur.com/YQYvf6y.png
 
 - published_date: 2019/12/09
@@ -61,9 +61,14 @@
 - url: "/blog/2020-cav"
   published_date: 2020/10/25
   title: "ANNs's Latent Representation and Concept Activation Vector"
-  thumbnail: /images/blog/2020-cav/thumbnail.png 
+  thumbnail: /images/blog/2020-cav/thumbnail.png
 
 - url: "/blog/2020-bayesian-decision-theory"
   published_date: 2020/11/04
   title: "Bayesian Decision Theory and Discriminant Function"
   thumbnail: https://i.imgur.com/vApwJdS.png
+
+- url: "blog/2020-fisher-discriminant-analysis"
+  published_date: 2020/11/16
+  title: "Fisher Discriminant Analysis"
+  thumbnail: /images/blog/2020-fisher-discriminant-analysis-thumbnail.png
