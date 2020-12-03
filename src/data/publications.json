@@ -25,13 +25,21 @@
       {
         "name": "paper",
         "url": "https://arxiv.org/abs/1911.07056"
+      },
+      {
+        "name": "PyPI",
+        "url": "https://pypi.org/project/attacut/"
+      },
+      {
+        "name": "Document",
+        "url": "https://pythainlp.github.io/attacut/"
       }
     ]
   },
   {
     "title": "Syllable based Neural Thai Word-Segmentation",
     "authors": "Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, Attapol Rutherford",
-    "venue": "COLING (to be appeared)",
+    "venue": "COLING",
     "year": 2020,
     "urls": [
       {
@@ -40,7 +48,11 @@
       },
       {
         "name": "paper",
-        "url": "#to-be-added"
+        "url": "https://www.aclweb.org/anthology/2020.coling-main.407"
+      },
+      {
+        "name": "poster",
+        "url": "https://drive.google.com/file/d/1sV8xPgdj0tMaWhHcCs4vANYWBCygPTvO/view"
       }
     ]
   }
