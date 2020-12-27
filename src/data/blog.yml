@@ -72,3 +72,8 @@
   published_date: 2020/11/16
   title: "Fisher Discriminant Analysis"
   thumbnail: /images/blog/2020-fisher-discriminant-analysis-thumbnail.png
+
+- url: "blog/2020-maximum-entropy"
+  published_date: 2020/12/27
+  title: "Principle of Maximum Entropy"
+  thumbnail: /images/blog/2020-entropy.png
