@@ -108,6 +108,17 @@ const Layout = ({ children }) => {
             Typeface with <OutLink href="https://fonts.google.com/specimen/Noto+Sans">Noto Sans</OutLink> and <OutLink href="https://fonts.google.com/specimen/Kanit">Kanit</OutLink>
             <Separator/>
             Applause Service by <OutLink href="https://applause-button.com">Applause Button</OutLink>
+            <Separator/>
+            <OutLink href="https://webring.wonderful.software#pat.chormai.org" title="Webring">
+              Webring
+              {` `}
+              <img
+                alt="Webring"
+                width="12px"
+                height="12px"
+                src="https://webring.wonderful.software/webring.black.svg"
+              />
+            </OutLink>
           </div>
         </footer>
       </div>
