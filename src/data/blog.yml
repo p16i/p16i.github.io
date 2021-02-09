@@ -77,3 +77,8 @@
   published_date: 2020/12/27
   title: "Principle of Maximum Entropy"
   thumbnail: /images/blog/2020-entropy.png
+
+- url: "/blog/2021-whitening"
+  published_date: 2021/02/09
+  title: "Approaches for Whitening Data"
+  thumbnail: /images/blog/2021-whitening.png
