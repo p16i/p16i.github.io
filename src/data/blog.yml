@@ -82,3 +82,8 @@
   published_date: 2021/02/09
   title: "Approaches for Whitening Data"
   thumbnail: /images/blog/2021-whitening.png
+
+- url: "/blog/2021-bayesian-linear-regression"
+  published_date: 2021/02/12
+  title: "Bayesian Linear Regression"
+  thumbnail: /images/blog/2021-bayesian-linear-regression.png
