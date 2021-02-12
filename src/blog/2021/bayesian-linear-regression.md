@@ -217,6 +217,6 @@ From Fig. 1, we see the extrapolation effect in the range that our training data
 
 Perhaps, in the next step, we shall look at classification tasks and how to estimate uncertainty of the prediction in such situations.
 
-This post is my recap of [Yarin Gal's tutorial at SMILES 2019](https://www.youtube.com/watch?v=7p56lnNi74s).
+This post is my recap of [Yarin Gal's tutorial at SMILES 2019](https://www.youtube.com/watch?v=7p56lnNi74s). I also consulted [mathematicalmok's Youtube channel](https://www.youtube.com/watch?v=xyuSiKXttxw&list=PLD0F06AA0D2E8FFBA&index=62).
 
 The figure is generated from [this Google Colab](https://colab.research.google.com/drive/1fRP-S6PXXx1RA5fgMuymkQZ75Sv2NupF#scrollTo=X1MGn8xNuzcO).
