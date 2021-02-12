@@ -65,9 +65,9 @@ $$
 \begin{aligned}
 p(\mathcal D | \mathbf w) p(\mathbf w) &= \prod_{i=1}^n p(y_i | \mathbf x_i, \mathbf w) p(\mathbf w) \\
 &=\bigg [ \prod_{i=1}^n \frac{1}{Z_x} \exp\bigg( - \frac{(y_i - \mathbf w^T \mathbf x_i)^2}{2\sigma^2} \bigg) \bigg] \frac{1}{Z_w} \exp \bigg(\frac{ - \mathbf w^T \Sigma_w^{-1} \mathbf w  }{2}\bigg) \\
-&\propto\exp\bigg( - \frac{1}{2\sigma^2}  \sum_{i=1}^n  (\mathbf w^T \mathbf x_i \mathbf x_i^T \mathbf w - 2y_i\mathbf w^T \mathbf x_i + y_i^2)  - \frac{ \mathbf w^T \Sigma_w^{-1} \mathbf w }{2} \bigg)  \\
-&\propto \exp\bigg( - \frac{1}{2} \bigg( \mathbf w^T \bigg(  \frac{1}{\sigma^2}  \sum_{i=1}^n    \mathbf x_i \mathbf x_i^T \bigg) \mathbf w  + \mathbf w^T \Sigma_w^{-1} \mathbf w  - \frac{2}{\sigma^2} \mathbf w^T \mathbf X^T \mathbf y \bigg) + C\bigg)  \\
-&\propto \exp\bigg( - \frac{1}{2} \bigg( \mathbf w^T \bigg(  \frac{1}{\sigma^2}  \mathbf X^T \mathbf X + \Sigma_w^{-1} \bigg) \mathbf w   - \frac{2}{\sigma^2} \mathbf w^T \mathbf X^T \mathbf y \bigg) \bigg),
+&\propto_{\mathbf w}\exp\bigg( - \frac{1}{2\sigma^2}  \sum_{i=1}^n  (\mathbf w^T \mathbf x_i \mathbf x_i^T \mathbf w - 2y_i\mathbf w^T \mathbf x_i + y_i^2)  - \frac{ \mathbf w^T \Sigma_w^{-1} \mathbf w }{2} \bigg)  \\
+&\propto_{\mathbf w} \exp\bigg( - \frac{1}{2} \bigg( \mathbf w^T \bigg(  \frac{1}{\sigma^2}  \sum_{i=1}^n    \mathbf x_i \mathbf x_i^T \bigg) \mathbf w  + \mathbf w^T \Sigma_w^{-1} \mathbf w  - \frac{2}{\sigma^2} \mathbf w^T \mathbf X^T \mathbf y \bigg) + C\bigg)  \\
+&\propto_{\mathbf w} \exp\bigg( - \frac{1}{2} \bigg( \mathbf w^T \bigg(  \frac{1}{\sigma^2}  \mathbf X^T \mathbf X + \Sigma_w^{-1} \bigg) \mathbf w   - \frac{2}{\sigma^2} \mathbf w^T \mathbf X^T \mathbf y \bigg) \bigg),
 \end{aligned}
 $$
 
