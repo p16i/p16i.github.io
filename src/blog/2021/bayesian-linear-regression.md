@@ -161,7 +161,7 @@ $$
 \begin{aligned}
 p(y_* | \mathbf w, \mathbf x_*) &\propto_y \exp \bigg(- \frac{y_*^2}{2\sigma^2 } + \frac{\xi^T L \xi }{2} \bigg) \underbrace{\int \exp\bigg( -\frac{(\mathbf w - \xi)^T L (\mathbf w - \xi) }{2}  \bigg) d \mathbf w}_{1} \\
 &\propto_y \exp \bigg(- \frac{y_*^2}{2\sigma^2 } + \frac{\xi^T L \xi }{2} \bigg) \\
-&\propto_y \exp \bigg(- \frac{1}{2} \bigg [ \frac{y_*^2}{\sigma^2 } + \xi^T L \xi \bigg]  \bigg) .
+&\propto_y \exp \bigg(- \frac{1}{2} \bigg [ \frac{y_*^2}{\sigma^2 } - \xi^T L \xi \bigg]  \bigg) .
 \end{aligned}
 $$
 
@@ -174,7 +174,7 @@ $$
 \xi^T L \xi &= \bigg[L^{-1}\bigg(\frac{\mathbf x_* y_*}{\sigma^2} + \Sigma'^{-1}\mu'\bigg) \bigg]^T L \bigg[L^{-1}\bigg(\frac{\mathbf x_* y_*}{\sigma^2} + \Sigma'^{-1}\mu'\bigg) \bigg] \\
 &= \bigg[L^{-1}\bigg(\frac{\mathbf x_* y_*}{\sigma^2} + \Sigma'^{-1}\mu'\bigg) \bigg]^T \bigg(\frac{\mathbf x_* y_*}{\sigma^2} + \Sigma'^{-1}\mu'\bigg)  \\
 &= \bigg(\frac{(L^{-1} \mathbf x_*)^T \mathbf x_*}{\sigma^4} \bigg) y_*^2 + 2\bigg(\frac{(L^{-1}\mathbf x_*)^T \Sigma'^{-1}\mu' }{\sigma^2}\bigg) y_* + C \\
-&= \bigg(\frac{\mathbf x_* ^T L^{-1} \mathbf x_*}{\sigma^4}\bigg)y_*^2 + 2 \bigg ( \frac{ \mathbf x_* L^{-1} \Sigma'^{-1} \mu '}{\sigma^2} \bigg)y_* + C.
+&= \bigg(\frac{\mathbf x_* ^T L^{-1} \mathbf x_*}{\sigma^4}\bigg)y_*^2 + 2 \bigg ( \frac{ \mathbf x_*^T L^{-1} \Sigma'^{-1} \mu '}{\sigma^2} \bigg)y_* + C.
 \end{aligned}
 $$
 
@@ -184,7 +184,7 @@ Combining all the results together we have
 
 $$
 \begin{aligned}
-p(y_* | \mathbf w, \mathbf x_*) &\propto_y \exp \bigg( - \frac{1}{2} \bigg[  \frac{1}{\sigma^2} \bigg ( 1 -  \frac{\mathbf x_* L^{-1} \mathbf x_*}{\sigma^2}  \bigg) y_*^2  - 2\bigg ( \frac{\mathbf x_* L^{-1}\Sigma'^{-1}\mu'}{\sigma^2} \bigg ) y_*\bigg] \bigg) \\
+p(y_* | \mathbf w, \mathbf x_*) &\propto_y \exp \bigg( - \frac{1}{2} \bigg[  \frac{1}{\sigma^2} \bigg ( 1 -  \frac{\mathbf x_*^T L^{-1} \mathbf x_*}{\sigma^2}  \bigg) y_*^2  - 2\bigg ( \frac{\mathbf x_*^T L^{-1}\Sigma'^{-1}\mu'}{\sigma^2} \bigg ) y_*\bigg] \bigg) \\
 &= \mathcal{N}(\mu_{y_*}, \sigma_{y_*}^2),
 \end{aligned}
 $$
@@ -195,8 +195,40 @@ where we have
 
 $$
 \begin{aligned}
-\sigma^2_{y_*} &= \bigg [ \frac{1}{\sigma^2} \bigg( 1 -  \frac{\mathbf x_* L^{-1} \mathbf x_*}{\sigma^2} \bigg)  \bigg]^{-1} \\
-\mu_{y_*} &= \frac{1}{\sigma_{y_*}^2} \bigg( \frac{\mathbf x_* L^{-1}\Sigma'^{-1}\mu'}{\sigma^2} \bigg ).
+\sigma^2_{y_*} &= \bigg [ \frac{1}{\sigma^2} \bigg( 1 -  \frac{\mathbf x_*^T L^{-1} \mathbf x_*}{\sigma^2} \bigg)  \bigg]^{-1} \\
+\mu_{y_*} &= \sigma_{y_*}^2 \bigg( \frac{\mathbf x_*^T L^{-1}\Sigma'^{-1}\mu'}{\sigma^2} \bigg ).
+\end{aligned}
+$$
+These results can be further simplified by using [the Sherman–Morrison formula](https://en.wikipedia.org/wiki/Sherman–Morrison_formula#Application) (1). Denote $a=1/\sigma^2$. We have 
+
+$$
+\begin{aligned}
+\mathbf x_*^T L^{-1} \mathbf x_* &= \mathbf x_*^T \bigg( \Sigma'^{-1} + a \mathbf x_* \mathbf x_*^T \bigg)^{-1} \mathbf x_*  \\
+ &\overset{(1)}{=} \mathbf x_*^T \bigg( \Sigma' - \frac{a \Sigma' \mathbf x_* \mathbf x_*^T \Sigma'}{1+a \mathbf x_*^T\Sigma'\mathbf x_*} \bigg) \mathbf x_*  \\
+ &= \mathbf x_*^T \Sigma' \mathbf x_* \bigg ( 1 - \frac{a\mathbf x_*^T \Sigma' \mathbf x_*}{1+a\mathbf x_*^T \Sigma' \mathbf x_*} \bigg) \\
+ &= \frac{ \mathbf x_*^T \Sigma' \mathbf x_* }{1+a\mathbf x_*^T \Sigma' \mathbf x_*}.
+\end{aligned}
+$$
+
+Therefore, 
+$$
+\begin{aligned}
+\sigma_{y_*}^2 &= \bigg[ a \bigg( 1 - \frac{a\mathbf x_*^T \Sigma' \mathbf x_*}{1+a\mathbf x_*^T\Sigma' \mathbf x_*} \bigg) \bigg]^{-1} \\
+&= \bigg [ \frac{a}{1+a\mathbf x_*^T \Sigma' \mathbf x_*} \bigg]^{-1} \\
+&= \frac{1}{a} + \mathbf x_*^T \Sigma \mathbf x_* \\
+&= \sigma^2 + \mathbf x_*^T \Sigma \mathbf x_*.
+\end{aligned}
+$$
+
+Similary, we can follow the same steps for $\mu_{y_*}$,
+
+$$
+\begin{aligned}
+\mu_{y_*} &= \sigma_{y_*}^2 \bigg( a \mathbf x_*^T L^{-1}\Sigma'^{-1}\mu' \bigg ) \\
+&= \sigma_{y_*}^2 \bigg( a \mathbf x_*^T \bigg( \Sigma' -  \frac{ a\Sigma'\mathbf x_*\mathbf x_*^T \Sigma' }{1+a\mathbf x_*^T \Sigma' \mathbf x_* } \bigg)\Sigma'^{-1}\mu'\bigg) \\
+&= \sigma_{y_*}^2 a\bigg( \mathbf x_*^T \mu'\bigg(\frac{1}{1+a\mathbf x^*\Sigma' \mathbf x} \bigg) \bigg) \\
+&= \cancel{\sigma_{y_*}^2} \bigg( \mathbf x_*^T \mu'\bigg(\frac{1}{\cancel{\frac{1}{a}+\mathbf x^*\Sigma' \mathbf x}} \bigg) \bigg) \\
+&= \mathbf x_*^T \mu'.
 \end{aligned}
 $$
 
