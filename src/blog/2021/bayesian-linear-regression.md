@@ -215,8 +215,8 @@ $$
 \begin{aligned}
 \sigma_{y_*}^2 &= \bigg[ a \bigg( 1 - \frac{a\mathbf x_*^T \Sigma' \mathbf x_*}{1+a\mathbf x_*^T\Sigma' \mathbf x_*} \bigg) \bigg]^{-1} \\
 &= \bigg [ \frac{a}{1+a\mathbf x_*^T \Sigma' \mathbf x_*} \bigg]^{-1} \\
-&= \frac{1}{a} + \mathbf x_*^T \Sigma \mathbf x_* \\
-&= \sigma^2 + \mathbf x_*^T \Sigma \mathbf x_*.
+&= \frac{1}{a} + \mathbf x_*^T \Sigma' \mathbf x_* \\
+&= \sigma^2 + \mathbf x_*^T \Sigma' \mathbf x_*.
 \end{aligned}
 $$
 
