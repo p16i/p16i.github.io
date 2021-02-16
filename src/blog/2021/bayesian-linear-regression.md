@@ -232,7 +232,12 @@ $$
 \end{aligned}
 $$
 
-These are the predictive variance and predictive mean for logistic regression with Gaussian prior, or ridge regression.
+These are the predictive variance and predictive mean for logistic regression with Gaussian prior or ridge regression.
+
+We can look closer at $\sigma_{y_*}^2$. Here the first term $\sigma^2$ is a constrant we assume; more precisely it tells us about **aleatoric uncertainty**, which is the uncertainy due to noise in measurement. On the other hand, the second term $\mathbf x_*^T \Sigma' \mathbf x_*$ is what we are interested in if we make prediction. It captures **epistemic uncertainty**, which indicates the level of knowledge one does not have  in the problem or the model. Therefore, if one is interested in the uncertainty of her/his model $f$'s prediction, one can determine the uncertainy by 
+$$
+\text{Var}(f) = \mathbf x_*^T \Sigma' \mathbf x_*.
+$$
 
 ## Example
 Now, it is time to put things together. We take a dataset and train a linear regression model on four different subsets. We assume that all train samples are in the range $[-1, 1]$, while test samples are $[-1.5, 1.5]$.
