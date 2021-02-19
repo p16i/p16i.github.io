@@ -248,7 +248,7 @@ Now, it is time to put things together. We take a dataset and train a linear reg
 </div>
 <br/>
 
-From Fig. 1, we see the extrapolation effect in the range that our training data is not covered. Without the posterior distribution, we would not know how much we had the point-estimate of the solution (i.e. solutions of ML or MAP). Furthermore, as we have more training samples, our model does not only do well in the interpolation regime (where training data is covered) but also the extrapolation regime.
+From Fig. 1, we see the effect of extrapolation in the range that our training data does not cover. Without the posterior distribution, we would not know how much uncertainty we had if we relied the point-estimate of the solution (i.e. solutions of ML or MAP). Nevertheless, as we have more training samples, our model does not only do well in the interpolation regime (where training data is covered) but also the extrapolation regime.
 
 ## Conclusion and References
 
