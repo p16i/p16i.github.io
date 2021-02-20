@@ -87,3 +87,8 @@
   published_date: 2021/02/12
   title: "Bayesian Linear Regression"
   thumbnail: /images/blog/2021-bayesian-linear-regression.png
+
+- url: "/blog/2021-krr-gps"
+  published_date: 2021/02/20
+  title: "Kernel Ridge Regression and Gaussian Processes"
+  thumbnail: https://i.imgur.com/5rBm3PR.png
