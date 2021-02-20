@@ -244,7 +244,7 @@ Now, it is time to put things together. We take a dataset and train a linear reg
 
 <div align="center">
   <img src="https://i.imgur.com/NHgHcsG.png"/>
-  <div style="color: gray">Fig. 1: Ridge regression trained with data with different sizes; the more training the more certain prediction especially in the extrapolation regime.</div>
+  <div style="color: gray">Fig. 1: Ridge regression trained with data with different sizes; the more training data the more certain prediction it is, especially in the extrapolation regime.</div>
 </div>
 <br/>
 
