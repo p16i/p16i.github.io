@@ -329,7 +329,7 @@ $$
 $$
 
 
-We can see that we can write $\hat W^{1} = M^1 \epsilon^1$ and $\hat W^{2} = M^2 \epsilon^2$.  Gal (2016) shows that the KL term can be approximated
+We can see that we can write $\hat W^{1} = M^1 \epsilon^1$ and $\hat W^{2} = M^2 \epsilon^2$.  [Gal (2016)](http://www.cs.ox.ac.uk/people/yarin.gal/website/thesis/9_appendix_A.pdf) shows that the KL term can be approximated
 
 
 $$
