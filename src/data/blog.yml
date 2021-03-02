@@ -92,3 +92,8 @@
   published_date: 2021/02/20
   title: "Kernel Ridge Regression and Gaussian Processes"
   thumbnail: https://i.imgur.com/5rBm3PR.png
+
+- url: "/blog/2021-modeling-uncertainty-in-neural-networks"
+  published_date: 2021/03/02
+  title: "Modeling Uncertainty in Neural Networks"
+  thumbnail: https://i.imgur.com/9PloUKD.png
