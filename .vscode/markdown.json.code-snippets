@@ -32,6 +32,7 @@
 			"<div align=\"center\">",
 			"  <img src=\"$1\"/>",
 			"  <div style=\"color: gray\">...</div>",
+			"  <br/>",
 			"</div>"
 		],
         "description": "Center Image"
