@@ -97,3 +97,8 @@
   published_date: 2021/03/02
   title: "Modeling Uncertainty in Neural Networks"
   thumbnail: https://i.imgur.com/9PloUKD.png
+
+- url: "/blog/2021-laplace-approximation"
+  published_date: 2021/03/05
+  title: "Laplace Approximation"
+  thumbnail: https://i.imgur.com/tumsgDV.png
