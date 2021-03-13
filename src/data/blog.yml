@@ -103,7 +103,7 @@
   title: "Laplace Approximation"
   thumbnail: https://i.imgur.com/tumsgDV.png
 
-- url: "blog/2021-em-and-mixture-models"
+- url: "/blog/2021-em-and-mixture-models"
   published_date: 2021/03/13
   title: "Expectation Maximization and Mixture Models"
   thumbnail: https://i.imgur.com/Iuu8lEQ.gif
