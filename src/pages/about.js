@@ -43,16 +43,16 @@ const About = () => {
     <p>
     <b>Football</b> is my favourite sport. I've been playing since a young age.
     Although I came to Europe for my study, I still play football there. These are clubs
-    that I've played with:
+    that I've played for:
     <ul css={{listStyle: "none"}}>
         <li>
             <TeamIcon icon={IconBosna}/><OutLink href="http://www.fussball.de/verein/sc-bosna-berlin-berlin/-/id/01OE5U5FUG000000VV0AG80NVUVDNPJM">SC Bosna Berlin</OutLink>, Germany: Berlin's Keisliga C 2018/19
         </li>
         <li>
-            <TeamIcon icon={IconRotation}/><OutLink href="https://www.rotationpb-fussball.de">SG Rotitaion Prenzlauer</OutLink>, Berlin Germany: Freizeitliga 2017/2018
+            <TeamIcon icon={IconRotation}/><OutLink href="https://www.rotationpb-fussball.de">SG Rotation Prenzlauer</OutLink>, Berlin Germany: Freizeitliga 2017/18
         </li>
         <li>
-            <TeamIcon icon={IconPusphaira}/><OutLink href="https://pusphaira.nl/en/">Pusphaira 6</OutLink>, Eindhoven, the Netherlands: Sunday Leaguage 2015/2016
+            <TeamIcon icon={IconPusphaira}/><OutLink href="https://pusphaira.nl/en/">Pusphaira 6</OutLink>, Eindhoven, the Netherlands: Sunday Leaguage 2015/16
         </li>
     </ul>
     </p>
