@@ -103,7 +103,7 @@ $$
 Because $L^{-1}$  is also [a lower triangular matrix](https://math.stackexchange.com/questions/245871/proving-the-inverse-if-any-of-a-lower-triangular-matrix-is-lower-triangular). This invert can be computed efficiently using [forward substitution](https://en.wikipedia.org/wiki/Triangular_matrix#Forward_and_back_substitution).
 
 <div align="center">
-  <img src="https://i.imgur.com/STXioPz.png" style="width: 100%"/>
+  <img src="https://i.imgur.com/CLo496s.png" style="width: 100%"/>
   <div style="color: gray">Figure 1: Data whitened with various approaches. Although the results look similar, ZCA-whitened data is closed to the original.
   </div>
 </div>
@@ -113,4 +113,5 @@ Because $L^{-1}$  is also [a lower triangular matrix](https://math.stackexchange
 These are resources that I consult while writing this blog:
 - [Colab notebook  for the figure.](https://colab.research.google.com/drive/1Y1NjQkDUlr6DUX_-sTuSVNJu_YjBbU8N#scrollTo=52MLSrC1tw7G)
 - [Kessy et al. (2015), "Optimal Whitening and Decorrelation"](https://arxiv.org/pdf/1512.00809.pdf)
-- [H. Larochelle, Sparse coding - ZCA preprocessing](https://www.youtube.com/watch?v=eUiwhV1QcQ4)
+- [Hugo Larochelle (2013), Sparse coding - ZCA preprocessing](https://www.youtube.com/watch?v=eUiwhV1QcQ4)
+- [Joe Marino (2017), Statistical Whitening ](https://joelouismarino.github.io/posts/2017/08/statistical_whitening/)
