@@ -48,13 +48,6 @@ module.exports = {
         name: `markdown-pages`,
       },
     },
-    // {
-    //   resolve: `gatsby-transformer-remark`,
-    //   options: {
-    //     plugins: [
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
