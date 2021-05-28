@@ -25,17 +25,6 @@ export default function Template({
 }) {
   console.log(data)
 
-  // return <div>
-  //   <MDXProvider components={shortcodes}>
-  //     <h1>drr!</h1>
-  //     <MDXRenderer>
-  //       {data.mdx.body}
-  //     </MDXRenderer>
-  //   </MDXProvider>
-  // </div>
-
-  // const { markdownRemark } = data // data.markdownRemark holds your post data
-  // const { frontmatter, html, tableOfContents } = markdownRemark
   console.log(data.frontmatter)
   const {frontmatter, body, headings} = data.mdx
   const slugger = new Slugger()
