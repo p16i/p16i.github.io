@@ -1,7 +1,7 @@
 ---
 path: /blog/2020-pca
 date: 2020-01-23
-title:
+title: PCA (draft)
 ---
 
 ## TODO
