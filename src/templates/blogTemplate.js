@@ -10,7 +10,6 @@ import Slugger from 'github-slugger'
 
 
 import  CollapsableBlock  from "../components/collapsable-block"
-import ApplauseButton from "../components/applause-button"
 
 
 
@@ -18,7 +17,7 @@ import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
 
 require(`katex/dist/katex.min.css`)
 
-const shortcodes = { CollapsableBlock, ApplauseButton }
+const shortcodes = { CollapsableBlock }
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -112,13 +111,3 @@ export const pageQuery = graphql`
     }
   }
 `
-      // html
-      // headings {
-      //   value
-      //   depth
-      // }
-      // tableOfContents(
-      //   absolute: false 
-      //   pathToSlugField: "frontmatter.path"
-      //   maxDepth: 3
-      // )
