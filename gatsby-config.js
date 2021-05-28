@@ -4,6 +4,9 @@ module.exports = {
     description: `A PhD Candidate at Max Planck School of Cognition`,
     author: `@heytitle`,
   },
+  flags: {
+    FAST_DEV: true,
+  },
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
