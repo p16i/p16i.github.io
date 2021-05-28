@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - develop
+      - with-mdx
 
 jobs:
   build:
