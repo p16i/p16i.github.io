@@ -16,7 +16,7 @@ Kim argues that not all situation that interpretability is necessary: for exampl
 One particular issue of interpretability research is how to evaluate the important of technique proposes as we do have the ground truth to objectively compare.  Kim purposes there levels are application-grounded, human-grounded, and functional-grounded evaluations; one can see these evaluations are ordered by the involvement degree of humans.
 
 <div>
-    <img src="https://i.imgur.com/0OkA2O8.png">
+    <img src="https://i.imgur.com/0OkA2O8.png"/>
     <div style="color: gray">Fig 1: Taxonomy of evaluation approaches for interpretability (image courtesy Doshi-Velez and Kim (2017))</div>
     <br/>
 </div>

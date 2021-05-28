@@ -11,7 +11,7 @@ Artificial neural networks (ANNs) have become a power horse of many intelligent 
 
 
 <div style="width: 800px">
-    <img src="/images/blog/2020-cav/latent-representation.png">
+    <img src="/images/blog/2020-cav/latent-representation.png"/>
     <div style="color: gray">Fig. 1: Each layer learns to detect certain features. Early layers learn to detect simple features, while later layers learn to recognize complex features. Images are drawn and adapted from Lee et al. (2011).
     </div>
     <br/>
@@ -23,7 +23,7 @@ Many works have investigated what these representations of ANNs represent. For e
 Another direction that we can investigate this phenomenon is to look at neightbours in these space. For example, we can use an image, take its activation at a certain layer, and then find the neighbour points (i.e. other images' activation). Most of the case, we will get these neighbour points are the images look visually to the image that we query.
 
 <div style="width: 800px">
-    <img src="/images/blog/2020-cav/visually-similar.png">
+    <img src="/images/blog/2020-cav/visually-similar.png"/>
     <div style="color: gray">Fig. 2: Finding visually similar images using latent representation from a trained ANN. <a href="https://github.com/heytitle/visually-similar-image-search">More details.</a>
     </div>
     <br/>
@@ -35,7 +35,7 @@ Although there is no clear interpretation of these latent spaces, one can levera
 Given a trained image classifier $f(\cdot)$, [Kim et al. (2018)](http://proceedings.mlr.press/v80/kim18d.html) propose to build a linear classifier based on the latent representation $l$ of this classifier using two sets of images: one contains samples with the concept of interest and the other one is the complement (or something else). Geometrically, this linear classifier is a hyperplane in a $d$-dimension space represented  by a normal vector $\mathbf v_l \in \Reals^d$, called **Concept Activation Vector**.
 
 <div>
-    <img src="/images/blog/2020-cav/cav-vis.png">
+    <img src="/images/blog/2020-cav/cav-vis.png"/>
     <div style="color: gray">Fig. 3: Concept Activation Vector and the measure of concept alignment.
     </div>
     <br/>
