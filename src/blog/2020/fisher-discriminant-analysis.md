@@ -10,7 +10,7 @@ However, one issue might arise is that we might lose some information that is me
 
 
 <div align="center">
-  <img src="https://i.imgur.com/EjF1fUm.png"/ width="400px"><br/>
+  <img src="https://i.imgur.com/EjF1fUm.png"/ width="400px"/><br/>
   <div style="color: gray">Fig. 1: Projection direction that does not separate the two distribution well.</div>
 </div>
 

@@ -4,26 +4,33 @@ date: "1990-12-31"
 title: "[title]"
 ---
 
-
-
 content
 
-<!-- <h1>{props.pageContext.frontmatter.title} ee</h1>
-<span>{props.pageContext.frontmatter.date} ee</span> -->
+This is latex with `$`: $E=mc^2$.
 
-dd
-
-
-This is latex
+This is latex `$$`.
 
 $$
-E = mc^2.
+\begin{aligned}
+E &= mc^2 \\
+&= mc \cdot c
+\end{aligned}
 $$
 
-<CollapsableBlock title="Proof 1">
+<CollapsableBlock title="Proof 1 (Sketch)">
 ^ we should see collapsable block above
+
+$$
+    F=ma
+$$
 </CollapsableBlock>
 
-eee
+## Header 2
+Part 1
 
-something
+
+### Header 3
+Part 2
+
+<hr/>
+the end.!

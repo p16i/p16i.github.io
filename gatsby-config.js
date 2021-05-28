@@ -52,11 +52,19 @@ module.exports = {
     //   resolve: `gatsby-transformer-remark`,
     //   options: {
     //     plugins: [
-    //       `gatsby-remark-autolink-headers`,
-    //       `gatsby-remark-katex`,
     //     ],
     //   },
     // },
-    `gatsby-plugin-mdx`
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`],
+        gatsbyRemarkPlugins: [
+            `gatsby-remark-slug`,
+        ],
+        remarkPlugins: [require('remark-math')],
+        rehypePlugins: [require('rehype-katex')],
+      }
+    }
   ],
 }
