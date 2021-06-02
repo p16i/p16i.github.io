@@ -107,3 +107,8 @@
   published_date: 2021/03/13
   title: "Expectation Maximization and Mixture Models"
   thumbnail: https://i.imgur.com/Iuu8lEQ.gif
+
+- url: "/blog/2021-activation-maximization"
+  published_date: 2021/06/02
+  title: "Activation Maximization"
+  thumbnail: /images/blog/2021-activation-maximization.png
