@@ -4,6 +4,8 @@ date: "2020-07-28"
 title: "ReLU and Softplus Activations"
 ---
 
+
+
 ReLU is one of the commonly used activations for artificial neural networks, and softplus can viewed as its smooth version.
 $$
 \text{ReLU}(x) = \max(0, x) \ \ \ \ \ \ \ \ \ \ \ \text{softplus}_\beta(x) = \frac{1}{\beta}\log(1 +  e^{\beta x}),
@@ -72,6 +74,13 @@ $$
 $$
 
 Differentiating both sides yields the desired result. ◼️
+
+<div align="center">
+  <iframe width="100%" height="826" frameborder="0"
+  src="https://observablehq.com/embed/@heytitle/smoothing-activation-surface-with-softplus?cells=betaDesc%2Cviewof+beta%2CviewLegend%2Cchart"></iframe>
+  <div style="color: gray">(Visualization added on 02/06/2020)</div>
+</div>
+<br/>
 
 ## Why does this result matter?
 
