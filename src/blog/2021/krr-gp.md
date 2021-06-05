@@ -228,4 +228,4 @@ These are materials I consulted while writing this article:
 - [Tzu-Kuo Huang's A Technical Introduction to Gaussian Process Regression](http://ntur.lib.ntu.edu.tw/bitstream/246246/20060927122912664791/1/gpr.pdf)
 - [Chuong B. Do's Gaussian Processes](https://see.stanford.edu/materials/aimlcs229/cs229-gp.pdf)
 
-Figures are maded using [Google Colab](https://colab.research.google.com/drive/1UkCSyjtML7Kr_vFNNd_gcGknQp2FFnvo).
+Figures are made using [Google Colab](https://colab.research.google.com/drive/1UkCSyjtML7Kr_vFNNd_gcGknQp2FFnvo).

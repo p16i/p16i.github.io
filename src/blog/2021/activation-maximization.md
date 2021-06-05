@@ -197,3 +197,5 @@ This phenomena is an interesting connection between adversarial robustness and m
 Activation maximization is a tool that one can use to study what features DNNs learn. Recent works have observed interesting properties from synthetic images from the framework, and the connection between these properties and adversarial robustness seem prominent. However, despite such positive results, a recent human study [[Borowski and Zimmermann et al. (ICLR, 2021)]](https://arxiv.org/pdf/2010.12606.pdf) shows that these synthetic images might not be that helpful for humans to understand models comparing those exemplar images.
 
 This article is my recollection of [Grégoire Montavon](https://www.ml.tu-berlin.de/menue/members/gregoire_montavon)'s ML 1 (WS2021), Lecture XAI, at TU Berlin.
+
+The first two figures are made in [Google Colab](https://colab.research.google.com/drive/15RkMdxwxigHJSOK0l8_CaM4XfBplaJIO).
