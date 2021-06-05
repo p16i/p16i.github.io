@@ -6,6 +6,9 @@ title: "Principle of Maximum Entropy"
 
 Finding the underlying distribution that matches the data we observe is one of the most important aspect of machine learning. Without any constraint, this task seems to be impossible to solve; therefore, we need to also choose a set of assumptions, called inductive bias, that describe what characteristics of the solution (or hypothesis) that we prefer. One of such biases is Occam's Razor, which states that given two correct hypotheses the simpler one is preferred.
 
+<iframe width="100%" height="492" frameborder="0"
+  src="https://observablehq.com/embed/@heytitle/uncertainty-and-entropy?cells=questionView%2Cviewof+p%2Cchart"></iframe>
+
 It might sound circulate, but one might ask "How can we determine which hypothesis is simple?".  As we are interested in finding a distribution that aligns well with our observational data, we might look at the entropy of the distribution, which measures the uncertainty (or surprise) of the distribution. Given a set of statistics we can extract from the data, one might choose the distribution that has the highest entropy. This is [Jaynes (1957)'s Principle of Maximum Entropy](https://journals.aps.org/pr/abstract/10.1103/PhysRev.106.620) (MaxEnt). My interpretation to this principle is that more surprise indicates that we make fewer assumptions or less claims about the data. 
 
 # Deriving Distributions with MaxEnt
