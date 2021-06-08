@@ -46,7 +46,7 @@ const About = () => {
     that I've played for:
     <ul css={{listStyle: "none"}}>
         <li>
-            <TeamIcon icon={IconBosna}/><OutLink href="http://www.fussball.de/verein/sc-bosna-berlin-berlin/-/id/01OE5U5FUG000000VV0AG80NVUVDNPJM">SC Bosna Berlin</OutLink>, Germany: Berlin's Keisliga C 2018/19
+            <TeamIcon icon={IconBosna}/><OutLink href="http://www.fussball.de/verein/sc-bosna-berlin-berlin/-/id/01OE5U5FUG000000VV0AG80NVUVDNPJM">SC Bosna Berlin</OutLink>, Germany: Berlin's Kreisliga C 2018/19
         </li>
         <li>
             <TeamIcon icon={IconRotation}/><OutLink href="https://www.rotationpb-fussball.de">SG Rotation Prenzlauer</OutLink>, Berlin Germany: Freizeitliga 2017/18
