@@ -98,7 +98,7 @@ Consider a test sample $\mathbf x^*$ . The prediction is
 
 $$
 \begin{aligned}
-f(\mathbf x^*) &= \phi(\mathbf x^*)^T\bigg( \phi(\mathbf X)\phi(\mathbf X) + \lambda I_h \bigg)^{-1} \phi(\mathbf X)^T \mathbf y \\
+f(\mathbf x^*) &= \phi(\mathbf x^*)^T\bigg( \phi(\mathbf X)^T\phi(\mathbf X) + \lambda I_h \bigg)^{-1} \phi(\mathbf X)^T \mathbf y \\
 &= \phi(\mathbf x^*)^T\bigg( \phi(\mathbf X)^T\phi(\mathbf X)+ \lambda I_h \bigg)^{-1} \phi(\mathbf X)^T \bigg( \phi(\mathbf X)\phi(\mathbf X)^T + \lambda I_h \bigg) \bigg( \phi(\mathbf X)\phi(\mathbf X)^T + \lambda I_h \bigg)^{-1}  \mathbf y \\
 &= \phi(\mathbf x^*)^T\bigg( \phi(\mathbf X)^T\phi(\mathbf X)+ \lambda I_h \bigg)^{-1}  \bigg( \phi(\mathbf X)^T\phi(\mathbf X)\phi(\mathbf X)^T + \lambda \phi(\mathbf X)^T \bigg) \bigg( \phi(\mathbf X)\phi(\mathbf X)^T + \lambda I_h \bigg)^{-1}  \mathbf y \\
 &= \phi(\mathbf x^*)^T\bigg( \phi(\mathbf X)^T\phi(\mathbf X)+ \lambda I_h \bigg)^{-1}  \bigg( \phi(\mathbf X)^T\phi(\mathbf X) + \lambda I_h \bigg) \phi(\mathbf X)^T \bigg( \phi(\mathbf X)\phi(\mathbf X)^T + \lambda I_h \bigg)^{-1}  \mathbf y \\
