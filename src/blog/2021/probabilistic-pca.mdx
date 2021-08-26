@@ -1,0 +1,258 @@
+---
+path: "/blog/2021-probabilistic-pca"
+date: "2021-08-26"
+title: "Probabilistic PCA"
+---
+
+This article is a personal summary of [Bishop (2006)](https://www.springer.com/gp/book/9780387310732)'s Chapter 12.2.
+
+## Formulation: Linear Generative Model
+
+Let $\mathbf x \in \reals^d$ be an observed sample. We model it using the following linear generative model
+
+$$
+\mathbf x = W \mathbf z + \mu + \epsilon ,
+$$
+
+where
+
+- $W \in  \reals^{d \times p }$ is a mixing matrix;
+- $\mu \in \reals^d$ is a mean or bias;
+- $\mathbf z \in \reals^p \sim p_Z := \mathcal N(0, I_p)$ is the latent variable;
+- $\epsilon \in \reals^d \sim p_\epsilon := \mathcal N(0, \sigma^2 I_d)$ is isotropic noise.
+
+**Example**
+
+The example below is a linear generative model where $p = 1$ (i.e., $z \sim \mathcal N(0, 1)$) and $d = 2$.
+We parameterize $W \in \reals^{2 \times 1}$ using the polar coordinates; that is
+
+$$
+\begin{aligned}
+W = \begin{bmatrix} r \cos(\theta)\\
+r \sin(\theta)
+\end{bmatrix},
+\end{aligned}
+$$
+
+where $r \in [0.1, 5]$ and $\theta \in [0, 2\pi]$. We assume $\mu = [0, 0]$.
+
+The animation shows the mechanism as follows
+
+- $Wz$ is displayed as <span style="color: gray">●</span>;
+- $Wz + \epsilon$ is displayed as <span style="color: salmon">●</span>.
+
+<iframe
+  width="800"
+  height="745"
+  frameborder="0"
+  src="https://observablehq.com/embed/@heytitle/linear-generative-models?cells=viewof+resample%2Csvg%2Cviewof+values"
+></iframe>
+
+The condition distribution of $\mathbf x$ given $\mathbf z$ is
+
+$$
+\begin{aligned}
+p_{X|Z} = \mathcal N(W\mathbf z + \mathbf u,\sigma^2 I_d),
+\end{aligned}
+$$
+
+and the marginal distribution over $\mathbf x$ is
+
+$$
+\begin{aligned}
+p_X &=  \int p_{XZ\epsilon}( \cdot, \mathbf z, \epsilon) d\mathbf z d\epsilon \\
+
+&= \int p_{XZ}(\cdot, \mathbf z)  p_\epsilon(\mathbf \epsilon ) d\mathbf z d\epsilon  \\
+
+&= \int p_{XZ}(\cdot, \mathbf z)  \underbrace{\bigg [ \int p_\epsilon(\mathbf \epsilon )  d\epsilon \bigg] }_{=1} d\mathbf z  \\
+
+&= \int p_{X|Z}( \cdot | \mathbf z) p_Z(\mathbf z) d \mathbf z,
+\end{aligned}$$
+
+where the second step is due to the independence assumption between $(X, Z)$  and $\epsilon$ .
+
+Observe that both $p_{X|Z}$ and $p_Z$ are Gaussian. We then have an analytical form for the integral. In particular, one can derive that the integral of two Gaussians is another Gaussian, i.e,
+$$
+
+p_X = \mathcal N(\nu, \Sigma).
+
+$$
+We can derive $\nu \in \reals^d$ and $\Sigma \in \reals^{d\times d }$ as follows:
+- First, we recall that $\nu = \mathbb{E}_{p_X} [X].$ Thus, we have
+
+    $$\begin{aligned}
+    \nu &= \mathbb{E}_{p_X}[ W\mathbf z + \mu + \epsilon ] \\
+
+    &= W \mathbb E_{p_Z}[\mathbf z] + \mu + \mathbb E_{p_\epsilon}[\epsilon] \\
+    &=  \mu, 
+    \end{aligned}$$
+
+    where the two expectations are zero by the assumptions; noting that t distributions of the expectations can derived from writing $p_X$ as below and exchange the order of the intergals.
+
+    $$
+    p_X = \int p_{XZ\epsilon}(\cdot, \mathbf z, \epsilon ) d\mathbf z d \epsilon
+    $$
+
+- Second, we have
+    $$
+    \Sigma = \mathbb{E}_{p_X}[ (\mathbf x - \mu)(\mathbf x - \mu)^T] = \mathbb{E}_{p_X}[ (W\mathbf z + \epsilon) (W\mathbf z +\epsilon)^T].
+    $$
+    Explanding the terms yields
+    $$
+    \begin{aligned}
+    \Sigma &= \mathbb E_{p_X}[ W\mathbf z \mathbf z ^TW^T + 2W\mathbf z \epsilon^T + \epsilon \epsilon^T] \\
+
+    &= W \mathbb E_{p_Z}[ \mathbf z \mathbf z^T] W^T + 2W \mathbb E_{p_{Z\epsilon}}[ \mathbf z \epsilon^T] + \mathbb E_{p_\epsilon}[ \epsilon\epsilon^T] \\
+
+    &= WI_dW^T + 2W\mathbb{E}_{p_{Z\epsilon}}[\mathbf z \epsilon^T] + \sigma^2I_d.
+    \end{aligned}
+    $$
+
+    We know that $Z \perp \epsilon$ ; hence, we have $p_{Z\epsilon}(\mathbf z, \epsilon) = p_Z (\mathbf z) p(\epsilon)$. This leads to 
+
+    $$\begin{aligned}
+    \mathbb E_{p_{Z\epsilon}}[\mathbf z \epsilon^T] &= \int p_Z(\mathbf z) p_\epsilon(\epsilon) [ \mathbf z \epsilon^T ] d\mathbf z d \epsilon \\
+
+    &= \int p_Z(\mathbf z) \mathbf z \underbrace{\bigg[ \int p_\epsilon(\epsilon)\epsilon^T  d\epsilon \bigg]}_{=\mathbf 0}  d\mathbf z \\
+    &= \mathbf 0 .
+    \end{aligned}$$
+
+    Thus, we have $\Sigma = W W^T + \sigma^2I_d$.
+
+Putting the two steps together yields 
+
+$$
+p_X = \mathcal N(\mu, W  W^T + \sigma^2 I_d).
+$$
+
+## Inferring Parameters
+
+Consider a dataset $\mathcal D = \{\mathbf x_i\}_{i=1}^n$ where $\mathbf x_i$'s are assumed to be idendent and identallycal distributed according to $p_X$. Define $\Theta :=  \{ \mu, \Sigma\}$ be the parameters of the model. The log-likelihood of the model is 
+
+$$
+\begin{aligned}
+\log p(\mathcal D|\Theta) &= \sum_{i=1}^n \log p_X(\mathbf x_i) \\
+
+&= \sum_{i=1}^n  - \frac{d}{2}\log 2\pi  - \frac{1}{2}\log |\Sigma| - \frac{1}{2} (\mathbf x_i - \mu)^T \Sigma^{-1} (\mathbf x_i - \mu) \\
+
+&=  - \frac{nd}{2}\log 2\pi  - \frac{n}{2}\log |\Sigma| - \frac{1}{2}  \sum_{i=1}^n  (\mathbf x_i - \mu)^T \Sigma^{-1} (\mathbf x_i - \mu) \\
+&=: \mathcal L(\Theta).
+\end{aligned}
+$$
+
+### Finding Mean 
+
+Taking derivative of $\mathcal L (\Theta)$ w.r.t $\mu$  and set it to zero yields 
+
+$$
+\begin{aligned}
+\nabla_\mu \mathcal L(\Theta) &=  \sum_{i=1}^n \Sigma^{-1} (\mathbf x_i  - \mu) \\
+
+&\overset{!}{=} 0 \\
+
+\implies  \mu^\star &= \frac{1}{n} \sum_{i=1}^n \mathbf x_i.
+\end{aligned}
+$$
+
+### Finding Covariance
+
+Similarly, we have 
+
+$$
+\begin{aligned}
+\nabla_\Sigma \mathcal L(\Theta) &\overset{!}{=} 0 \\
+
+\implies \Sigma^\star &= \frac{1}{n} \sum_{i=1}^n (\mathbf x_i - \mu)(\mathbf x_i - \mu)^T,
+\end{aligned}
+$$
+
+which is the data covariance matrix. To find the parameters $W$ and $\sigma^2$, we first perform eigenvalue decomposition $\Sigma^\star  = U\Lambda U^T$. Without loss generality, we assume that the eigenvalues and eigenvectors are sorted in descending order. We then decompose the data covariance matrix into
+
+$$
+\begin{aligned}
+\Sigma^\star &= U_W \Lambda_W U_W^T +  U_\epsilon \Lambda_\epsilon U_\epsilon^T,
+\end{aligned}
+$$
+
+where
+
+- the  columns of $U_W\in \reals^{d\times p}$ are the first $p$ columns of $U$, similarly for $\Lambda_W \in \reals^{p \times p }$.
+- conversely, the  columns of $U_\epsilon \in \reals^{d \times (d-p)}$ and $\Lambda_\epsilon  \in \reals^{(d-p)\times (d-p)}$ are the corresponding values are taken from $U$ and $\Lambda$.
+
+Recall also that $U^T U = UU^T =I_d$. Thus, we have,
+
+$$I_d = U_WU_W^T + U_\epsilon U_\epsilon^T,$$
+
+and
+
+$$
+\begin{aligned}
+U_W\Lambda_W U_W^T +  U_\epsilon \Lambda_\epsilon U_\epsilon^T  & = WW^T +\sigma^2 \bigg( U_WU_W^T + U_\epsilon U_\epsilon^T\bigg).
+\end{aligned}
+$$
+
+To find $W$, we assume that the variances of the first $p$ dimensions (i.e., spanned by $U_W)$ are captured by it. Hence, collecting the terms associate to these dimensions yield
+
+$$
+\begin{aligned}
+WW^T &= U_W\Lambda_WU_W^T - \sigma^2 U_WU_W^T \\
+
+&= U_W \underbrace{(\Lambda_W - \sigma^2I_p)}_{=:\Gamma}U_W^T \\
+
+&= U_W \Gamma^{1/2} \Gamma^{1/2}U_W^T  \\
+
+&= U_W \Gamma^{1/2} (U_W \Gamma^{1/2})^T \\
+
+\implies W &= U_W\Gamma^{1/2}.
+\end{aligned}
+$$
+
+To find $\sigma^2$, we then assume it to be the average of the variances spanned by $U_\epsilon$, i.e., 
+
+$$
+\sigma^2 = \frac{1}{d-p} \sum_{k=p+1}^d \lambda_k,
+$$
+
+where $\lambda_k \in \reals_+ = \Lambda_{kk}$.
+
+To summarize, with the assumptions $p_Z$ and $p_\epsilon$  are Gaussians, we have
+
+$$
+\begin{aligned}
+p_{X|Z} &= \mathcal N(W\mathbf z+\mu, \sigma^2I_d) \\
+p_X &=  \mathcal N(\mu, WW^T + \sigma^2I_d),
+\end{aligned}
+$$
+
+where the parameters of the model are
+
+$$
+\begin{aligned}
+\mu &= \frac{1}{n} \sum_{i=1}^n \mathbf x_i \\
+\Sigma &= \frac{1}{n} \sum_{i=1}^n \mathbf (\mathbf x_i - \mu)(\mathbf x_i - \mu)^T \\
+
+\sigma^2 &= \frac{1}{d-p} \sum_{k=p+1}^d \lambda_k \\ 
+W &= U_W (\Lambda_W - \sigma^2I_p)^{1/2} .
+\end{aligned}
+$$
+
+## Example: Inferring Parameters of Linear Generative Model
+
+<div align="center" style="width:800px">
+  <img src="https://i.imgur.com/Bxtpj3h.png"/>
+  <div style="color: gray">Inferring parameters of a linear generative model using training sets with various sizes.</div>
+  <br/>
+</div>
+
+Observe that both the data generated and inferred distribution align with the shape of Gaussian distributions.
+
+## Conclusion 
+Linear generative models are simple generative models. They are the foundation of Probablistic PCA [[Tippings and Bishop (1996)]](https://rss.onlinelibrary.wiley.com/doi/10.1111/1467-9868.00196).
+Through this len, it is the modeling perspective of PCA, complementing the other traditional two views of PCA that is to  find a subspace that (1) maximizes variance or (2) mimizes reconstruction error.
+
+
+**Acknowlegdement**
+
+Apart from [Bishop (2006)](https://www.springer.com/gp/book/9780387310732)'s Chapter 12.2, I also gained some intuition from watching [Erik Bekkers's video](https://www.youtube.com/watch?v=invkqcdSkco).
+
+The last figure is from [a notebook on Google Colab](https://colab.research.google.com/drive/1kK1UBEVBLz8_np6kgDmUD3cjAejFwncB#scrollTo=o6rpmApcB1Lv).

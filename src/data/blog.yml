@@ -117,3 +117,8 @@
   published_date: 2021/06/13
   title: "Stein Variational Gradient Descent"
   thumbnail: "https://i.imgur.com/LDBq4Ol.png"
+
+- url: blog/2021-probabilistic-pca
+  published_date: 2021/08/26
+  title: Probabilistic PCA
+  thumbnail: https://i.imgur.com/SxormsB.png
