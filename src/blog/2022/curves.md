@@ -24,7 +24,7 @@ Consider another curve $\tilde \gamma : [c, d] \rightarrow C$ that has the same 
   <br/>
 </div>
 
-Suppose we have a smooth map $\varphi : [c, d] \rightarrow [a, b]$ with $\forall \tilde t \in [c, d] : \varphi'(\tilde t ) > 0$ . The condition of $\varphi '(\tilde t)$ implies that $\varphi$  is bijective. We then have $\tilde \gamma = \gamma \circ \varphi$ , and we call it a reparameterization of the parameterized curve $\gamma$. 
+Suppose we have a smooth map $\varphi : [c, d] \rightarrow [a, b]$ with $\forall \tilde t \in [c, d] : \varphi'(\tilde t ) \ne \mathbf 0$ . The condition of $\varphi '(\tilde t)$ implies that $\varphi$  is bijective. We then have $\tilde \gamma = \gamma \circ \varphi$ , and we call it a reparameterization of the parameterized curve $\gamma$. 
 
 With $\varphi,$  we can show that $\tilde \gamma$  is also regular
 
@@ -74,7 +74,7 @@ $$
 L( \gamma) &= \int_a^b \| {\gamma'}(t) \| \text d t \\
 &= \int_{\varphi^{-1}(a)}^{\varphi^{-1}(b)} \|  \gamma'( \varphi (\tilde t)) \| \varphi'(\tilde t) \text d \tilde t \\
 
-&\overset{(1)}{=} \int_c^d  \|  \gamma'( \varphi (\tilde t)) \varphi'(\tilde t) \|  \text d \tilde t \\ 
+&= \int_c^d  \|  \gamma'( \varphi (\tilde t)) \varphi'(\tilde t) \|  \text d \tilde t \\ 
 
 &= \int_c^d \| {\gamma'}(\tilde t)\| \text d\tilde t \\
 &= L(\tilde \gamma).
@@ -97,7 +97,7 @@ $$
 We first can show that the velocity vector is orthogonal to the acceleration vector
 
 $$
- \gamma(t)' \cdot \gamma''(t) = 0
+ \gamma'(t)^\top \gamma''(t) = 0
 $$
 
 *Proof:* With the assumption, we have 
@@ -219,7 +219,7 @@ $$
 
 See discussion about the proof at https://math.stackexchange.com/a/669330.
 
-We can then find the minimizer (a curve function) via calculus of variation. In particular, the Lagrangian is $\mathcal E = \gamma'(t) ^\top \gamma'(t)$ and
+We can then find the minimizer (a curve function) via calculus of variations. In particular, the Lagrangian is $\mathcal E := \gamma'(t) ^\top \gamma'(t)$ and
 
 $$
 \frac{\delta \mathcal E }{\delta \gamma(t)} - \frac{\text d }{\text d t} \frac{\delta \mathcal E }{\delta \gamma'(t)} = 0.
@@ -228,28 +228,28 @@ $$
 First, we observe that The first time is zero. For the second term, we have 
 
 $$
-\frac{\delta \mathcal E}{\delta \gamma'} = \gamma'(t) \in \R^2
+\frac{\delta \mathcal E}{\delta \gamma'(t)} = \gamma'(t) \in \R^2
 $$
 
 and the second term becomes 
 
 $$
-\frac{\text d }{\text d t} \frac{\delta \mathcal E }{\delta \gamma'(t)} = \gamma''(t) \in \R^2.
+\frac{\text d }{\text d t} \frac{\delta \mathcal E }{\delta \gamma'(t)} = 2 \gamma''(t) \in \R^2.
 $$
 
 Integrating the results  above yields 
 
 $$
-\forall i \in \{1, 2\}: \int \gamma''_i(t) \text dt = \gamma'_i(t) + C_{i,0} 
+\forall i \in \{1, 2\}: \int \gamma''_i(t) \text dt = 2 \gamma'_i(t) + C_{i,0} 
 $$
 
 and 
 
 $$
-\int \gamma'_i(t) + C_{i,0} \text dt = \gamma_i(t) + C_{i, 0} t + C_{i,1},
+\int \gamma'_i(t) + C_{i,0} \text dt = 2 \gamma_i(t) + C_{i, 0} t + C_{i,1},
 $$
 
-where $C_{i, 0}, C_{i, 1} \in \R$ are integration constants. We absorb the minus signs in both constants in write
+where $C_{i, 0}, C_{i, 1} \in \R$ are integration constants. We absorb the minus signs and $1/2$ in both constants and write
 
 $$
 \gamma_i(t) = C_{i, 0}t + C_{i, 1}.
