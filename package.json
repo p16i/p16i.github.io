@@ -37,7 +37,7 @@
     "react-markdown": "^4.3.1",
     "rehype-katex": "^4.0.0",
     "remark-math": "^3.0.1",
-    "sharp": "^0.25.4",
+    "sharp": "^0.30.5",
     "typeface-kanit": "0.0.72",
     "typeface-noto-sans": "0.0.72"
   },
