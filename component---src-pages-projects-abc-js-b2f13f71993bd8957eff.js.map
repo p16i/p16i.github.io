@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/projects/abc.js"],"names":["ABC"],"mappings":"2FAAA,iCAQeA,UALH,WACR,OAAO","file":"component---src-pages-projects-abc-js-b2f13f71993bd8957eff.js","sourcesContent":["import React from \"react\"\n\n\nconst ABC = () => {\n    return <h1>eee</h1>\n    \n}\n\nexport default ABC"],"sourceRoot":""}
