@@ -6,7 +6,7 @@
     "year": 2018,
     "urls": [
       {
-        "name": "paper",
+        "name": "manuscript",
         "url": "https://link.springer.com/chapter/10.1007/978-3-319-98131-4_5"
       }
     ],
@@ -19,20 +19,16 @@
     "year": 2019,
     "urls": [
       {
+        "name": "Preprint",
+        "url": "https://arxiv.org/abs/1911.07056"
+      },
+      {
         "name": "code",
         "url": "https://github.com/PyThaiNLP/attacut"
       },
       {
-        "name": "paper",
-        "url": "https://arxiv.org/abs/1911.07056"
-      },
-      {
         "name": "PyPI",
         "url": "https://pypi.org/project/attacut/"
-      },
-      {
-        "name": "Document",
-        "url": "https://pythainlp.github.io/attacut/"
       }
     ]
   },
@@ -43,16 +39,32 @@
     "year": 2020,
     "urls": [
       {
-        "name": "code",
-        "url": "https://github.com/heytitle/Syllable-based-Neural-Thai-Word-Segmentation"
-      },
-      {
-        "name": "paper",
+        "name": "manuscript",
         "url": "https://www.aclweb.org/anthology/2020.coling-main.407"
       },
       {
         "name": "poster",
         "url": "https://drive.google.com/file/d/1sV8xPgdj0tMaWhHcCs4vANYWBCygPTvO/view"
+      },
+      {
+        "name": "code",
+        "url": "https://github.com/heytitle/Syllable-based-Neural-Thai-Word-Segmentation"
+      }
+    ]
+  },
+  {
+    "title": "Machine learning of large-scale multimodal brain imaging data reveals neural correlates of hand preference: Large-scale neuroimaging of handedness",
+    "authors": "Pattarawat Chormai, Yi Pu, Haoyu Hu, Simon E Fisher, Clyde Francks, Xiang-Zhen Kong",
+    "venue": "NeuroImage",
+    "year": 2022,
+    "urls": [
+      {
+        "name": "manuscript",
+        "url": "https://www.sciencedirect.com/science/article/pii/S1053811922006498"
+      },
+      {
+        "name": "code",
+        "url": "https://osf.io/4q87k"
       }
     ]
   }

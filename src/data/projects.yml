@@ -1,306 +1,265 @@
--
-    title: "Thailand's Local Administrative Budget and Projects"
-    date: "2019"
-    desc:
-        >
-        A data-driven article reveals how Thailand's local admistrative authorities spend their budgets in 2018.
-        Not only showing  a certain type of procurement methods highly used, the data also presents interesting connections between
-        such authorities and a number of companies. This work was part of Data Journalism Camp Thailand 2019.
-    urls:
-        - name: code
-          url: https://github.com/codeforthailand/2019-local-administrative-budget-and-projects
-        - name: article
-          url: https://codeforthailand.github.io/2019-local-administrative-budget-and-projects/
-    image: https://i.imgur.com/lmvugLw.png
-    tags:
-        - codeforthailand
-# -
-#     title: "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai"
-#     date: "2019"
-#     desc: 
-#         > 
-#         Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
-#         a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
-#         We plan to release our final models under PyThaiNLP's distribution.  We gave an oral presentation at NeurIPS 2019 New in ML Workshop.
-#     urls:
-#         - name: code
-#           url: https://github.com/PyThaiNLP/attacut
-#         - name: document
-#           url: https://pythainlp.github.io/attacut
-#         - name: arXiv
-#           url: https://arxiv.org/abs/1911.07056
-#     image: https://i.imgur.com/7feZxFk.png
-#     tags:
-#         - NLP
-#         - PyThaiNLP
-#         - selected
-#         - research
--
-    title: Parliament Listening
-    date: "2019"
-    desc: 
-        >
-        A pilot project that aims to collect what being discussed in each parliament meeting.
-        Having this kind of data will allow us to build various tools and applications that individuals can easily engage or interact.
-        Hence, they would be well informed about the country's situtaion and potentially make a better decision in next elections.
-    code_url: 
-    url: 
-    urls:
-        - name: code
-          url: https://github.com/codeforthailand/parliament-listening
-        - name: link
-          url: https://elect.in.th/parliament-listening
-    image: https://i.imgur.com/RCHyQVH.png
-    tags:
-        - codeforthailand
-        - machine-learning
-        - selected
--
-    title: Pedigree Mate
-    date: "2019"
-    desc:
-        >
-        A tool that allows poutry researchers to find breeding pairs that have no common ancestors.
-        This tool is developed in collaboration with Poultry Research And Development Center Kabinburi, Prachinburi, Thailand.
-    urls:
-        - name: code
-          url: https://github.com/codeforthailand/pedigree-mate
-        - name: link
-          url: https://codeforthailand.github.io/pedigree-mate
-    image: https://i.imgur.com/fntennp.png
-    tags:
-        - codeforthailand
--
-    title: Tokenization Benchmark Visualization
-    date: "2019"
-    desc: 
-        > 
-        The website contains a collection of tokenisation benchmarks for Thai as well as visualization of the results.
-        Not only looking at the numbers, the visualization allows Thai NLP researchers to see qualitative pespectives of benchmark, visually seeing when
-        each algorithm perform well and when not.
-    urls:
-        - name: code
-          url: https://github.com/PyThaiNLP/tokenization-benchmark-visualization
-        - name: link
-          url: https://pythainlp.github.io/tokenization-benchmark-visualization
-    image: https://i.imgur.com/bRwMK3M.png
-    tags:
-        - NLP
-        - PyThaiNLP
+- title: "Thailand's Local Administrative Budget and Projects"
+  date: "2019"
+  desc: >
+    A data-driven article reveals how Thailand's local admistrative authorities spend their budgets in 2018.
+    Not only showing  a certain type of procurement methods highly used, the data also presents interesting connections between
+    such authorities and a number of companies. This work was part of Data Journalism Camp Thailand 2019.
+  urls:
+    - name: code
+      url: https://github.com/codeforthailand/2019-local-administrative-budget-and-projects
+    - name: article
+      url: https://codeforthailand.github.io/2019-local-administrative-budget-and-projects/
+  image: https://i.imgur.com/lmvugLw.png
+  tags:
+    - codeforthailand
+- title: "AttaCut: Fast and Reasonably Accurate Tokenizer for Thai"
+  date: "2019"
+  desc: >
+    Previous tokenizers for Thai are either fast with low accuracy or the opposite. In this work, we propose
+    a new tokenizer based on a CNN model and the dilation technique. Our models show comparable tokenization performances yet at least 6x faster than the state-of-the-art.
+    We plan to release our final models under PyThaiNLP's distribution.  We gave an oral presentation at NeurIPS 2019 New in ML Workshop.
+  urls:
+    - name: preprint
+      url: https://arxiv.org/abs/1911.07056
+    - name: code
+      url: https://github.com/PyThaiNLP/attacut
+  image: https://i.imgur.com/7feZxFk.png
+  tags:
+    - codeforthailand
+    - NLP
+    - PyThaiNLP
+    - selected
+    - research
+- title: Parliament Listening
+  date: "2019"
+  desc: >
+    A pilot project that aims to collect what being discussed in each parliament meeting.
+    Having this kind of data will allow us to build various tools and applications that individuals can easily engage or interact.
+    Hence, they would be well informed about the country's situtaion and potentially make a better decision in next elections.
+  code_url:
+  url:
+  urls:
+    - name: code
+      url: https://github.com/codeforthailand/parliament-listening
+    - name: demo
+      url: https://elect.in.th/parliament-listening
+  image: https://i.imgur.com/RCHyQVH.png
+  tags:
+    - codeforthailand
+    - machine-learning
+    - selected
+- title: Pedigree Mate
+  date: "2019"
+  desc: >
+    A tool that allows poutry researchers to find breeding pairs that have no common ancestors.
+    This tool is developed in collaboration with Poultry Research And Development Center Kabinburi, Prachinburi, Thailand.
+  urls:
+    - name: code
+      url: https://github.com/codeforthailand/pedigree-mate
+    - name: demo
+      url: https://codeforthailand.github.io/pedigree-mate
+  image: https://i.imgur.com/fntennp.png
+  tags:
+    - codeforthailand
+- title: Tokenization Benchmark Visualization
+  date: "2019"
+  desc: >
+    The website contains a collection of tokenisation benchmarks for Thai as well as visualization of the results.
+    Not only looking at the numbers, the visualization allows Thai NLP researchers to see qualitative pespectives of benchmark, visually seeing when
+    each algorithm perform well and when not.
+  urls:
+    - name: code
+      url: https://github.com/PyThaiNLP/tokenization-benchmark-visualization
+  image: https://i.imgur.com/bRwMK3M.png
+  tags:
+    - NLP
+    - PyThaiNLP
 
--
-    title: Live Report for Thailand's General Election 2019
-    date: "2019"
-    desc: 
-        > 
-    urls:
-        - name: code
-          url: https://github.com/codeforthailand/election-live
-        - name: link
-          url: https://elect.thematter.co
-    image: https://github.com/codeforthailand/election-live/raw/master/docs/images/screenshot.png
-    tags:
-        - codeforthailand
--
-    title: Thailand's Politics and Business
-    date: "2019"
-    desc: 
-        >
-        The goal of this visualization is to reveal business activities of each politician.
-        From the visualisation, one can see the relationships between political parties and companies that support them.
-        Moreover, integrating with Thailand's government spending data allows us to see the connections between producement campaigns and those companies.
-    urls:
-        - name: code
-          url: https://github.com/heytitle/politics-and-business
-        - name: link
-          url: https://elect.in.th/politics-and-business
-    image: https://i.imgur.com/iKICNxz.png
-    tags:
-        - visualization
-        - codeforthailand
+- title: Live Report for Thailand's General Election 2019
+  date: "2019"
+  desc: >
+  urls:
+    - name: code
+      url: https://github.com/codeforthailand/election-live
+    - name: URL
+      url: https://elect.thematter.co
+  image: https://github.com/codeforthailand/election-live/raw/master/docs/images/screenshot.png
+  tags:
+    - codeforthailand
+- title: Thailand's Politics and Business
+  date: "2019"
+  desc: >
+    The goal of this visualization is to reveal business activities of each politician.
+    From the visualisation, one can see the relationships between political parties and companies that support them.
+    Moreover, integrating with Thailand's government spending data allows us to see the connections between producement campaigns and those companies.
+  urls:
+    - name: code
+      url: https://github.com/heytitle/politics-and-business
+    - name: URL
+      url: https://elect.in.th/politics-and-business
+  image: https://i.imgur.com/iKICNxz.png
+  tags:
+    - visualization
+    - codeforthailand
 
--
-    title: Thailand's General Election 2562 (2019) Zone and Candidate Browsing Website
-    date: "2019"
-    desc: 
-        > 
-        This website provides a quick and simple way, using postcode, for Thais to see who are candidates in their area.
-        As zone and candidate data is rarely changed, the website is a static website without the use of backend and database.
-    urls:
-        - name: code
-          url: https://github.com/electinth/dataset-election-62-candidates
-        - name: link
-          url: https://elect.in.th/candidates
-    image: https://i.imgur.com/6HtUGrI.png
-    tags:
-        - codeforthailand
-        - opendata
+- title: Thailand's General Election 2562 (2019) Zone and Candidate Browsing Website
+  date: "2019"
+  desc: >
+    This website provides a quick and simple way, using postcode, for Thais to see who are candidates in their area.
+    As zone and candidate data is rarely changed, the website is a static website without the use of backend and database.
+  urls:
+    - name: code
+      url: https://github.com/electinth/dataset-election-62-candidates
+    - name: URL
+      url: https://elect.in.th/candidates
+  image: https://i.imgur.com/6HtUGrI.png
+  tags:
+    - codeforthailand
+    - opendata
 
--
-    title:  Visually Similar Image Search
-    date: "2019"
-    desc: 
-        > 
-        Finding similar images can be useful in many cases. For example, one can use it to retrieve mountain photos
-        from a ton of photos in his/her gallery. Our first experiment achieves this search by using a nearest neighbour approach
-        over features produced by pretrained neural networks. Currently, we are testing with techniques such as
-        autoencoders, Siamese networks, and TripetLoss.
-    urls:
-        - name: code
-          url: https://github.com/heytitle/visually-similar-image-search
-        - name: link
-          url: http://pat.chormai.org/visually-similar-image-search
-    image: https://i.imgur.com/0UKd53c.png
-    tags:
-        - machine-learning
-        - other
--
-    title: Loopify
-    date: "2018"
-    desc:
-        >
-        If you happen to use Spotify and play a music instrustument like me, you might sometimes want to
-        repeatedly play certain pieces of songs on Spotify for practicing. Loopify is the answer for that!
-    urls:
-        - name: code
-          url: https://github.com/heytitle/loopify
-        - name: download
-          url: https://github.com/heytitle/loopify/releases
-    image: https://i.imgur.com/sm1f5JD.png
-    tags:
-        - other
--
-    title: Designing RNNs for Explainability (M.Sc. Thesis)
-    date: "2018"
-    desc:
-        > 
-        We study how the architecture of RNNs influences the level of explainability. We use existing
-        explaination methods, such as LRP, Deep Taylor Decomposition, and Guided Backprop, to explain prediction from RNNs.
-        Our experiments show that RNN architectures can have significantly different levels of explainability although they perform
-        equally well in terms of an objective function.
-    urls: 
-        - name: code
-          url: https://github.com/heytitle/thesis-designing-recurrent-neural-networks-for-explainability
-        - name: PDF
-          url: https://drive.google.com/file/d/1NE52rFWFtZTf2U9UHiFZ6Vyeo0XoGNZ-/view
-    image: https://i.imgur.com/40To8sI.png
-    tags:
-        - machine-learning
-        - selected
-        - research
--
-    title: Monte Carlo Particle Filter for Localization
-    date: "2018"
-    desc: 
-        >
-        Particle filter algorithm is a nonparametric approach using a set of particles to approximate
-        the posterior distribution of some random processes. In this project, we develop a robot
-        simulator and implement the algorithm to localize the location of a robot in mazes.
-    urls:
-        - name: code
-          url: https://github.com/heytitle/particle-filter
-    image: https://raw.githubusercontent.com/heytitle/particle-filter/master/experiments/gifs/scene-2-2000-particles.mp4.gif
-    tags:
-        - machine-learning
-        - selected
--
-    title: LaTeX ⚡ Sketch Plugin
-    date: "2017"
-    desc: 
-        > 
-        The plugin brings LaTeX's functionalities to Sketch, a popular vector-based design application.
-        It allows us to create nice mathematical formulas directly inside Sketch. For example, I used it to design
-        figures for my master's thesis and its poster.
-    urls:
-        - name: code
-          url: https://github.com/heytitle/latex-sketch-plugin
-        - name: download
-          url: https://github.com/heytitle/latex-sketch-plugin/releases
-    image: https://camo.githubusercontent.com/421d45c810f894fbeceb46041488101849f09b13/68747470733a2f2f692e696d6775722e636f6d2f795044326e376d2e676966
-    tags:
-        - other
--
-    title: Black Box Optimization using RNNs
-    date: "2017"
-    desc: 
-        > 
-        We extend on the work of Chen et al. (2016), who introduce a new learning-based approach to global Black-Box optimization.
-        They train a LSTM model on functions sampled from Gaussian processes, learning to find an point that 
-        those training functions. We verified the claims made by the authors and conducted further experiments using various loss functions.
-        We also applied these learned LSTM models to airfoil optimization and hyperparameter tuning of a SVM classifier. 
-        Our experiments show that the learning approach can produces optimizers that perform comparably to state-of-the-art Black-Box optimization algorithms on these benchmarks
-    urls:
-        - name: code
-          url: https://github.com/heytitle/blackbox-optimization-using-rnns
-        - name: report
-          url: https://github.com/heytitle/blackbox-optimization-using-rnns/blob/master/report/final-report.pdf
-    image: https://i.imgur.com/8DDlTyR.png
-    tags:
-        - machine-learning
-        - selected
--
-    title: Code Generation for Apache Flink's NormalizedKeySorter
-    date: "2016"
-    desc:
-        >
-        The current implementation of NormalizedKeySorter is a generic implementation for all data types. Although this implementation
-        has an advantage of code maintenance, it creates unneccesary CPU branches for certain data types, causing needless latency. We solve
-        this problem by online creating a customer sorter for each data type. Our experiments show that this code-generated approach
-        reduces running time significantly.
-    urls:
-        - name: code
-          url: https://github.com/apache/flink/pull/3511
-        - name: design document
-          url: https://cwiki.apache.org/confluence/display/FLINK/FLIP-18%3A+Code+Generation+for+improving+sorting+performance
-    image: https://i.imgur.com/QrF99uK.png
-    tags:
-        - bigdata
-        - other
-        - research
--
-    title: Mining IRS990 Data with AWS Lambda
-    date: "2017"
-    desc:
-        > 
-        This project is a proof-of-concept showing how to use Amazon AWS's Lamba as a massive-scale data pipeline. 
-        For the IRS990 dataset, this approach can reduces the processing time down to to 25 minutes, significantly faster than
-        using other approaches, such as Apache Spark, directly.
-    urls:
-        - name: code
-          url: https://github.com/heytitle/mining-irs990-data
-    image: https://i.imgur.com/uBVltj5.png
-    tags:
-        - other
--
-    title: Who find the Netherlands a new home(hope)?
-    date: "2016"
-    desc: 
-        >
-        A visualization of asylum requests to the Netherlands. My partner and I incorporated visualization principles
-        into the design that balances between aesthetic and usability. Most of the important components here were
-        implemented from scratch using d3.
-    urls:
-        - name: code
-          url: https://github.com/heytitle/dutch-asylum-seeker/
-        - name: link
-          url: http://pat.chormai.org/dutch-asylum-seeker/
-    image: https://i.imgur.com/AiovkQ6.png
-    tags:
-        - visualization
-        - other
-
+- title: Visually Similar Image Search
+  date: "2019"
+  desc: >
+    Finding similar images can be useful in many cases. For example, one can use it to retrieve mountain photos
+    from a ton of photos in his/her gallery. Our first experiment achieves this search by using a nearest neighbour approach
+    over features produced by pretrained neural networks. Currently, we are testing with techniques such as
+    autoencoders, Siamese networks, and TripetLoss.
+  urls:
+    - name: code
+      url: https://github.com/heytitle/visually-similar-image-search
+    - name: demo
+      url: http://pat.chormai.org/visually-similar-image-search
+  image: https://i.imgur.com/0UKd53c.png
+  tags:
+    - machine-learning
+    - other
+- title: Loopify
+  date: "2018"
+  desc: >
+    If you happen to use Spotify and play a music instrustument like me, you might sometimes want to
+    repeatedly play certain pieces of songs on Spotify for practicing. Loopify is the answer for that!
+  urls:
+    - name: code
+      url: https://github.com/heytitle/loopify
+  image: https://i.imgur.com/sm1f5JD.png
+  tags:
+    - other
+- title: Designing RNNs for Explainability (M.Sc. Thesis)
+  date: "2018"
+  desc: >
+    We study how the architecture of RNNs influences the level of explainability. We use existing
+    explaination methods, such as LRP, Deep Taylor Decomposition, and Guided Backprop, to explain prediction from RNNs.
+    Our experiments show that RNN architectures can have significantly different levels of explainability although they perform
+    equally well in terms of an objective function.
+  urls:
+    - name: code
+      url: https://github.com/heytitle/thesis-designing-recurrent-neural-networks-for-explainability
+    - name: Thesis
+      #url: https://drive.google.com/file/d/1NE52rFWFtZTf2U9UHiFZ6Vyeo0XoGNZ-/view
+      url: https://research.tue.nl/files/109403817/CSE660_pattarawat_Chormai_thesis_v_final.pdf
+  image: https://i.imgur.com/40To8sI.png
+  tags:
+    - machine-learning
+    - selected
+    - research
+- title: Monte Carlo Particle Filter for Localization
+  date: "2018"
+  desc: >
+    Particle filter algorithm is a nonparametric approach using a set of particles to approximate
+    the posterior distribution of some random processes. In this project, we develop a robot
+    simulator and implement the algorithm to localize the location of a robot in mazes.
+  urls:
+    - name: code
+      url: https://github.com/heytitle/particle-filter
+  image: https://raw.githubusercontent.com/heytitle/particle-filter/master/experiments/gifs/scene-2-2000-particles.mp4.gif
+  tags:
+    - machine-learning
+- title: LaTeX ⚡ Sketch Plugin
+  date: "2017"
+  desc: >
+    The plugin brings LaTeX's functionalities to Sketch, a popular vector-based design application.
+    It allows us to create nice mathematical formulas directly inside Sketch. For example, I used it to design
+    figures for my master's thesis and its poster.
+  urls:
+    - name: code
+      url: https://github.com/heytitle/latex-sketch-plugin
+  image: https://camo.githubusercontent.com/421d45c810f894fbeceb46041488101849f09b13/68747470733a2f2f692e696d6775722e636f6d2f795044326e376d2e676966
+  tags:
+    - other
+- title: Black Box Optimization using RNNs
+  date: "2017"
+  desc: >
+    We extend on the work of Chen et al. (2016), who introduce a new learning-based approach to global Black-Box optimization.
+    They train a LSTM model on functions sampled from Gaussian processes, learning to find an point that 
+    those training functions. We verified the claims made by the authors and conducted further experiments using various loss functions.
+    We also applied these learned LSTM models to airfoil optimization and hyperparameter tuning of a SVM classifier. 
+    Our experiments show that the learning approach can produces optimizers that perform comparably to state-of-the-art Black-Box optimization algorithms on these benchmarks
+  urls:
+    - name: code
+      url: https://github.com/heytitle/blackbox-optimization-using-rnns
+    - name: report
+      url: https://github.com/heytitle/blackbox-optimization-using-rnns/blob/master/report/final-report.pdf
+  image: https://i.imgur.com/8DDlTyR.png
+  tags:
+    - machine-learning
+- title: Code Generation for Apache Flink's NormalizedKeySorter
+  date: "2016"
+  desc: >
+    The current implementation of NormalizedKeySorter is a generic implementation for all data types. Although this implementation
+    has an advantage of code maintenance, it creates unneccesary CPU branches for certain data types, causing needless latency. We solve
+    this problem by online creating a customer sorter for each data type. Our experiments show that this code-generated approach
+    reduces running time significantly.
+  urls:
+    - name: code
+      url: https://github.com/apache/flink/pull/3511
+    - name: report
+      url: https://cwiki.apache.org/confluence/display/FLINK/FLIP-18%3A+Code+Generation+for+improving+sorting+performance
+    - name: Related Pull-Request
+      url: https://github.com/apache/flink/pull/3511
+  image: https://i.imgur.com/QrF99uK.png
+  tags:
+    - bigdata
+    - other
+    - research
+- title: Mining IRS990 Data with AWS Lambda
+  date: "2017"
+  desc: >
+    This project is a proof-of-concept showing how to use Amazon AWS's Lamba as a massive-scale data pipeline. 
+    For the IRS990 dataset, this approach can reduces the processing time down to to 25 minutes, significantly faster than
+    using other approaches, such as Apache Spark, directly.
+  urls:
+    - name: code
+      url: https://github.com/heytitle/mining-irs990-data
+  image: https://i.imgur.com/uBVltj5.png
+  tags:
+    - other
+- title: Who find the Netherlands a new home(hope)?
+  date: "2016"
+  desc: >
+    A visualization of asylum requests to the Netherlands. My partner and I incorporated visualization principles
+    into the design that balances between aesthetic and usability. Most of the important components here were
+    implemented from scratch using d3.
+  urls:
+    - name: code
+      url: https://github.com/heytitle/dutch-asylum-seeker/
+    - name: demo
+      url: http://pat.chormai.org/dutch-asylum-seeker/
+  image: https://i.imgur.com/AiovkQ6.png
+  tags:
+    - visualization
+    - other
 # -
 #     title: "Syllable based Neural Thai Word-Segmentation"
 #     date: "2020"
-#     desc: 
+#     desc:
 #         >
 #         somtething
 #     urls:
 #         - name: code
 #           url: https://github.com/heytitle/Syllable-based-Neural-Thai-Word-Segmentation
-#         - name: paper(COLING2020) 
+#         - name: paper(COLING2020)
 #           url: https://will-be-added-later
-#     image: 
+#     image:
 #     tags:
 #         - NLP
 #         - PyThaiNLP
