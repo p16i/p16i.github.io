@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Pattarawat Chormai`,
     description: `A PhD Candidate at Max Planck School of Cognition`,
-    author: `@heytitle`,
+    author: `@p16i`,
   },
   flags: {
     FAST_DEV: true,

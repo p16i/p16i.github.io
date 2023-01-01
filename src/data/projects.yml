@@ -94,7 +94,7 @@
     Moreover, integrating with Thailand's government spending data allows us to see the connections between producement campaigns and those companies.
   urls:
     - name: code
-      url: https://github.com/heytitle/politics-and-business
+      url: https://github.com/p16i/politics-and-business
     - name: URL
       url: https://elect.in.th/politics-and-business
   image: https://i.imgur.com/iKICNxz.png
@@ -126,7 +126,7 @@
     autoencoders, Siamese networks, and TripetLoss.
   urls:
     - name: code
-      url: https://github.com/heytitle/visually-similar-image-search
+      url: https://github.com/p16i/visually-similar-image-search
     - name: demo
       url: http://pat.chormai.org/visually-similar-image-search
   image: https://i.imgur.com/0UKd53c.png
@@ -140,7 +140,7 @@
     repeatedly play certain pieces of songs on Spotify for practicing. Loopify is the answer for that!
   urls:
     - name: code
-      url: https://github.com/heytitle/loopify
+      url: https://github.com/p16i/loopify
   image: https://i.imgur.com/sm1f5JD.png
   tags:
     - other
@@ -153,7 +153,7 @@
     equally well in terms of an objective function.
   urls:
     - name: code
-      url: https://github.com/heytitle/thesis-designing-recurrent-neural-networks-for-explainability
+      url: https://github.com/p16i/thesis-designing-recurrent-neural-networks-for-explainability
     - name: Thesis
       #url: https://drive.google.com/file/d/1NE52rFWFtZTf2U9UHiFZ6Vyeo0XoGNZ-/view
       url: https://research.tue.nl/files/109403817/CSE660_pattarawat_Chormai_thesis_v_final.pdf
@@ -170,8 +170,8 @@
     simulator and implement the algorithm to localize the location of a robot in mazes.
   urls:
     - name: code
-      url: https://github.com/heytitle/particle-filter
-  image: https://raw.githubusercontent.com/heytitle/particle-filter/master/experiments/gifs/scene-2-2000-particles.mp4.gif
+      url: https://github.com/p16i/particle-filter
+  image: https://raw.githubusercontent.com/p16i/particle-filter/master/experiments/gifs/scene-2-2000-particles.mp4.gif
   tags:
     - machine-learning
 - title: LaTeX ⚡ Sketch Plugin
@@ -182,7 +182,7 @@
     figures for my master's thesis and its poster.
   urls:
     - name: code
-      url: https://github.com/heytitle/latex-sketch-plugin
+      url: https://github.com/p16i/latex-sketch-plugin
   image: https://camo.githubusercontent.com/421d45c810f894fbeceb46041488101849f09b13/68747470733a2f2f692e696d6775722e636f6d2f795044326e376d2e676966
   tags:
     - other
@@ -196,9 +196,9 @@
     Our experiments show that the learning approach can produces optimizers that perform comparably to state-of-the-art Black-Box optimization algorithms on these benchmarks
   urls:
     - name: code
-      url: https://github.com/heytitle/blackbox-optimization-using-rnns
+      url: https://github.com/p16i/blackbox-optimization-using-rnns
     - name: report
-      url: https://github.com/heytitle/blackbox-optimization-using-rnns/blob/master/report/final-report.pdf
+      url: https://github.com/p16i/blackbox-optimization-using-rnns/blob/master/report/final-report.pdf
   image: https://i.imgur.com/8DDlTyR.png
   tags:
     - machine-learning
@@ -229,7 +229,7 @@
     using other approaches, such as Apache Spark, directly.
   urls:
     - name: code
-      url: https://github.com/heytitle/mining-irs990-data
+      url: https://github.com/p16i/mining-irs990-data
   image: https://i.imgur.com/uBVltj5.png
   tags:
     - other
@@ -241,7 +241,7 @@
     implemented from scratch using d3.
   urls:
     - name: code
-      url: https://github.com/heytitle/dutch-asylum-seeker/
+      url: https://github.com/p16i/dutch-asylum-seeker/
     - name: demo
       url: http://pat.chormai.org/dutch-asylum-seeker/
   image: https://i.imgur.com/AiovkQ6.png
@@ -256,7 +256,7 @@
 #         somtething
 #     urls:
 #         - name: code
-#           url: https://github.com/heytitle/Syllable-based-Neural-Thai-Word-Segmentation
+#           url: https://github.com/p16i/Syllable-based-Neural-Thai-Word-Segmentation
 #         - name: paper(COLING2020)
 #           url: https://will-be-added-later
 #     image:

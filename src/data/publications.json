@@ -4,12 +4,8 @@
     "authors": "Laura Rieger*, Pattarawat Chormai*, Grégoire Montavon, Lars Kai Hansen, Klaus-Robert Müller",
     "venue": "Explainable and Interpretable Models in Computer Vision and Machine Learning (book chapter)",
     "year": 2018,
-    "urls": [
-      {
-        "name": "manuscript",
-        "url": "https://link.springer.com/chapter/10.1007/978-3-319-98131-4_5"
-      }
-    ],
+    "url": "https://link.springer.com/chapter/10.1007/978-3-319-98131-4_5",
+    "urls": [],
     "note": "*: equal contribution"
   },
   {
@@ -17,6 +13,7 @@
     "authors": "Pattarawat Chormai, Ponrawee Prasertsom, Attapol Rutherford",
     "venue": "NeurIPS New in ML Workshop",
     "year": 2019,
+    "url": "https://arxiv.org/abs/1911.07056",
     "urls": [
       {
         "name": "Preprint",
@@ -37,18 +34,15 @@
     "authors": "Pattarawat Chormai, Ponrawee Prasertsom, Jin Cheevaprawatdomrong, Attapol Rutherford",
     "venue": "COLING",
     "year": 2020,
+    "url": "https://www.aclweb.org/anthology/2020.coling-main.407",
     "urls": [
-      {
-        "name": "manuscript",
-        "url": "https://www.aclweb.org/anthology/2020.coling-main.407"
-      },
       {
         "name": "poster",
         "url": "https://drive.google.com/file/d/1sV8xPgdj0tMaWhHcCs4vANYWBCygPTvO/view"
       },
       {
         "name": "code",
-        "url": "https://github.com/heytitle/Syllable-based-Neural-Thai-Word-Segmentation"
+        "url": "https://github.com/p16i/Syllable-based-Neural-Thai-Word-Segmentation"
       }
     ]
   },
@@ -57,11 +51,8 @@
     "authors": "Pattarawat Chormai, Yi Pu, Haoyu Hu, Simon E Fisher, Clyde Francks, Xiang-Zhen Kong",
     "venue": "NeuroImage",
     "year": 2022,
+    "url": "https://www.sciencedirect.com/science/article/pii/S1053811922006498",
     "urls": [
-      {
-        "name": "manuscript",
-        "url": "https://www.sciencedirect.com/science/article/pii/S1053811922006498"
-      },
       {
         "name": "code",
         "url": "https://osf.io/4q87k"

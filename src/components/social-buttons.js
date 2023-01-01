@@ -11,8 +11,8 @@ const Icon = ({src, link}) => <OutLink href={link}><img alt="some icon" css={{ma
 
 const SocialIcons = () => {
     return <div css={{textAlign: "center"}}>
-        <Icon link="mailto:[pat].[surname]@maxplanckschools.de" src={EmailIcon}/>
-        <Icon link="http://github.com/heytitle" src={GithubIcon}/>
+        <Icon link="mailto:p.[surname]@tu-berlin.de" src={EmailIcon}/>
+        <Icon link="http://github.com/p16i" src={GithubIcon}/>
         <Icon link="https://scholar.google.co.th/citations?user=XFcgz7cAAAAJ&hl=en" src={GScholarIcon}/>
     </div>
 }

@@ -113,7 +113,7 @@
   title: "Activation Maximization"
   thumbnail: /images/blog/2021-activation-maximization.png
 
-- url: "https://observablehq.com/@heytitle/stein-variational-gradient-descent"
+- url: "https://observablehq.com/@p16i/stein-variational-gradient-descent"
   published_date: 2021/06/13
   title: "Stein Variational Gradient Descent"
   thumbnail: "https://i.imgur.com/LDBq4Ol.png"
@@ -123,7 +123,7 @@
   title: Probabilistic PCA
   thumbnail: https://i.imgur.com/SxormsB.png
 
-- url: https://observablehq.com/@heytitle/spectral-clustering
+- url: https://observablehq.com/@p16i/spectral-clustering
   published_date: 2021/08/27
   title: Spectral Clustering
   thumbnail: https://i.imgur.com/zGuf2yh.png
