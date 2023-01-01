@@ -128,7 +128,12 @@
   title: Spectral Clustering
   thumbnail: https://i.imgur.com/zGuf2yh.png
 
-- url: blog/2022-curves
+- url: blog/2022-parameterized-curves
   published_date: 2022/05/21
   title: Parameterized Curves
-  thumbnail: https://i.imgur.com/gJGPt3Q.png
+  thumbnail: https://user-images.githubusercontent.com/1214890/210171984-80bf9e19-ac31-414e-80b4-74fe19c34fd0.png
+
+- url: https://observablehq.com/@p16i/planar-curves-and-geometric-quantities
+  published_date: 2022/06/22
+  title: Planar Curves and Basis Geometric Quantities
+  thumbnail: https://user-images.githubusercontent.com/1214890/210171984-80bf9e19-ac31-414e-80b4-74fe19c34fd0.png

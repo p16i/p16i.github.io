@@ -7,6 +7,10 @@ import OutLink from "../components/outlink";
 
 import { DESKTOP_MIN_WIDTH, media } from "../shared/style"
 
+
+const MONTHS = [`Jan`, `Feb`, `Mar`, `Apr`, `May`, `Jun`, `Jul`, `Aug`, `Sep`, `Oct`, `Nov`, `Dev`]
+
+
 const Blog = () => {
 
   const { allBlogYaml } = useStaticQuery(
@@ -30,9 +34,12 @@ const Blog = () => {
   )
 
   const articles = allBlogYaml.edges.map(n => {
+    const published_date = new Date(n.node.published_date)
+    const published_date_short = `${MONTHS[published_date.getMonth()]}, ${published_date.getDate()}`
     return {
         ...n.node, 
-        year: n.node.published_date.split("/")[0]
+        year: n.node.published_date.split("/")[0],
+        published_date_short: published_date_short
     }
   })
   const years = Array.from(new Set(articles.map(a => a.year)))
@@ -67,7 +74,7 @@ const Blog = () => {
                                     display: "inline-block",
                               }
                             }}>
-                              <img src={a.thumbnail} style={{width: `100px`}}/>
+                              <img src={a.thumbnail} style={{width: `100px`, border: `1px solid #eee`}}/>
                             </div>
                             <div css={{
                                 float: "left",
@@ -76,19 +83,19 @@ const Blog = () => {
                                     width: "calc(960px - 100px)"
                                 }
                               }}>
+                              <h3 css={{paddingLeft: "10px", marginTop: `20px`, marginBottom: `0px`}}>
+                                <OutLink href={a.url}>{a.title}</OutLink>
+                              </h3>
+
                               <b css={{
                                 marginBottom: "10px",
                                 width: "100%",
                                 display: "block",
-                                [media(DESKTOP_MIN_WIDTH)]: {
-                                  textAlign: "right",
-                                }
+                                paddingLeft: `10px`,
+                                fontSize: `1em`,
                               }}>
-                                  {a.published_date}
+                                  {a.published_date_short}
                               </b>
-                              <h3 css={{paddingLeft: "20px"}}>
-                                <OutLink href={a.url}>{a.title}</OutLink>
-                              </h3>
                             </div>
                             <div style={{clear: "both"}}></div>
                         </li>

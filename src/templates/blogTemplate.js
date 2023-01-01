@@ -30,57 +30,37 @@ export default function Template({
 
   return <Layout>
     <SEO title={`Blog - ${frontmatter.title}`}/>
-    <h1>{frontmatter.title}</h1>
-    <b>{frontmatter.date}</b>
+    <h1 css={{marginBottom: `0px`}}>{frontmatter.title}</h1>
     <div
       css={{
         width:  `100%`,
-        [media(DESKTOP_MIN_WIDTH)]: {
-          width: `600px`,
-        }
+        // [media(DESKTOP_MIN_WIDTH)]: {
+        //   width: `600px`,
+        // }
       }}
     >
        <div css={{
-             display: "none",
-             [media(DESKTOP_MIN_WIDTH)]: {
-               fontSize: "0.8em",
-               background: "white",
-               display: "block",
-               position: "absolute",
-               top: "150px",
-               left: "calc(50% + 150px)",
-               borderLeft: "2px solid black",
-               padding: "10px",
-               maxWidth: "300px",
-               listStyle: "none",
-               "& li":{
-                 lineHeight: "1.2em",
-                 listStyle: "none",
-                 marginBottom: "5px",
-                 "& p": {
-                   marginBottom: 0,
-                 }
-               },
-               "& ul": {
-                 marginLeft: 10,
-                 marginTop: 0,
-               }
-             }
+            fontSize: "0.8em",
+            // background: `#eee`,
+            padding: `10px 0px`,
+            borderBottom: `1px solid black`,
+            color: "#888"
        }}
        >
-         <b css={{textTransform: `uppercase`, color: `#888`}}>Table of Content</b>
-         <ul>
-           {headings.map( (h, i) => {
-              return <li key={h.value} css={{marginLeft: 10 * (h.depth - 2)}}>
-                <a href={`#${slugger.slug(h.value)}`}>{h.value}</a>
-              </li>
-           })}
-         </ul>
+        <b>{frontmatter.date}</b><br/>
+        <b>Table of Content</b>
+          <ul css={{marginBottom: 0}}>
+            {headings.map( (h, i) => {
+                return <li key={h.value} css={{marginLeft: 50 * (h.depth - 2), marginBottom: 0}}>
+                  <a href={`#${slugger.slug(h.value)}`}>{h.value}</a>
+                </li>
+            })}
+          </ul>
        </div>
 
       <MDXProvider components={shortcodes}>
         <div
-          css={{marginTop: "50px"}}
+          css={{marginTop: "25px"}}
           className="blog-post-content"
         >
           <MDXRenderer>

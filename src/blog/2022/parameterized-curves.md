@@ -1,5 +1,5 @@
 ---
-path: "/blog/2022-curves"
+path: "/blog/2022-parameterized-curves"
 date: "2022-05-21"
 title: "Parameterized Curves"
 ---
